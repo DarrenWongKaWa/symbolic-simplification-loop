@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CandidateRanking",
+  "type": "object",
+  "required": ["recommendation", "best_candidate_id", "ranked_candidates"],
+  "properties": {
+    "recommendation": {
+      "type": "string",
+      "enum": [
+        "promote candidate",
+        "patch candidate",
+        "archive candidate",
+        "try next conjecture",
+        "request human approval"
+      ]
+    },
+    "best_candidate_id": { "type": ["string", "null"] },
+    "ranked_candidates": { "type": "array" }
+  },
+  "additionalProperties": true
+}

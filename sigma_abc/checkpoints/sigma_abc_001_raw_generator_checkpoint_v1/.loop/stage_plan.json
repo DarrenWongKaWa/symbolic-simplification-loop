@@ -1,0 +1,53 @@
+{
+  "allowed_transformations": [
+    "Reuse Stage 001 raw generator outputs",
+    "Project raw finite-frequency candidate to xxx",
+    "Attempt optimized direct DC projection",
+    "Use inherited DC validation with documented premises if direct DC times out"
+  ],
+  "claim_boundary": {
+    "allowed_claims": [
+      "Stage 001 raw generator candidate is projection-validated for xxx regression.",
+      "DC projection is inherited from finite-frequency projection plus archived 1D DC pipeline."
+    ],
+    "forbidden_claims": [
+      "Full tensorial sigma_abc correctness is proven.",
+      "sigma_abc simplification has started.",
+      "Sector decomposition has started."
+    ]
+  },
+  "expected_outputs": [
+    "validation/dc_projection_validation_patch.wl",
+    "reports/dc_projection_validation_patch.md",
+    "validation/validation_summary.json",
+    "review_packet.md"
+  ],
+  "forbidden_transformations": [
+    "Regenerate tensorial raw expression unless necessary",
+    "Start sector decomposition",
+    "Start tensorial kernel fusion",
+    "Start tensorial IBP reduction",
+    "Claim full tensorial sigma_abc correctness"
+  ],
+  "goal": "Patch Stage 001 DC projection validation without weakening scientific safety.",
+  "input_snapshots": [
+    "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+    "input_snapshots/raw_sigma_abc.wl",
+    "input_snapshots/raw_sigma_abc_dc.wl",
+    "input_snapshots/raw_sigma_abc_manifest.json",
+    "input_snapshots/stage001_validation_summary.json",
+    "input_snapshots/abc_w1_w2_1D.txt",
+    "input_snapshots/Sigma_abc_dc_1D.txt",
+    "input_snapshots/DC limit - Gamma Expansion -1D.nb"
+  ],
+  "next_stage_trigger": "After checkpoint freeze, a separate Stage 002 raw import and convention audit may be opened by user request.",
+  "protected_regressions": [
+    "FiniteFrequencyProjectionTo1D remains PASS",
+    "DCProjectionTo1D becomes PASS or INHERITED_PASS with documented premises"
+  ],
+  "stage_name": "001b_dc_projection_validation_patch",
+  "validation_identity": {
+    "expression": "FiniteFrequencyProjectionTo1D == PASS && DCProjectionTo1D in {PASS, INHERITED_PASS}",
+    "type": "ProjectionRegression"
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "allowed_claims": [
+    "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist.",
+    "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist.",
+    "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist."
+  ],
+  "files": [
+    {
+      "bytes": 129,
+      "path": ".loop/decision.json",
+      "sha256": "8ab5eea512ed15e2015563253b98f2fdf5be1cc49d1a8c8dc266910a03c04afe"
+    },
+    {
+      "bytes": 339,
+      "path": ".loop/metrics.json",
+      "sha256": "cb55cbbe2484de1e942633015c4edd037e24abae0ac853c1e8c55f212795f9b0"
+    },
+    {
+      "bytes": 1443,
+      "path": ".loop/review_result.json",
+      "sha256": "713f95715646fe3df217add515e6c00de4964a2061510f51559fde06fe34298e"
+    },
+    {
+      "bytes": 895,
+      "path": ".loop/reviewer_results/algebra_reviewer.json",
+      "sha256": "3123a1a5b6b73521f4c300c03d948c638d806e8bf3eee172d79117722feb1423"
+    },
+    {
+      "bytes": 895,
+      "path": ".loop/reviewer_results/physics_reviewer.json",
+      "sha256": "531a96e228074d0a866aab6d6f4a06c3ccc82840f3a92e63abd32c11263b0b18"
+    },
+    {
+      "bytes": 896,
+      "path": ".loop/reviewer_results/software_reviewer.json",
+      "sha256": "52fa80e909207b9454c8cb595fec4810ef3f03befcfe63c0a8eba6cb4922478b"
+    },
+    {
+      "bytes": 1240,
+      "path": ".loop/stage_plan.json",
+      "sha256": "b795402976ffe932320095694200b3b54b626c3982c8816cfce921a3ebf9da78"
+    },
+    {
+      "bytes": 78,
+      "path": ".loop/state.json",
+      "sha256": "f51369e4465449ff55a7f00797dc8a9635bad4ea35fd12c1a51b13f11ae1407d"
+    },
+    {
+      "bytes": 600,
+      "path": ".loop/validation_summary.json",
+      "sha256": "acdfaddf5e001547d212342709ce1a7dca15f3e3bdb2a7fdcc56ee01d75ddfa2"
+    },
+    {
+      "bytes": 397,
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "e0bc040d82352121a7b195ca51fa9c2ac2c3d48b17394b796ea6069464ddbd9f"
+    },
+    {
+      "bytes": 796,
+      "path": "EXECUTION_REPORT.md",
+      "sha256": "68c4a27613a4bd713afaff339d7291b157aebc9aa6838c50b07bf68ef3c84acf"
+    },
+    {
+      "bytes": 1283,
+      "path": "STAGE_PLAN.md",
+      "sha256": "d4216ff8ea54d5141a4437b89bc6e987a6f54ac78960e4faa0a72ce7bbfa18c4"
+    },
+    {
+      "bytes": 129,
+      "path": "decision.json",
+      "sha256": "8ab5eea512ed15e2015563253b98f2fdf5be1cc49d1a8c8dc266910a03c04afe"
+    },
+    {
+      "bytes": 14,
+      "path": "input_snapshots/mock_old_expression.txt",
+      "sha256": "771a66b6e2f349fcba3cba646efb31e60db5b72530a4a98e3dabb134821f3154"
+    },
+    {
+      "bytes": 763,
+      "path": "input_snapshots/sigma_xxx_benchmark_metadata.json",
+      "sha256": "b8c82eef675818ad3fff7a4a777c4276c0d2da2fc2a31b1c06d8df06c2e2aa3f"
+    },
+    {
+      "bytes": 198,
+      "path": "output/mock_identity_difference.json",
+      "sha256": "7c7114149d7b0ed02678d2afa2c451450aa40a0c946ae92177a65bddf36a0148"
+    },
+    {
+      "bytes": 10,
+      "path": "output/mock_new_expression.txt",
+      "sha256": "e76d766cffbe535b18860c8e1144b39509a0fc419fe6367b345a8d4d8fc54c3e"
+    },
+    {
+      "bytes": 544,
+      "path": "reports/sigma_xxx_benchmark_registration.md",
+      "sha256": "b4032968d95f66a673a1bbe35a71c5eaa753cc996e5d1ea134810047988c1e09"
+    },
+    {
+      "bytes": 5083,
+      "path": "review_packet.md",
+      "sha256": "3f8773637eb4e73258bd0ddfb7c0f8db128a2fbfe0d9a2cb316f8ab5de27a15e"
+    },
+    {
+      "bytes": 1443,
+      "path": "review_result.json",
+      "sha256": "713f95715646fe3df217add515e6c00de4964a2061510f51559fde06fe34298e"
+    },
+    {
+      "bytes": 2961,
+      "path": "reviewer_agent_prompt.AlgebraReviewer.md",
+      "sha256": "0d89b8e052b13e1fe8b5834cdd4af1f55e1d573fb08aa4d589dfb215ade1df9c"
+    },
+    {
+      "bytes": 3002,
+      "path": "reviewer_agent_prompt.PhysicsReviewer.md",
+      "sha256": "18cd07a9033f4f452846526032312e41b61557247475bb41c03b9588838b79e7"
+    },
+    {
+      "bytes": 2983,
+      "path": "reviewer_agent_prompt.SoftwareReviewer.md",
+      "sha256": "1cd666a841265a3fafb9e3424975f3f360951327f9feeb67f622c576501b3b40"
+    },
+    {
+      "bytes": 600,
+      "path": "validation/validation_summary.json",
+      "sha256": "acdfaddf5e001547d212342709ce1a7dca15f3e3bdb2a7fdcc56ee01d75ddfa2"
+    }
+  ],
+  "forbidden_claims": [
+    "Do not override validation failures with reviewer approval.",
+    "Do not claim unvalidated physics from a structured local review.",
+    "Do not override validation failures with reviewer approval.",
+    "Do not claim unvalidated physics from a structured local review.",
+    "Do not override validation failures with reviewer approval.",
+    "Do not claim unvalidated physics from a structured local review."
+  ],
+  "input_snapshots": [
+    "input_snapshots/mock_old_expression.txt",
+    "input_snapshots/sigma_xxx_benchmark_metadata.json"
+  ],
+  "known_caveats": [
+    "Infrastructure-only smoke test; no physics simplification was run."
+  ],
+  "metrics": {
+    "after": {
+      "difference": "0",
+      "expanded_terms": 3,
+      "expression": "(x + 1)^2"
+    },
+    "before": {
+      "expression": "x^2 + 2 x + 1",
+      "terms": 3
+    },
+    "deltas": {
+      "identity_difference": "0"
+    },
+    "notes": [
+      "Toy exact identity used to smoke-test loop lifecycle."
+    ],
+    "stage_name": "000_polynomial_identity"
+  },
+  "output_artifacts": [
+    "output/mock_identity_difference.json",
+    "output/mock_new_expression.txt"
+  ],
+  "review_result": {
+    "allowed_claims": [
+      "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist.",
+      "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist.",
+      "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist."
+    ],
+    "blocking_issues": [],
+    "forbidden_claims": [
+      "Do not override validation failures with reviewer approval.",
+      "Do not claim unvalidated physics from a structured local review.",
+      "Do not override validation failures with reviewer approval.",
+      "Do not claim unvalidated physics from a structured local review.",
+      "Do not override validation failures with reviewer approval.",
+      "Do not claim unvalidated physics from a structured local review."
+    ],
+    "mathematical_status": {
+      "exact_reconstruction": true,
+      "overclaim_detected": false,
+      "regression_preserved": true,
+      "simplification_real": true
+    },
+    "next_action": "FREEZE",
+    "nonblocking_caveats": [],
+    "patch_instructions": [],
+    "review_scope": "routine_branch",
+    "reviewer_role": "IntegratorReview",
+    "source_review_files": [
+      ".loop/reviewer_results/algebra_reviewer.json",
+      ".loop/reviewer_results/physics_reviewer.json",
+      ".loop/reviewer_results/software_reviewer.json"
+    ],
+    "stage_name": "000_polynomial_identity",
+    "suggested_next_stage": null,
+    "verdict": "PASS"
+  },
+  "stage_name": "000_polynomial_identity",
+  "timestamp": "2026-06-28T19:20:57+00:00",
+  "validation_summary": {
+    "caveats": [
+      "Infrastructure-only smoke test; no physics simplification was run."
+    ],
+    "checks": [
+      {
+        "actual": "0",
+        "expected": "0",
+        "gate": "PASS",
+        "name": "mock_polynomial_identity",
+        "new": "(x + 1)^2",
+        "old": "x^2 + 2 x + 1"
+      }
+    ],
+    "identity_type": "OldMinusNewZero",
+    "overall_gate": "PASS",
+    "protected_regressions": [
+      {
+        "gate": "PASS",
+        "name": "sigma_xxx_benchmark_metadata_registered",
+        "source": "examples/sigma_xxx_case/benchmark_sigma_xxx_projection.json"
+      }
+    ],
+    "stage_name": "000_polynomial_identity"
+  }
+}

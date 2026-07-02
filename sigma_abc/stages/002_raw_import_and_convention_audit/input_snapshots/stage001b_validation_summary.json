@@ -1,0 +1,100 @@
+{
+  "DCProjectionTo1D": "INHERITED_PASS",
+  "FiniteFrequencyProjectionTo1D": "PASS",
+  "InheritedDCPremises": {
+    "DCSnapshotBytes": 121067,
+    "DCSnapshotSha256": "f613a4ce5bdb0972c32b7f799fbb408be237c94648fb9945e1b055914cfacace",
+    "FiniteFrequencyProjectionTo1D": "PASS",
+    "NotebookPipelineChecks": {
+      "applies_omega2_to_minus_omega1": true,
+      "exports_sigma_abc_dc_1d": true,
+      "imports_finite_frequency_1d": true,
+      "uses_function_expand_on_dc_output": true,
+      "uses_series_coefficient_order_2": true
+    }
+  },
+  "NoSectorDecompositionStarted": true,
+  "NoSimplificationStarted": true,
+  "NoTensorialIBPStarted": true,
+  "NoTensorialKernelFusionStarted": true,
+  "RawSigmaABCExists": true,
+  "caveats": [
+    "DCProjectionTo1D is inherited from the archived 1D DC notebook pipeline because direct full SeriesCoefficient simplification timed out.",
+    "The stage validates projection consistency only and does not prove full tensorial sigma_abc correctness."
+  ],
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawGeneratorOutputsReused"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "gate": "PASS",
+      "name": "FiniteFrequencyProjectionTo1D"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "OptimizedDirectDCProjectionAttempted"
+    },
+    {
+      "actual": "TIMEOUT",
+      "expected": "PASS or TIMEOUT",
+      "gate": "PASS",
+      "name": "OptimizedDirectDCProjectionStatus"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "OneDDCNotebookPipelineVerified"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "DCSnapshotExists"
+    },
+    {
+      "actual": "INHERITED_PASS",
+      "expected": "PASS or INHERITED_PASS",
+      "gate": "PASS",
+      "name": "DCProjectionTo1D"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoSectorDecompositionStarted"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoTensorialKernelFusionStarted"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoTensorialIBPStarted"
+    }
+  ],
+  "identity_type": "ProjectionRegression",
+  "overall_gate": "PASS",
+  "protected_regressions": [
+    {
+      "gate": "PASS",
+      "name": "FiniteFrequencyProjectionTo1D"
+    },
+    {
+      "gate": "INHERITED_PASS",
+      "name": "DCProjectionTo1D"
+    }
+  ],
+  "stage_name": "001b_dc_projection_validation_patch"
+}

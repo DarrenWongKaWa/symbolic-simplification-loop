@@ -1,0 +1,6 @@
+agent: digest_reviewer
+mode: structured_mailbox
+runtime: codex_subagent
+requires_read_only_contract: true
+output_contract: schema_validated_json_or_markdown
+forbidden: [uncontrolled_free_form_chat, bypass_decision_engine]

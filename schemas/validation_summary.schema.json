@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ValidationSummary",
+  "type": "object",
+  "required": ["stage_name", "overall_gate", "checks"],
+  "properties": {
+    "stage_name": { "type": "string", "minLength": 1 },
+    "overall_gate": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED", "UNKNOWN"] },
+    "identity_type": {
+      "type": "string",
+      "enum": ["OldMinusNewZero", "IBPEquivalence", "ProjectionRegression", "NumericalRegression", "RowProvenanceHashConservation", "Mixed", "NotApplicable"]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "gate"],
+        "properties": {
+          "name": { "type": "string" },
+          "expected": {},
+          "actual": {},
+          "gate": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED", "UNKNOWN"] }
+        },
+        "additionalProperties": true
+      }
+    },
+    "protected_regressions": { "type": "array" },
+    "caveats": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

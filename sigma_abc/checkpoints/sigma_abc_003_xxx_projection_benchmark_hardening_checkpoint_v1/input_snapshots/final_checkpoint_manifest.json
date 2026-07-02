@@ -1,0 +1,37 @@
+{
+  "checkpoint_name": "projected_xxx_symbolic_simplification_process_summary_v1",
+  "paired_theoretical_checkpoint": "sigma_xxx_theoretical_derivation_supplement_v1",
+  "scope": "projected one-dimensional sigma^xxx, not full tensorial sigma_abc",
+  "final_basis": ["K_c", "K_R", "K_ReL", "K_ImL"],
+  "progression": {
+    "raw_rows": 118,
+    "coefficient_rows": 208,
+    "fused_kernels": 7,
+    "surviving_kernels": 4,
+    "pair_residual_to_cokernel": "10 -> 6 -> 0"
+  },
+  "validation": {
+    "DeltaKR": "0",
+    "ThirdPassCokernel": "0",
+    "FinalSurvivingKernelCount": 4,
+    "AnanEq6Regression": "INHERITED_PASS",
+    "Modify4ToModify5RiceMeleConsistency": "PASS"
+  },
+  "allowed_claims": [
+    "projected pair velocity sectors are IBP-exact at the final checkpoint",
+    "projected pair sector reduces modulo BZ total derivatives to the pair shift-vector kernel",
+    "final projected basis contains K_c, K_R, K_ReL, and K_ImL"
+  ],
+  "forbidden_claims": [
+    "full tensorial sigma_abc derivation",
+    "full equality to Anan Eq.(5)",
+    "general center or loop sector vanishing"
+  ],
+  "source_artifacts": [
+    "modify4_anan/projected_xxx_symbolic_simplification_process_summary_v1",
+    "modify4_anan/sigma_xxx_theoretical_derivation_supplement_v1",
+    "modify4_anan/projected_xxx_reduced_pair_shift_final",
+    "modify4_anan/modify4_to_modify5_rice_mele_consistency"
+  ]
+}
+

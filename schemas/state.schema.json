@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LoopState",
+  "type": "object",
+  "required": ["stage_name", "status"],
+  "properties": {
+    "stage_name": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT_PLAN",
+        "READY_TO_EXECUTE",
+        "EXECUTING",
+        "VALIDATING",
+        "READY_FOR_REVIEW",
+        "UNDER_REVIEW",
+        "NEEDS_PATCH",
+        "PASS_CHECKPOINT",
+        "PASS_WITH_CAVEAT",
+        "FAILED",
+        "FROZEN"
+      ]
+    },
+    "updated_at": { "type": "string" }
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,75 @@
+{
+  "DCProjectionTo1D": "TIMEOUT",
+  "FiniteFrequencyProjectionTo1D": "PASS",
+  "MathematicaCommands": [
+    {
+      "command": "wolframscript -code src=\"/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/low_frequency/abc_w1_w2_1D.txt\"; dc=\"/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/low_frequency/Sigma_abc_dc_1D.txt\"; expr=ToExpression[Import[src,\"Text\"], InputForm]; target=ToExpression[Import[dc,\"Text\"], InputForm]; res=TimeConstrained[Quiet@FullSimplify[SeriesCoefficient[expr /. \\[Omega]2 -> -\\[Omega]1, {\\[Omega]1,0,2}] - target], 180, $TimedOut]; Print[If[res===$TimedOut,\"TIMEOUT\",ToString[res===0]]];",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "TIMEOUT\nNull"
+    }
+  ],
+  "NoSimplificationStarted": true,
+  "RawSigmaABCExists": true,
+  "caveats": [
+    "The tensorial candidate is a direction-label lift from 1D sources, not a full tensorial correctness proof.",
+    "DC series projection benchmark timed out; Stage 001 is not eligible for checkpoint freeze."
+  ],
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawSigmaABCExists"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "gate": "PASS",
+      "name": "FiniteFrequencyProjectionTo1D"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "gate": "PASS",
+      "name": "DCDirectSourceProjectionTo1D"
+    },
+    {
+      "actual": "TIMEOUT",
+      "expected": "PASS",
+      "gate": "FAIL",
+      "name": "DCProjectionTo1D"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoSimplificationStarted"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoTensorialKernelFusionStarted"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoTensorialIBPStarted"
+    }
+  ],
+  "identity_type": "ProjectionRegression",
+  "overall_gate": "FAIL",
+  "protected_regressions": [
+    {
+      "gate": "PASS",
+      "name": "finite_frequency_xxx_projection_to_low_frequency_1d"
+    },
+    {
+      "gate": "TIMEOUT",
+      "name": "dc_series_projection_to_sigma_abc_dc_1d"
+    }
+  ],
+  "stage_name": "001_raw_generator_from_low_frequency_code"
+}

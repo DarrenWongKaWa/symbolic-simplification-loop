@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MetaReviewResult",
+  "type": "object",
+  "required": [
+    "verdict",
+    "stage_name",
+    "scientific_status",
+    "engineering_status",
+    "allowed_claims",
+    "forbidden_claims",
+    "caveats_to_preserve",
+    "boundary_audit",
+    "next_safe_stage",
+    "human_approval_required",
+    "short_human_summary"
+  ],
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": ["PASS", "PASS_WITH_CAVEAT", "NEEDS_PATCH", "FAILED"]
+    },
+    "stage_name": { "type": "string", "minLength": 1 },
+    "scientific_status": { "type": "string" },
+    "engineering_status": { "type": "string" },
+    "allowed_claims": { "type": "array", "items": { "type": "string" } },
+    "forbidden_claims": { "type": "array", "items": { "type": "string" } },
+    "caveats_to_preserve": { "type": "array", "items": { "type": "string" } },
+    "boundary_audit": {
+      "type": "object",
+      "required": [
+        "overclaim_detected",
+        "full_tensorial_claim_detected",
+        "ibp_started_without_approval",
+        "dc_caveat_preserved"
+      ],
+      "properties": {
+        "overclaim_detected": { "type": "boolean" },
+        "full_tensorial_claim_detected": { "type": "boolean" },
+        "ibp_started_without_approval": { "type": "boolean" },
+        "dc_caveat_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "next_safe_stage": { "type": ["string", "null"] },
+    "human_approval_required": { "type": "boolean" },
+    "short_human_summary": { "type": "string" },
+    "blocking_issues": { "type": "array", "items": { "type": "string" } },
+    "source_files": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

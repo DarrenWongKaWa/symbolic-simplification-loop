@@ -1,0 +1,20 @@
+{
+  "allowed_use": "raw input registration, convention audit, raw sector ledger decomposition",
+  "forbidden_use": [
+    "full tensorial correctness claim",
+    "tensorial kernel fusion",
+    "tensorial IBP reduction"
+  ],
+  "object": "sigma_abc_raw_input_manifest",
+  "official_finite_frequency_raw_input": "sigma_abc/checkpoints/sigma_abc_001_raw_generator_checkpoint_v1/raw/raw_sigma_abc_finite_frequency.wl",
+  "official_raw_input": "sigma_abc/checkpoints/sigma_abc_001_raw_generator_checkpoint_v1/raw/raw_sigma_abc.wl",
+  "raw_expression_sha256": "35f5e793be9f770f13f61e93f95d52254a4ad12b792e076a5b364585a77e6cb8",
+  "raw_finite_frequency_sha256": "43c6f73273e98df1bde381c3c6e5bed4d4b8bc9859f855592b44162c6c308b46",
+  "registered_at": "2026-06-28T18:57:06+00:00",
+  "source_checkpoint": "sigma_abc/checkpoints/sigma_abc_001_raw_generator_checkpoint_v1",
+  "stage001_dc_caveat": "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+  "stage001_validation": {
+    "DCProjectionTo1D": "INHERITED_PASS",
+    "FiniteFrequencyProjectionTo1D": "PASS"
+  }
+}

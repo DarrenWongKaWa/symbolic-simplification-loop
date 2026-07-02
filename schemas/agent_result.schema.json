@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentResult",
+  "type": "object",
+  "required": ["verdict", "stage_name"],
+  "properties": {
+    "verdict": { "type": "string" },
+    "stage_name": { "type": "string" },
+    "blocking_issues": { "type": "array", "items": { "type": "string" } },
+    "source_files": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

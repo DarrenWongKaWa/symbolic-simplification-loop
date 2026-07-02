@@ -1,0 +1,42 @@
+{
+  "allowed_transformations": [
+    "Raw additive term partition",
+    "Exact reconstruction by term provenance"
+  ],
+  "claim_boundary": {
+    "allowed_claims": [
+      "Raw sector decomposition ledger exactly reconstructs the expanded raw expression."
+    ],
+    "forbidden_claims": [
+      "Sector ledger is a fused physical kernel formula.",
+      "Tensorial IBP has started."
+    ]
+  },
+  "expected_outputs": [
+    "output/sector_decomposition.wl",
+    "output/sector_ledger.csv",
+    "output/sector_counts.json",
+    "validation/sector_decomposition_validation.wl",
+    "reports/sector_decomposition_report.md"
+  ],
+  "forbidden_transformations": [
+    "Kernel fusion",
+    "IBP reduction",
+    "Physical basis reduction",
+    "Full tensorial correctness claim"
+  ],
+  "goal": "Decompose the raw tensorial expression into raw sector ledgers without simplifying.",
+  "input_snapshots": [
+    "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+    "input_snapshots/stage001b_validation_summary.json"
+  ],
+  "next_stage_trigger": "Proceed to Stage 005 only if exact reconstruction passes.",
+  "protected_regressions": [
+    "Stage001DCCaveatPreserved"
+  ],
+  "stage_name": "004_tensorial_raw_sector_decomposition_ledger",
+  "validation_identity": {
+    "expression": "raw_sigma_abc - (center_sector + pair_sector + loop_sector) == 0",
+    "type": "ProjectionRegression"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "after": {
+    "difference": "0",
+    "expanded_terms": 3,
+    "expression": "(x + 1)^2"
+  },
+  "before": {
+    "expression": "x^2 + 2 x + 1",
+    "terms": 3
+  },
+  "deltas": {
+    "identity_difference": "0"
+  },
+  "notes": [
+    "Toy exact identity used to smoke-test loop lifecycle."
+  ],
+  "stage_name": "000_polynomial_identity"
+}

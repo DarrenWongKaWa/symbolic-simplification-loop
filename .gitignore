@@ -1,0 +1,35 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+*.pyc
+*.pyo
+*.aux
+*.log
+*.out
+*.toc
+.DS_Store
+.env
+__MACOSX/
+.claude/
+
+# Generated artifacts
+autonomous_runs/
+# Patch (Loop Skill / Repo Integration Patch): pytest-time
+# sandbox (autonomous_runs_test/) used by tests/test_autonomous_loop_runner.py
+# and tests/test_loop020a_runner_path_hygiene.py via LOOP_RUN_ROOT.
+autonomous_runs_test/
+reports/
+
+# Local-only machine-specific runtime config
+agents/runtime.local.yaml
+
+# Archived local-run snapshots
+archive/local_runs/
+
+# Loop-engine bytecode caches from prior runs
+loop_engine/__pycache__/
+schemas/__pycache__/
+scripts/__pycache__/
+tests/__pycache__/

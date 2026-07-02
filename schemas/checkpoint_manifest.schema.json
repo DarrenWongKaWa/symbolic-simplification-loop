@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CheckpointManifest",
+  "type": "object",
+  "required": [
+    "stage_name",
+    "timestamp",
+    "input_snapshots",
+    "output_artifacts",
+    "validation_summary",
+    "review_result",
+    "allowed_claims",
+    "forbidden_claims",
+    "metrics",
+    "known_caveats",
+    "files"
+  ],
+  "properties": {
+    "stage_name": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "minLength": 1 },
+    "input_snapshots": { "type": "array", "items": { "type": "string" } },
+    "output_artifacts": { "type": "array", "items": { "type": "string" } },
+    "validation_summary": { "type": "object" },
+    "review_result": { "type": "object" },
+    "allowed_claims": { "type": "array", "items": { "type": "string" } },
+    "forbidden_claims": { "type": "array", "items": { "type": "string" } },
+    "metrics": { "type": "object" },
+    "known_caveats": { "type": "array", "items": { "type": "string" } },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "properties": {
+          "path": { "type": "string" },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

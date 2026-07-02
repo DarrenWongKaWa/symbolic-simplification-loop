@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DigestReviewerResult",
+  "type": "object",
+  "required": ["verdict", "stage_name", "overclaim_detected", "dc_caveat_preserved", "named_digest_paths"],
+  "properties": {
+    "verdict": { "type": "string", "enum": ["PASS", "PASS_WITH_CAVEAT", "NEEDS_PATCH", "FAILED"] },
+    "stage_name": { "type": "string" },
+    "overclaim_detected": { "type": "boolean" },
+    "dc_caveat_preserved": { "type": "boolean" },
+    "named_digest_paths": { "type": "array", "items": { "type": "string" } },
+    "blocking_issues": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

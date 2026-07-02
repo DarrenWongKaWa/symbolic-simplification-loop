@@ -1,0 +1,37 @@
+{
+  "allowed_transformations": [
+    "Exact polynomial expansion."
+  ],
+  "claim_boundary": {
+    "allowed_claims": [
+      "The mock polynomial identity validates through the loop infrastructure.",
+      "The stage lifecycle can build packet, review, decide, and freeze."
+    ],
+    "forbidden_claims": [
+      "sigma_abc simplification has started.",
+      "The framework has performed any physics simplification."
+    ]
+  },
+  "expected_outputs": [
+    "output/mock_new_expression.txt",
+    "output/mock_identity_difference.json",
+    ".loop/validation_summary.json"
+  ],
+  "forbidden_transformations": [
+    "Do not perform any sigma_abc physics simplification.",
+    "Do not discard terms by intuition."
+  ],
+  "goal": "Verify a mock symbolic identity through the full loop lifecycle.",
+  "input_snapshots": [
+    "input_snapshots/mock_old_expression.txt"
+  ],
+  "next_stage_trigger": "Freeze only after validation PASS and reviewer PASS.",
+  "protected_regressions": [
+    "sigma_xxx benchmark metadata remains registered for future tensorial projects."
+  ],
+  "stage_name": "000_polynomial_identity",
+  "validation_identity": {
+    "expression": "Old - New == 0 for Old=x^2+2x+1 and New=(x+1)^2",
+    "type": "OldMinusNewZero"
+  }
+}

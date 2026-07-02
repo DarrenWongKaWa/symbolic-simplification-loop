@@ -1,0 +1,45 @@
+{
+  "allowed_transformations": [
+    "Define raw-expression contract",
+    "Create Missing[\"NotGeneratedYet\"] placeholder template",
+    "Register existing sigma_xxx benchmark metadata"
+  ],
+  "claim_boundary": {
+    "allowed_claims": [
+      "Raw contract exists",
+      "Raw generation is needed",
+      "sigma_xxx projection benchmark is registered"
+    ],
+    "forbidden_claims": [
+      "raw_sigma_abc.wl exists",
+      "sigma_abc simplification has started",
+      "full tensorial formula is correct"
+    ]
+  },
+  "expected_outputs": [
+    "raw/RAW_SIGMA_ABC_CONTRACT.md",
+    "raw/raw_sigma_abc.template.wl",
+    "benchmarks/sigma_xxx_projection_benchmark.md",
+    "stages/000_raw_contract/.loop/validation_summary.json"
+  ],
+  "forbidden_transformations": [
+    "Generate raw_sigma_abc.wl",
+    "Start symbolic simplification",
+    "Claim raw availability"
+  ],
+  "goal": "Define raw sigma_abc expression contract and benchmark registration without generating the raw expression.",
+  "input_snapshots": [
+    "examples/sigma_xxx_case/benchmark_sigma_xxx_projection.json",
+    "examples/sigma_xxx_case/final_checkpoint_manifest.json"
+  ],
+  "next_stage_trigger": "Open raw generation or raw transcription stage.",
+  "protected_regressions": [
+    "sigma_xxx projection benchmark metadata registered"
+  ],
+  "stage_name": "000_raw_contract",
+  "validation_identity": {
+    "expression": "ContractReadyQ && !RawSigmaABCExists && RawGenerationNeeded",
+    "type": "NumericalRegression"
+  }
+}
+

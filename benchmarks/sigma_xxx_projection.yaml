@@ -1,0 +1,16 @@
+protected_benchmark: sigma_xxx_projection
+source_case: examples/sigma_xxx_case/
+future_project: sigma_abc
+protected_gates:
+  - SigmaXXXBenchmarkRegistered
+  - ProjectionRuleDefined
+  - RawLevelProjectionAvailable
+  - Stage001DCCaveatPreserved
+caveats:
+  stage001_dc_projection: INHERITED_PASS
+  scope: projected one-dimensional xxx benchmark, not full tensorial sigma_abc proof
+allowed_claims:
+  - sigma_xxx is registered as future projection benchmark metadata.
+forbidden_claims:
+  - sigma_abc simplification has started.
+  - full tensorial sigma_abc correctness has been proven.

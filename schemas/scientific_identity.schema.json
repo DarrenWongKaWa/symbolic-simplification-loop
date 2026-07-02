@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ScientificIdentity",
+  "type": "object",
+  "required": ["label", "latex", "role"],
+  "properties": {
+    "label": { "type": "string", "minLength": 1 },
+    "latex": { "type": "string", "minLength": 1 },
+    "check": {},
+    "role": { "type": "string" },
+    "blocking": { "type": "boolean" }
+  },
+  "additionalProperties": true
+}

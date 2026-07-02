@@ -1,0 +1,52 @@
+{
+  "FrequencyConventionAuditComplete": true,
+  "ProjectionRuleXXXRecorded": true,
+  "RawExpressionExists": true,
+  "RawExpressionHashRecorded": true,
+  "Stage001DCCaveatPreserved": true,
+  "TensorConventionAuditComplete": true,
+  "caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+  ],
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawExpressionExists"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawExpressionHashRecorded"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "TensorConventionAuditComplete"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "FrequencyConventionAuditComplete"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "ProjectionRuleXXXRecorded"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "Stage001DCCaveatPreserved"
+    }
+  ],
+  "identity_type": "ProjectionRegression",
+  "overall_gate": "PASS",
+  "stage_name": "002_raw_import_and_convention_audit"
+}

@@ -1,0 +1,18 @@
+{
+  "verdict": "PASS",
+  "stage_name": "<stage_name>",
+  "mathematical_status": {
+    "exact_reconstruction": true,
+    "simplification_real": true,
+    "regression_preserved": true,
+    "overclaim_detected": false
+  },
+  "blocking_issues": [],
+  "nonblocking_caveats": [],
+  "allowed_claims": [],
+  "forbidden_claims": [],
+  "next_action": "FREEZE",
+  "suggested_next_stage": null,
+  "patch_instructions": []
+}
+

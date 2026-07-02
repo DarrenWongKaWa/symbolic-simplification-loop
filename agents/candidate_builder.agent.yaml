@@ -1,0 +1,6 @@
+agent: candidate_builder
+mode: structured_mailbox
+runtime: codex_subagent
+requires_read_only_contract: true
+output_contract: schema_validated_hypothesis_artifact
+forbidden: [edit_frozen_outputs, bypass_verifier_service, claim_unverified_conjecture]

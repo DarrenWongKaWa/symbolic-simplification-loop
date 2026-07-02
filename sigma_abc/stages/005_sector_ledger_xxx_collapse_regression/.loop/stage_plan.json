@@ -1,0 +1,42 @@
+{
+  "allowed_transformations": [
+    "xxx projection of raw sector ledger",
+    "Raw-level projection regression"
+  ],
+  "claim_boundary": {
+    "allowed_claims": [
+      "Raw sector ledger collapses to the projected 1D finite-frequency source under xxx projection."
+    ],
+    "forbidden_claims": [
+      "Full reduced sigma_xxx kernel equality has been proven from tensorial sigma_abc.",
+      "Tensorial simplification has started."
+    ]
+  },
+  "expected_outputs": [
+    "validation/sector_ledger_xxx_collapse_validation.wl",
+    "reports/sector_ledger_xxx_collapse_report.md",
+    "output/sector_ledger_xxx_projection_summary.json"
+  ],
+  "forbidden_transformations": [
+    "Kernel-level projection benchmark",
+    "Kernel fusion",
+    "IBP reduction",
+    "Full tensorial correctness claim"
+  ],
+  "goal": "Check that the tensorial sector ledger collapses to the known projected 1D xxx source structure.",
+  "input_snapshots": [
+    "input_snapshots/sector_decomposition.wl",
+    "input_snapshots/sector_counts.json",
+    "input_snapshots/abc_w1_w2_1D.txt",
+    "input_snapshots/stage001b_validation_summary.json"
+  ],
+  "next_stage_trigger": "If all preparation stages pass, recommend Stage 006 architecture review but do not start it.",
+  "protected_regressions": [
+    "Stage001DCCaveatPreserved"
+  ],
+  "stage_name": "005_sector_ledger_xxx_collapse_regression",
+  "validation_identity": {
+    "expression": "ProjectXXX[center + pair + loop] - abc_w1_w2_1D == 0",
+    "type": "ProjectionRegression"
+  }
+}

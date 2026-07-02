@@ -1,0 +1,19 @@
+project: mock
+description: Two-stage autonomous-loop smoke project.
+stages:
+  - id: mock_000_identity
+    goal: Verify Old=x^2+2x+1 and New=(x+1)^2.
+    tags: [mock, no_simplification]
+    kind: polynomial_identity
+    old: x^2 + 2 x + 1
+    new: (x + 1)^2
+    expanded_new: x^2 + 2 x + 1
+    expected_difference: "0"
+  - id: mock_001_identity
+    goal: Verify Old=y^2-1 and New=(y-1)(y+1).
+    tags: [mock, no_simplification]
+    kind: polynomial_identity
+    old: y^2 - 1
+    new: (y - 1)(y + 1)
+    expanded_new: y^2 - 1
+    expected_difference: "0"

@@ -1,0 +1,51 @@
+profile: test_hypothesis_search_loop
+autonomy:
+  allow_physics_simplification: false
+  allow_kernel_fusion: false
+  allow_ibp_reduction: false
+  max_stages_per_run: 1
+  stop_after_stage: mock_000_identity
+allowed_stage_ids:
+  - mock_000_identity
+review:
+  mode: codex_subagent
+  scope: routine_branch
+reporting:
+  build_stage_digest: true
+  require_human_readable_review: true
+  require_meta_review: true
+  named_stage_digest: true
+  require_stage_digest: true
+  require_digest_review: true
+agents:
+  allow_stub_for_tests: true
+  require_real_invocation: false
+  forbid_stub_in_production: false
+  require_invocation_evidence: true
+  require_read_only_contract: true
+  require_mailbox_events: true
+orchestration:
+  use_mailbox: true
+  require_patch_planner_for_patch: true
+  max_patch_attempts_per_stage: 2
+patching:
+  max_patch_attempts_per_stage: 2
+  allow_report_only_patch: true
+  allow_validation_patch: true
+  allow_symbolic_patch: false
+  require_patch_plan: true
+hypothesis_search:
+  enabled: true
+  max_conjectures_per_stage: 2
+  max_candidates_per_conjecture: 1
+  max_total_candidate_attempts: 2
+  archive_failed_conjectures: true
+  allow_ibp_conjectures: false
+  allow_total_derivative_conjectures: false
+  promote_only_verified_candidates: true
+  require_candidate_ranking: true
+hard_stop_policy: sigma_abc_hard_stops
+benchmark_policy: sigma_xxx_projection
+human_signoff:
+  auto_for_tests: true
+  signed_by: pytest_profile

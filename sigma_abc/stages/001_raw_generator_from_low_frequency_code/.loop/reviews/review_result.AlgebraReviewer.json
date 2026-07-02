@@ -1,0 +1,41 @@
+{
+  "allowed_claims": [
+    "A candidate tensorial raw wrapper was generated from low_frequency 1D sources.",
+    "The finite-frequency xxx projection of the candidate wrapper returns the archived 1D source.",
+    "No tensorial simplification, kernel fusion, or IBP reduction was started."
+  ],
+  "blocking_issues": [
+    "The DC xxx projection benchmark did not complete within the configured timeout."
+  ],
+  "forbidden_claims": [
+    "The full tensorial sigma_{mu alpha beta} formula is correct.",
+    "The raw sigma_abc candidate is validated for import.",
+    "The DC projection benchmark passed.",
+    "Tensorial sector decomposition or simplification has started."
+  ],
+  "mathematical_status": {
+    "exact_reconstruction": false,
+    "overclaim_detected": false,
+    "regression_preserved": false,
+    "simplification_real": false
+  },
+  "next_action": "FAIL",
+  "nonblocking_caveats": [
+    "Finite-frequency projection is a text-level exact regression of the direction-label lift.",
+    "DC source projection is direct-source text regression, not the required finite-frequency series derivation.",
+    "DC series benchmark timed out, so Stage 001 blocks the overnight chain."
+  ],
+  "patch_instructions": [
+    "Optimize or source a trusted DC benchmark derivation before rerunning Stage 001."
+  ],
+  "review_scope": "routine_branch",
+  "reviewer_role": "AlgebraReviewer",
+  "source_review_files": [
+    "review_packet.md",
+    "validation/validation_summary.json",
+    "validation/dc_series_projection_attempt.log"
+  ],
+  "stage_name": "001_raw_generator_from_low_frequency_code",
+  "suggested_next_stage": "rerun_stage_001_with_successful_dc_projection_benchmark",
+  "verdict": "FAILED"
+}

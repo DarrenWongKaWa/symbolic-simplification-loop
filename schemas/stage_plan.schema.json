@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StagePlan",
+  "type": "object",
+  "required": [
+    "stage_name",
+    "goal",
+    "input_snapshots",
+    "expected_outputs",
+    "allowed_transformations",
+    "validation_identity",
+    "protected_regressions",
+    "claim_boundary",
+    "next_stage_trigger"
+  ],
+  "properties": {
+    "stage_name": { "type": "string", "minLength": 1 },
+    "goal": { "type": "string", "minLength": 1 },
+    "input_snapshots": { "type": "array", "items": { "type": "string" } },
+    "expected_outputs": { "type": "array", "items": { "type": "string" } },
+    "allowed_transformations": { "type": "array", "items": { "type": "string" } },
+    "forbidden_transformations": { "type": "array", "items": { "type": "string" } },
+    "validation_identity": {
+      "type": "object",
+      "required": ["type", "expression"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["OldMinusNewZero", "IBPEquivalence", "ProjectionRegression", "NumericalRegression"]
+        },
+        "expression": { "type": "string", "minLength": 1 },
+        "tolerance": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "protected_regressions": { "type": "array", "items": { "type": "string" } },
+    "claim_boundary": {
+      "type": "object",
+      "required": ["allowed_claims", "forbidden_claims"],
+      "properties": {
+        "allowed_claims": { "type": "array", "items": { "type": "string" } },
+        "forbidden_claims": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "next_stage_trigger": { "type": "string" }
+  },
+  "additionalProperties": false
+}
+

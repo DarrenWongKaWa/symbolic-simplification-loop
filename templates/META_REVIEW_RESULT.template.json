@@ -1,0 +1,20 @@
+{
+  "verdict": "PASS_WITH_CAVEAT",
+  "stage_name": "stage_id",
+  "scientific_status": "PASS as stage-local checkpoint, with preserved caveats.",
+  "engineering_status": "Validation and structured review artifacts are present.",
+  "allowed_claims": [],
+  "forbidden_claims": [],
+  "caveats_to_preserve": [],
+  "boundary_audit": {
+    "overclaim_detected": false,
+    "full_tensorial_claim_detected": false,
+    "ibp_started_without_approval": false,
+    "dc_caveat_preserved": true
+  },
+  "next_safe_stage": null,
+  "human_approval_required": true,
+  "short_human_summary": "Stage may freeze with caveats.",
+  "blocking_issues": [],
+  "source_files": []
+}

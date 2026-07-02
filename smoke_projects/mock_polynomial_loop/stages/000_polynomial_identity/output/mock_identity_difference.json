@@ -1,0 +1,12 @@
+{
+  "difference": "0",
+  "difference_coefficients": {
+    "1": 0,
+    "x": 0,
+    "x^2": 0
+  },
+  "expanded_new": "x^2 + 2 x + 1",
+  "gate": "PASS",
+  "new": "(x + 1)^2",
+  "old": "x^2 + 2 x + 1"
+}

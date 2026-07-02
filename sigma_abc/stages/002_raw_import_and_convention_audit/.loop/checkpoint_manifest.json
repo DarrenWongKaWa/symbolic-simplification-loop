@@ -1,0 +1,251 @@
+{
+  "allowed_claims": [
+    "Raw input candidate is registered for preparation stages.",
+    "Tensor, frequency, Gamma, and xxx projection conventions are audited."
+  ],
+  "files": [
+    {
+      "bytes": 351,
+      "path": ".loop/decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 347,
+      "path": ".loop/metrics.json",
+      "sha256": "5972d0c792f1a062561edd5247a14fcc8f854269584ff473b51852572b9051b1"
+    },
+    {
+      "bytes": 1166,
+      "path": ".loop/review_result.json",
+      "sha256": "5a44815bf074941d147be33f834766694ae3b792f8fdb930ccad1f05c6393658"
+    },
+    {
+      "bytes": 1062,
+      "path": ".loop/reviews/review_result.AlgebraReviewer.json",
+      "sha256": "f7a7a9cb628827efe8a600e4ffd883d91ab51c2e81791c02444b1a9ac9be406a"
+    },
+    {
+      "bytes": 1062,
+      "path": ".loop/reviews/review_result.PhysicsReviewer.json",
+      "sha256": "2739724699304818fb58e4ecf7a8ef5dc6efaf54c56e869ed99f847635613208"
+    },
+    {
+      "bytes": 1063,
+      "path": ".loop/reviews/review_result.SoftwareReviewer.json",
+      "sha256": "e150089335e702345f314bceb421edb6b2972ccc9ead75b50f1c46a2b8573e5e"
+    },
+    {
+      "bytes": 1750,
+      "path": ".loop/stage_plan.json",
+      "sha256": "f581366524344d2b5eee4a2a3b47b1337159a7787dcac5cc5440c17ef58f97ab"
+    },
+    {
+      "bytes": 1329,
+      "path": ".loop/validation_summary.json",
+      "sha256": "34a033242d100c72ceb3cc1fa531f9d1d665daf7b559de50cdcc16986a63f629"
+    },
+    {
+      "bytes": 493,
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "0b0ba1732a9ab5944bc1791a63ef725a07705e7002bdb13a2c51d84889567724"
+    },
+    {
+      "bytes": 1760,
+      "path": "EXECUTION_REPORT.md",
+      "sha256": "f0ac5e8a8121d64fb40f37410e41bf9dc5a387dd20b1f9c05e87e52a6264a819"
+    },
+    {
+      "bytes": 760,
+      "path": "STAGE_PLAN.md",
+      "sha256": "e92b450fc13c3d623b178a26ab9e9efb6dc6feb5e2d4c0054624ab974e7c0cdb"
+    },
+    {
+      "bytes": 351,
+      "path": "decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 1263,
+      "path": "input_snapshots/raw_sigma_abc.wl",
+      "sha256": "35f5e793be9f770f13f61e93f95d52254a4ad12b792e076a5b364585a77e6cb8"
+    },
+    {
+      "bytes": 113942,
+      "path": "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+      "sha256": "43c6f73273e98df1bde381c3c6e5bed4d4b8bc9859f855592b44162c6c308b46"
+    },
+    {
+      "bytes": 1569,
+      "path": "input_snapshots/raw_sigma_abc_manifest.json",
+      "sha256": "fef1373c260afb21b704232ea1e88cc42ef6b8c3a279955ebc416b61489239a4"
+    },
+    {
+      "bytes": 12670,
+      "path": "input_snapshots/stage001b_checkpoint_manifest.json",
+      "sha256": "0ab7e9a3608a8cd1b44517febc1d9c4a5c40637a56f4d06f5e9dd50b44a91324"
+    },
+    {
+      "bytes": 2632,
+      "path": "input_snapshots/stage001b_validation_summary.json",
+      "sha256": "e959b252720e0807ee9330ab55a7362776b5e9f8666f6cafb40c806a34eacb07"
+    },
+    {
+      "bytes": 1727,
+      "path": "review_packet.md",
+      "sha256": "491c77284c858fa33d7760969f3049d3bf3977e23abe459a4fe83511abb7a59b"
+    },
+    {
+      "bytes": 1062,
+      "path": "review_result.AlgebraReviewer.json",
+      "sha256": "f7a7a9cb628827efe8a600e4ffd883d91ab51c2e81791c02444b1a9ac9be406a"
+    },
+    {
+      "bytes": 1062,
+      "path": "review_result.PhysicsReviewer.json",
+      "sha256": "2739724699304818fb58e4ecf7a8ef5dc6efaf54c56e869ed99f847635613208"
+    },
+    {
+      "bytes": 1063,
+      "path": "review_result.SoftwareReviewer.json",
+      "sha256": "e150089335e702345f314bceb421edb6b2972ccc9ead75b50f1c46a2b8573e5e"
+    },
+    {
+      "bytes": 1166,
+      "path": "review_result.json",
+      "sha256": "5a44815bf074941d147be33f834766694ae3b792f8fdb930ccad1f05c6393658"
+    },
+    {
+      "bytes": 363,
+      "path": "reviewer_agent_prompt.AlgebraReviewer.md",
+      "sha256": "3a0775e4e871698872ad7a5fee6d99c5b1f76cdca0de91a55fdc17f5746ddf46"
+    },
+    {
+      "bytes": 363,
+      "path": "reviewer_agent_prompt.PhysicsReviewer.md",
+      "sha256": "bb10ad864152dcc01e99915de2f0f469de96101d5b52691e0dedfd69ff324bdc"
+    },
+    {
+      "bytes": 364,
+      "path": "reviewer_agent_prompt.SoftwareReviewer.md",
+      "sha256": "25940fa419cf99f9acaf50dc6e6bf6f1f1d7ae458804afd3d6cf2c47f60f26db"
+    },
+    {
+      "bytes": 1329,
+      "path": "validation/validation_summary.json",
+      "sha256": "34a033242d100c72ceb3cc1fa531f9d1d665daf7b559de50cdcc16986a63f629"
+    }
+  ],
+  "forbidden_claims": [
+    "Full tensorial sigma_abc correctness is proven.",
+    "Tensorial simplification has started."
+  ],
+  "input_snapshots": [
+    "input_snapshots/raw_sigma_abc.wl",
+    "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+    "input_snapshots/raw_sigma_abc_manifest.json",
+    "input_snapshots/stage001b_checkpoint_manifest.json",
+    "input_snapshots/stage001b_validation_summary.json"
+  ],
+  "known_caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+  ],
+  "metrics": {
+    "after": {
+      "overall_gate": "PASS"
+    },
+    "before": {},
+    "deltas": {},
+    "notes": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "stage_name": "002_raw_import_and_convention_audit"
+  },
+  "output_artifacts": [],
+  "review_result": {
+    "allowed_claims": [
+      "Raw input candidate is registered for preparation stages.",
+      "Tensor, frequency, Gamma, and xxx projection conventions are audited."
+    ],
+    "blocking_issues": [],
+    "forbidden_claims": [
+      "Full tensorial sigma_abc correctness is proven.",
+      "Tensorial simplification has started."
+    ],
+    "mathematical_status": {
+      "exact_reconstruction": true,
+      "overclaim_detected": false,
+      "regression_preserved": true,
+      "simplification_real": false
+    },
+    "next_action": "FREEZE",
+    "nonblocking_caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "patch_instructions": [],
+    "review_scope": "routine_branch",
+    "reviewer_role": "IntegratorReview",
+    "source_review_files": [
+      ".loop/reviews/review_result.AlgebraReviewer.json",
+      ".loop/reviews/review_result.PhysicsReviewer.json",
+      ".loop/reviews/review_result.SoftwareReviewer.json"
+    ],
+    "stage_name": "002_raw_import_and_convention_audit",
+    "suggested_next_stage": null,
+    "verdict": "PASS_WITH_CAVEAT"
+  },
+  "stage_name": "002_raw_import_and_convention_audit",
+  "timestamp": "2026-06-28T18:57:06+00:00",
+  "validation_summary": {
+    "FrequencyConventionAuditComplete": true,
+    "ProjectionRuleXXXRecorded": true,
+    "RawExpressionExists": true,
+    "RawExpressionHashRecorded": true,
+    "Stage001DCCaveatPreserved": true,
+    "TensorConventionAuditComplete": true,
+    "caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "checks": [
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "RawExpressionExists"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "RawExpressionHashRecorded"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "TensorConventionAuditComplete"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "FrequencyConventionAuditComplete"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "ProjectionRuleXXXRecorded"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "Stage001DCCaveatPreserved"
+      }
+    ],
+    "identity_type": "ProjectionRegression",
+    "overall_gate": "PASS",
+    "stage_name": "002_raw_import_and_convention_audit"
+  }
+}

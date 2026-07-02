@@ -1,0 +1,13 @@
+{
+  "action": "FREEZE_WITH_CAVEAT",
+  "caveats": [
+    "No algebraic simplification was expected or performed in this contract stage.",
+    "The sigma_xxx projection benchmark is registered but not run because no raw tensorial expression exists.",
+    "The branch is a contract and benchmark-registration checkpoint only.",
+    "The next scientific branch must select a raw source before import.",
+    "Freeze is acceptable only as a contract checkpoint, not as raw import."
+  ],
+  "freeze_allowed": true,
+  "reason": "review passed with caveats",
+  "suggested_next_stage": "sigma_abc_001_raw_generation_or_transcription"
+}

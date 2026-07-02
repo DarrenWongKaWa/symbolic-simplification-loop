@@ -1,0 +1,37 @@
+{
+  "allowed_claims": [
+    "FiniteFrequencyProjectionTo1D remains PASS.",
+    "DCProjectionTo1D is INHERITED_PASS with documented premises.",
+    "No sector decomposition, tensorial kernel fusion, or tensorial IBP was started.",
+    "Stage 001 raw generator can be frozen as a projection-validated raw-candidate checkpoint."
+  ],
+  "blocking_issues": [],
+  "forbidden_claims": [
+    "Full tensorial sigma_{mu alpha beta} correctness is proven.",
+    "The direct finite-frequency-to-DC tensorial benchmark completed as a fresh direct PASS.",
+    "sigma_abc simplification has started.",
+    "Sector decomposition, tensorial kernel fusion, or tensorial IBP has started."
+  ],
+  "mathematical_status": {
+    "exact_reconstruction": true,
+    "overclaim_detected": false,
+    "regression_preserved": true,
+    "simplification_real": false
+  },
+  "next_action": "FREEZE",
+  "nonblocking_caveats": [
+    "DCProjectionTo1D is inherited from the finite-frequency xxx projection and the archived 1D DC notebook pipeline, not from a fresh full direct SeriesCoefficient simplification.",
+    "The raw tensorial wrapper remains projection-validated only; no full tensorial correctness claim is made."
+  ],
+  "patch_instructions": [],
+  "review_scope": "routine_branch",
+  "reviewer_role": "AlgebraReviewer",
+  "source_review_files": [
+    "review_packet.md",
+    "validation/validation_summary.json",
+    "reports/dc_projection_validation_patch.md"
+  ],
+  "stage_name": "001b_dc_projection_validation_patch",
+  "suggested_next_stage": "sigma_abc_002_raw_import_and_convention_audit",
+  "verdict": "PASS"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Metrics",
+  "type": "object",
+  "properties": {
+    "stage_name": { "type": "string" },
+    "before": { "type": "object" },
+    "after": { "type": "object" },
+    "deltas": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}
+

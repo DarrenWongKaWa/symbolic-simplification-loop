@@ -1,0 +1,17 @@
+{
+  "benchmark_name": "sigma_xxx_projection_benchmark",
+  "purpose": "Protected regression for future full tensorial sigma_abc projects.",
+  "identity": "ProjectToXXX[tensor_formula] - sigma_xxx_final_reference == 0",
+  "reference_scope": "projected one-dimensional sigma^xxx final checkpoint",
+  "accepted_gate": {
+    "symbolic": "PASS when exact difference is zero",
+    "numerical_fallback": "PASS_WITH_CAVEAT when max absolute difference is below documented tolerance"
+  },
+  "reference_final_basis": ["center velocity-power", "pair shift-vector", "loop Re/Im three-band interference"],
+  "must_not_claim_before_pass": [
+    "full tensorial formula is correct",
+    "center or loop sectors can be discarded",
+    "Anan Eq.(5) equality"
+  ]
+}
+

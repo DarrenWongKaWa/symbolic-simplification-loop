@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VerifierAgentResult",
+  "type": "object",
+  "required": ["stage_name", "VerifierAgentAuditPassed", "VerifierServicePassed", "CannotOverrideValidationFailure"],
+  "properties": {
+    "stage_name": { "type": "string" },
+    "VerifierAgentAuditPassed": { "type": "boolean" },
+    "VerifierServicePassed": { "type": "boolean" },
+    "CannotOverrideValidationFailure": { "type": "boolean" },
+    "weak_validation_flags": { "type": "array", "items": { "type": "string" } },
+    "caveats_to_preserve": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

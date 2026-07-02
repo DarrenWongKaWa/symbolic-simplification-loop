@@ -1,0 +1,18 @@
+{
+  "pytest": {
+    "status": "PASS",
+    "summary": "269 passed, 1 warning"
+  },
+  "compileall": {
+    "status": "PASS",
+    "summary": "No errors"
+  },
+  "two_test_reproducer": {
+    "status": "PASS",
+    "summary": "2 passed, 1 warning"
+  },
+  "report_consistency_tests": {
+    "status": "PASS",
+    "summary": "3 passed"
+  }
+}

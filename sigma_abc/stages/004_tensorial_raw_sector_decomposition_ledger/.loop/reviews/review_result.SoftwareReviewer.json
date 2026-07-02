@@ -1,0 +1,30 @@
+{
+  "allowed_claims": [
+    "Raw sector decomposition ledger exactly reconstructs the expanded raw expression."
+  ],
+  "blocking_issues": [],
+  "forbidden_claims": [
+    "Sector ledger is a fused physical kernel formula.",
+    "Tensorial IBP has started."
+  ],
+  "mathematical_status": {
+    "exact_reconstruction": true,
+    "overclaim_detected": false,
+    "regression_preserved": true,
+    "simplification_real": false
+  },
+  "next_action": "FREEZE",
+  "nonblocking_caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+  ],
+  "patch_instructions": [],
+  "review_scope": "routine_branch",
+  "reviewer_role": "SoftwareReviewer",
+  "source_review_files": [
+    "review_packet.md",
+    "validation/validation_summary.json"
+  ],
+  "stage_name": "004_tensorial_raw_sector_decomposition_ledger",
+  "suggested_next_stage": null,
+  "verdict": "PASS_WITH_CAVEAT"
+}

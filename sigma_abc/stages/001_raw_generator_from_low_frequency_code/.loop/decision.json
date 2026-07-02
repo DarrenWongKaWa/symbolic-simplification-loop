@@ -1,0 +1,7 @@
+{
+  "action": "DO_NOT_FREEZE",
+  "caveats": [],
+  "freeze_allowed": false,
+  "reason": "validation failed or missing PASS gate",
+  "suggested_next_stage": null
+}

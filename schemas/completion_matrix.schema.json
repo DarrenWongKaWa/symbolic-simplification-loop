@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompletionMatrix",
+  "type": "object",
+  "required": [
+    "stage_id",
+    "overall_completion",
+    "freeze_eligible",
+    "generated_at",
+    "items",
+    "boundary_audit",
+    "recommended_human_action",
+    "basis"
+  ],
+  "properties": {
+    "stage_id": {
+      "type": "string"
+    },
+    "overall_completion": {
+      "enum": [
+        "COMPLETE",
+        "INCOMPLETE",
+        "BLOCKED",
+        "FAILED"
+      ]
+    },
+    "freeze_eligible": {
+      "type": "boolean"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "basis": {
+      "type": "object",
+      "required": [
+        "stage_plan",
+        "validation_summary",
+        "review_result",
+        "claim_boundary"
+      ],
+      "properties": {
+        "stage_plan": {
+          "type": "string"
+        },
+        "validation_summary": {
+          "type": "string"
+        },
+        "review_result": {
+          "type": "string"
+        },
+        "claim_boundary": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "basis_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "description",
+          "status",
+          "blocking"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "dependency",
+              "boundary",
+              "validation",
+              "scientific_caveat",
+              "review_evidence",
+              "output_file",
+              "protected_regression",
+              "custom"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "expected_from": {
+            "type": "string"
+          },
+          "actual_evidence": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "DONE",
+              "DONE_WITH_CAVEAT",
+              "REGISTERED",
+              "MISSING",
+              "FAILED",
+              "BLOCKED"
+            ]
+          },
+          "blocking": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "boundary_audit": {
+      "type": "object"
+    },
+    "recommended_human_action": {
+      "enum": [
+        "APPROVE_FREEZE",
+        "APPROVE_FREEZE_WITH_CAVEAT",
+        "DO_NOT_FREEZE_PATCH",
+        "REJECT_AND_STOP"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

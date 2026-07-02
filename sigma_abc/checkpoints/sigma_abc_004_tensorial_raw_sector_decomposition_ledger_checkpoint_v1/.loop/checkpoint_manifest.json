@@ -1,0 +1,267 @@
+{
+  "allowed_claims": [
+    "Raw sector decomposition ledger exactly reconstructs the expanded raw expression."
+  ],
+  "files": [
+    {
+      "bytes": 351,
+      "path": ".loop/decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 357,
+      "path": ".loop/metrics.json",
+      "sha256": "029c361abd741da17eddd255ee8bba3ce6a5da3c8396b92813b0b22a57a603f4"
+    },
+    {
+      "bytes": 1114,
+      "path": ".loop/review_result.json",
+      "sha256": "7bf6b20efc3a44baff90078df95034234109910095c33c9831e1c20c6c4907b0"
+    },
+    {
+      "bytes": 1010,
+      "path": ".loop/reviews/review_result.AlgebraReviewer.json",
+      "sha256": "41569b667cc3d2210d7ea1221084c37ce96025cc75b306b7c4e0c464b9ce55a5"
+    },
+    {
+      "bytes": 1010,
+      "path": ".loop/reviews/review_result.PhysicsReviewer.json",
+      "sha256": "f186c37d6693a24d3af92e68ddb9909bcea80d0fb2c841ce17071f3586192802"
+    },
+    {
+      "bytes": 1011,
+      "path": ".loop/reviews/review_result.SoftwareReviewer.json",
+      "sha256": "60f997b03118703c918a4ea14a57089ea2f987fcbdfb34db1d4c29afebcf6f85"
+    },
+    {
+      "bytes": 1382,
+      "path": ".loop/stage_plan.json",
+      "sha256": "22de1960715289f40fa3f61b6965e1647e7c24a232112c4440696d7b6c4a98b8"
+    },
+    {
+      "bytes": 1347,
+      "path": ".loop/validation_summary.json",
+      "sha256": "0be0a2272a7867ce478e7cc666fbbfa421d5c5987695c6633a271d7f465f64cc"
+    },
+    {
+      "bytes": 436,
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "54345f27d9157eaee29ee33df213c34eed607ee7edab0dd309cb2fccf4654612"
+    },
+    {
+      "bytes": 1748,
+      "path": "EXECUTION_REPORT.md",
+      "sha256": "902d60c592f458a7018c0c9dee2cf3f943761e8df40efbe97b61374bd0ad9dfb"
+    },
+    {
+      "bytes": 691,
+      "path": "STAGE_PLAN.md",
+      "sha256": "d9070f8bb5ec6fa4cb3ffd5259fc6541aeeaf0f386448fca39b9c9c6d2446754"
+    },
+    {
+      "bytes": 351,
+      "path": "decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 113942,
+      "path": "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+      "sha256": "43c6f73273e98df1bde381c3c6e5bed4d4b8bc9859f855592b44162c6c308b46"
+    },
+    {
+      "bytes": 2632,
+      "path": "input_snapshots/stage001b_validation_summary.json",
+      "sha256": "e959b252720e0807ee9330ab55a7362776b5e9f8666f6cafb40c806a34eacb07"
+    },
+    {
+      "bytes": 133,
+      "path": "output/sector_counts.json",
+      "sha256": "2a047d2685fcc7a566bc82b7909fadaf8045836f4a14d514c1e88dcf4eefc898"
+    },
+    {
+      "bytes": 1265693,
+      "path": "output/sector_decomposition.wl",
+      "sha256": "2849104ecc3f4228013b51534dc8d7e747f3cd0ea18b56c44742d06ee19ec438"
+    },
+    {
+      "bytes": 150038,
+      "path": "output/sector_ledger.csv",
+      "sha256": "8605d18e7f62522b452286d220f2771c933e836f53abde7a75f520a92febcf65"
+    },
+    {
+      "bytes": 859,
+      "path": "reports/sector_decomposition_report.md",
+      "sha256": "babfac9ecce9d8c2f3b61bbf054cf0e614536d7d15bf6609600bcd1aaec73467"
+    },
+    {
+      "bytes": 1755,
+      "path": "review_packet.md",
+      "sha256": "7867d1b330eef31defc7705be45e5f4f5b7e2e4ce7fe056e963c253d3b099079"
+    },
+    {
+      "bytes": 1010,
+      "path": "review_result.AlgebraReviewer.json",
+      "sha256": "41569b667cc3d2210d7ea1221084c37ce96025cc75b306b7c4e0c464b9ce55a5"
+    },
+    {
+      "bytes": 1010,
+      "path": "review_result.PhysicsReviewer.json",
+      "sha256": "f186c37d6693a24d3af92e68ddb9909bcea80d0fb2c841ce17071f3586192802"
+    },
+    {
+      "bytes": 1011,
+      "path": "review_result.SoftwareReviewer.json",
+      "sha256": "60f997b03118703c918a4ea14a57089ea2f987fcbdfb34db1d4c29afebcf6f85"
+    },
+    {
+      "bytes": 1114,
+      "path": "review_result.json",
+      "sha256": "7bf6b20efc3a44baff90078df95034234109910095c33c9831e1c20c6c4907b0"
+    },
+    {
+      "bytes": 373,
+      "path": "reviewer_agent_prompt.AlgebraReviewer.md",
+      "sha256": "60c3b6be59302002192f5676f3683f1e71d154d55060aa6af8dbc7561a66022b"
+    },
+    {
+      "bytes": 373,
+      "path": "reviewer_agent_prompt.PhysicsReviewer.md",
+      "sha256": "b6bbcf9e739fd88ea1608710efc2c4766328d5aaf4e05d7090475e11ea32931e"
+    },
+    {
+      "bytes": 374,
+      "path": "reviewer_agent_prompt.SoftwareReviewer.md",
+      "sha256": "dce9543c79e6d4aeccf46d3f40943c5d8d8762f54454ffbe5200a7b0dfb711c2"
+    },
+    {
+      "bytes": 2994,
+      "path": "validation/sector_decomposition_validation.wl",
+      "sha256": "1caf2abb4e67ce8063262d81ca6c4bbbeae54d859ad5e566af871a00016ef48a"
+    },
+    {
+      "bytes": 295,
+      "path": "validation/sector_decomposition_validation_result.json",
+      "sha256": "e9da35be8dee12d8f26f1ebafb38c3a0699571fe41413b7ae4fb9b1b360079f3"
+    },
+    {
+      "bytes": 1347,
+      "path": "validation/validation_summary.json",
+      "sha256": "0be0a2272a7867ce478e7cc666fbbfa421d5c5987695c6633a271d7f465f64cc"
+    }
+  ],
+  "forbidden_claims": [
+    "Sector ledger is a fused physical kernel formula.",
+    "Tensorial IBP has started."
+  ],
+  "input_snapshots": [
+    "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+    "input_snapshots/stage001b_validation_summary.json"
+  ],
+  "known_caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Sector labels are raw row-provenance groups, not physical kernel fusion."
+  ],
+  "metrics": {
+    "after": {
+      "overall_gate": "PASS"
+    },
+    "before": {},
+    "deltas": {},
+    "notes": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "stage_name": "004_tensorial_raw_sector_decomposition_ledger"
+  },
+  "output_artifacts": [
+    "output/sector_counts.json",
+    "output/sector_decomposition.wl",
+    "output/sector_ledger.csv"
+  ],
+  "review_result": {
+    "allowed_claims": [
+      "Raw sector decomposition ledger exactly reconstructs the expanded raw expression."
+    ],
+    "blocking_issues": [],
+    "forbidden_claims": [
+      "Sector ledger is a fused physical kernel formula.",
+      "Tensorial IBP has started."
+    ],
+    "mathematical_status": {
+      "exact_reconstruction": true,
+      "overclaim_detected": false,
+      "regression_preserved": true,
+      "simplification_real": false
+    },
+    "next_action": "FREEZE",
+    "nonblocking_caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "patch_instructions": [],
+    "review_scope": "routine_branch",
+    "reviewer_role": "IntegratorReview",
+    "source_review_files": [
+      ".loop/reviews/review_result.AlgebraReviewer.json",
+      ".loop/reviews/review_result.PhysicsReviewer.json",
+      ".loop/reviews/review_result.SoftwareReviewer.json"
+    ],
+    "stage_name": "004_tensorial_raw_sector_decomposition_ledger",
+    "suggested_next_stage": null,
+    "verdict": "PASS_WITH_CAVEAT"
+  },
+  "stage_name": "004_tensorial_raw_sector_decomposition_ledger",
+  "timestamp": "2026-06-28T18:57:11+00:00",
+  "validation_summary": {
+    "NoIBPStarted": true,
+    "NoKernelFusionStarted": true,
+    "RawMinusSectorSum": 0,
+    "SectorCounts": {
+      "center/contact sector": 93,
+      "loop/three-band sector": 288,
+      "pair/two-band sector": 912,
+      "total_rows": 1293,
+      "unclassified": 0
+    },
+    "SectorCountsRecorded": true,
+    "SectorDecompositionExists": true,
+    "caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+      "Sector labels are raw row-provenance groups, not physical kernel fusion."
+    ],
+    "checks": [
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "SectorDecompositionExists"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "gate": "PASS",
+        "name": "RawMinusSectorSum"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "SectorCountsRecorded"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "NoKernelFusionStarted"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "NoIBPStarted"
+      }
+    ],
+    "identity_type": "OldMinusNewZero",
+    "overall_gate": "PASS",
+    "stage_name": "004_tensorial_raw_sector_decomposition_ledger"
+  }
+}

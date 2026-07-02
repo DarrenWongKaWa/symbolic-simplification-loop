@@ -1,0 +1,266 @@
+{
+  "allowed_claims": [
+    "Raw sector ledger collapses to the projected 1D finite-frequency source under xxx projection."
+  ],
+  "files": [
+    {
+      "bytes": 351,
+      "path": ".loop/decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 353,
+      "path": ".loop/metrics.json",
+      "sha256": "98a8dc6db86ebd6ac53e1d39a34eb27205fe047fca742c55b8fdb0355dcf7c71"
+    },
+    {
+      "bytes": 1164,
+      "path": ".loop/review_result.json",
+      "sha256": "78f34ae069e6e6ec95870f728413604d739775fadeb2544e68fd171cabd53b58"
+    },
+    {
+      "bytes": 1060,
+      "path": ".loop/reviews/review_result.AlgebraReviewer.json",
+      "sha256": "29669c0eb34a0246bab772a1588aaf4d76d616aaa9b56775e57d81d8674b7baf"
+    },
+    {
+      "bytes": 1060,
+      "path": ".loop/reviews/review_result.PhysicsReviewer.json",
+      "sha256": "6cbb43799383003488405202d1df43e11b1764d1c870b9f99ff749c9e354e5b4"
+    },
+    {
+      "bytes": 1061,
+      "path": ".loop/reviews/review_result.SoftwareReviewer.json",
+      "sha256": "e76dead50c7f71b778caed8cc9b683f679f3ce54f1c1f5a5587cfc9430fc9252"
+    },
+    {
+      "bytes": 1514,
+      "path": ".loop/stage_plan.json",
+      "sha256": "c8041938539d6d6276ec6ba266fdd13d30250ef7ad788b63b83f65d377c6d68d"
+    },
+    {
+      "bytes": 1262,
+      "path": ".loop/validation_summary.json",
+      "sha256": "73013e9edf2af205bf7bd0d0da5c5b0b9bd857f5923fa0968b6a922f2252db6d"
+    },
+    {
+      "bytes": 490,
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "010cab33aa162be72aece5adcec3dcab3953538fd01a04d045c2c584c1ae4e14"
+    },
+    {
+      "bytes": 1672,
+      "path": "EXECUTION_REPORT.md",
+      "sha256": "54e5c2e28474090e9dfbb885f266653a76028fb0df133a08dad16974ae4570b1"
+    },
+    {
+      "bytes": 680,
+      "path": "STAGE_PLAN.md",
+      "sha256": "a301fae56f43ddd97248f1b46c150445483d04bd4e41b7ea3db5ff6042c68535"
+    },
+    {
+      "bytes": 351,
+      "path": "decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 112470,
+      "path": "input_snapshots/abc_w1_w2_1D.txt",
+      "sha256": "03da44d8a00727547775306cd39125d0f14740a60c2871fa09d1fa91e0b6c52e"
+    },
+    {
+      "bytes": 133,
+      "path": "input_snapshots/sector_counts.json",
+      "sha256": "2a047d2685fcc7a566bc82b7909fadaf8045836f4a14d514c1e88dcf4eefc898"
+    },
+    {
+      "bytes": 1265693,
+      "path": "input_snapshots/sector_decomposition.wl",
+      "sha256": "2849104ecc3f4228013b51534dc8d7e747f3cd0ea18b56c44742d06ee19ec438"
+    },
+    {
+      "bytes": 2632,
+      "path": "input_snapshots/stage001b_validation_summary.json",
+      "sha256": "e959b252720e0807ee9330ab55a7362776b5e9f8666f6cafb40c806a34eacb07"
+    },
+    {
+      "bytes": 194,
+      "path": "output/sector_ledger_xxx_projection_summary.json",
+      "sha256": "196a7a9254d6f0ca098cb9790680dd475b79c3224e4fbb4ec66382b17700eb36"
+    },
+    {
+      "bytes": 809203,
+      "path": "output/sector_ledger_xxx_projection_summary.wl",
+      "sha256": "9559269118a67c6bc86c513e46a85cc3dd070a5b42f18d77790f992bf04291a9"
+    },
+    {
+      "bytes": 1864,
+      "path": "reports/sector_ledger_xxx_collapse_report.md",
+      "sha256": "662732a126db7355ee1ce7a28ba835198da5b18a5a06797c94d87e1857bff218"
+    },
+    {
+      "bytes": 1666,
+      "path": "review_packet.md",
+      "sha256": "70684296317f4083e7050f164d713b228d4114c2ed1b8a8e47894b3a14d048ae"
+    },
+    {
+      "bytes": 1060,
+      "path": "review_result.AlgebraReviewer.json",
+      "sha256": "29669c0eb34a0246bab772a1588aaf4d76d616aaa9b56775e57d81d8674b7baf"
+    },
+    {
+      "bytes": 1060,
+      "path": "review_result.PhysicsReviewer.json",
+      "sha256": "6cbb43799383003488405202d1df43e11b1764d1c870b9f99ff749c9e354e5b4"
+    },
+    {
+      "bytes": 1061,
+      "path": "review_result.SoftwareReviewer.json",
+      "sha256": "e76dead50c7f71b778caed8cc9b683f679f3ce54f1c1f5a5587cfc9430fc9252"
+    },
+    {
+      "bytes": 1164,
+      "path": "review_result.json",
+      "sha256": "78f34ae069e6e6ec95870f728413604d739775fadeb2544e68fd171cabd53b58"
+    },
+    {
+      "bytes": 369,
+      "path": "reviewer_agent_prompt.AlgebraReviewer.md",
+      "sha256": "5b176df418b6b5e955b19bcb0cb36b2392b50e1c327a714a8fa7c881a1ce40d3"
+    },
+    {
+      "bytes": 369,
+      "path": "reviewer_agent_prompt.PhysicsReviewer.md",
+      "sha256": "cce57efa6ce73b67fe66078c1881f9059252e218d9e0115931389f5591d4efa8"
+    },
+    {
+      "bytes": 370,
+      "path": "reviewer_agent_prompt.SoftwareReviewer.md",
+      "sha256": "cc852c950581731462169e455ef4ca47aad4899fdef2b0ffa4a6fda6e66aa0f8"
+    },
+    {
+      "bytes": 194,
+      "path": "validation/sector_ledger_xxx_collapse_result.json",
+      "sha256": "196a7a9254d6f0ca098cb9790680dd475b79c3224e4fbb4ec66382b17700eb36"
+    },
+    {
+      "bytes": 1901,
+      "path": "validation/sector_ledger_xxx_collapse_validation.wl",
+      "sha256": "c0088c1c5a0ef156186523eb2bed3c4fc6fd5bedbbdb1ecaa0b688b8d5a1ab66"
+    },
+    {
+      "bytes": 1262,
+      "path": "validation/validation_summary.json",
+      "sha256": "73013e9edf2af205bf7bd0d0da5c5b0b9bd857f5923fa0968b6a922f2252db6d"
+    }
+  ],
+  "forbidden_claims": [
+    "Full reduced sigma_xxx kernel equality has been proven from tensorial sigma_abc.",
+    "Tensorial simplification has started."
+  ],
+  "input_snapshots": [
+    "input_snapshots/abc_w1_w2_1D.txt",
+    "input_snapshots/sector_counts.json",
+    "input_snapshots/sector_decomposition.wl",
+    "input_snapshots/stage001b_validation_summary.json"
+  ],
+  "known_caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "This is a raw-level xxx collapse regression, not final kernel-level sigma_xxx equality."
+  ],
+  "metrics": {
+    "after": {
+      "overall_gate": "PASS"
+    },
+    "before": {},
+    "deltas": {},
+    "notes": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "stage_name": "005_sector_ledger_xxx_collapse_regression"
+  },
+  "output_artifacts": [
+    "output/sector_ledger_xxx_projection_summary.json",
+    "output/sector_ledger_xxx_projection_summary.wl"
+  ],
+  "review_result": {
+    "allowed_claims": [
+      "Raw sector ledger collapses to the projected 1D finite-frequency source under xxx projection."
+    ],
+    "blocking_issues": [],
+    "forbidden_claims": [
+      "Full reduced sigma_xxx kernel equality has been proven from tensorial sigma_abc.",
+      "Tensorial simplification has started."
+    ],
+    "mathematical_status": {
+      "exact_reconstruction": true,
+      "overclaim_detected": false,
+      "regression_preserved": true,
+      "simplification_real": false
+    },
+    "next_action": "FREEZE",
+    "nonblocking_caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "patch_instructions": [],
+    "review_scope": "routine_branch",
+    "reviewer_role": "IntegratorReview",
+    "source_review_files": [
+      ".loop/reviews/review_result.AlgebraReviewer.json",
+      ".loop/reviews/review_result.PhysicsReviewer.json",
+      ".loop/reviews/review_result.SoftwareReviewer.json"
+    ],
+    "stage_name": "005_sector_ledger_xxx_collapse_regression",
+    "suggested_next_stage": null,
+    "verdict": "PASS_WITH_CAVEAT"
+  },
+  "stage_name": "005_sector_ledger_xxx_collapse_regression",
+  "timestamp": "2026-06-28T18:57:13+00:00",
+  "validation_summary": {
+    "DCProjectionStillInheritedPASS": true,
+    "NoSimplificationStarted": true,
+    "RawProjectionStillPASS": true,
+    "SectorLedgerXXXCollapse": "PASS",
+    "SectorProvenancePreserved": true,
+    "caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+      "This is a raw-level xxx collapse regression, not final kernel-level sigma_xxx equality."
+    ],
+    "checks": [
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "gate": "PASS",
+        "name": "SectorLedgerXXXCollapse"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "RawProjectionStillPASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "DCProjectionStillInheritedPASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "SectorProvenancePreserved"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "NoSimplificationStarted"
+      }
+    ],
+    "identity_type": "ProjectionRegression",
+    "overall_gate": "PASS",
+    "stage_name": "005_sector_ledger_xxx_collapse_regression"
+  }
+}

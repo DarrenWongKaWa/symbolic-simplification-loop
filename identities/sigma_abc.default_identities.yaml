@@ -1,0 +1,83 @@
+project: sigma_abc
+identities:
+  - label: Reconstruction
+    latex: |
+      \[
+      \Delta_{\mathrm{recon}}
+      =
+      \mathcal{K}_{\mathrm{old}}
+      -
+      \mathcal{K}_{\mathrm{new}}
+      =
+      0.
+      \]
+    check: mock_identity
+    role: reconstruction
+    blocking: false
+  - label: XXX projection regression
+    latex: |
+      \[
+      \mathrm{Proj}_{xxx}
+      \left[
+      \sigma^{abc}_{\mathrm{tensorial}}
+      \right]
+      -
+      \sigma^{xxx}_{\mathrm{protected}}
+      =
+      0.
+      \]
+    check:
+      - XXXProjectionRegression
+      - ProtectedSigmaXXXBenchmark
+      - sigma_xxx_projection
+    role: protected_regression
+    blocking: true
+  - label: Pair / orbit fusion
+    latex: |
+      \[
+      \mathcal{K}_{\mathcal{O}}^{\mathrm{fused}}
+      -
+      \sum_{\alpha\in\mathcal{O}}
+      \mathcal{K}_{\alpha}
+      =
+      0.
+      \]
+    check: PairFusionDifference
+    role: fusion
+    blocking: false
+  - label: DC inherited caveat
+    latex: |
+      \[
+      \mathrm{DCProjectionTo1D}
+      \xrightarrow{\mathrm{INHERITED\_PASS}}
+      \sigma^{xxx}_{\mathrm{dc}},
+      \qquad
+      \mathrm{not}\;
+      \mathrm{PASS}
+      \left(
+      \sigma^{abc}_{\mathrm{full\ tensorial\ dc}}
+      \right).
+      \]
+    check: DCProjectionTo1D
+    role: caveat
+    blocking: false
+  - label: Forbidden-family containment
+    latex: |
+      \[
+      \mathcal{K}_{\mathrm{stage}}
+      \subseteq
+      \mathcal{K}_{\mathrm{allowed}},
+      \qquad
+      \mathcal{K}_{\mathrm{IBP}}
+      =
+      \varnothing.
+      \]
+    check:
+      - NoIBPStarted
+      - NoTotalDerivativeIntroduced
+      - NoTensorialIBPStarted
+      - NoFullTensorialKernelFusionStarted
+      - NoFullTensorialClaim
+      - NoCandidatePromoted
+    role: boundary
+    blocking: true

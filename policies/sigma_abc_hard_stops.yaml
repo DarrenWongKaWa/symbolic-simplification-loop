@@ -1,0 +1,19 @@
+policy: sigma_abc_hard_stops
+hard_stops:
+  forbidden_stage_tags:
+    - kernel_fusion
+    - ibp_reduction
+    - tensorial_simplification
+  forbidden_claims:
+    - full tensorial sigma_abc correctness
+    - direct full tensorial DC-series PASS
+    - full equality to projected sigma_xxx final formula before projection validation
+  require_human_approval_tags:
+    - requires_human_approval
+  stop_if_files_exist:
+    - STOP
+    - .loop/protected_regression_failed
+    - .loop/human_approval_required
+caveats_to_preserve:
+  - Stage001DCCaveatPreserved
+  - DCProjectionTo1D -> INHERITED_PASS

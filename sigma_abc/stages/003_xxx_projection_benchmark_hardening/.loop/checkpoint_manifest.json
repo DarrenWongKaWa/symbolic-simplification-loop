@@ -1,0 +1,236 @@
+{
+  "allowed_claims": [
+    "sigma_xxx final checkpoint is registered as a protected future benchmark."
+  ],
+  "files": [
+    {
+      "bytes": 351,
+      "path": ".loop/decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 350,
+      "path": ".loop/metrics.json",
+      "sha256": "267e5ab5449f7c88ddb40770a51980dad23e61a98775a01b83b6f7afd8d0e76c"
+    },
+    {
+      "bytes": 1101,
+      "path": ".loop/review_result.json",
+      "sha256": "2597eed11cc327fdc94136ff9417a116b46c6e5c67fc5302867c4d57ad268211"
+    },
+    {
+      "bytes": 997,
+      "path": ".loop/reviews/review_result.AlgebraReviewer.json",
+      "sha256": "48474b1ff9209192260791f0a3f9892e1b28f11662e0bec891b7c096f10c4680"
+    },
+    {
+      "bytes": 997,
+      "path": ".loop/reviews/review_result.PhysicsReviewer.json",
+      "sha256": "0e207598caee36e30516359dcbc87936834b417d866f304ff829bbb43e72ff36"
+    },
+    {
+      "bytes": 998,
+      "path": ".loop/reviews/review_result.SoftwareReviewer.json",
+      "sha256": "de8b012c63795715fea37079c546ce55673cda336bd704e2cb66ba167417c873"
+    },
+    {
+      "bytes": 1460,
+      "path": ".loop/stage_plan.json",
+      "sha256": "61bfe8f28b92fe2173b8713094345f3c3f131fb25c959e2b8f153276a9f976fe"
+    },
+    {
+      "bytes": 1243,
+      "path": ".loop/validation_summary.json",
+      "sha256": "450d5bddedf8f6963181a0ecf76ac2f6be8dafbb2abdf25cf11a684a9d6111b0"
+    },
+    {
+      "bytes": 435,
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "df2738cdf8e5e5bfc55b74e8dfc0536cf5495f29c2ba586a175b4ce6b3fc50d3"
+    },
+    {
+      "bytes": 1625,
+      "path": "EXECUTION_REPORT.md",
+      "sha256": "568ad38a744d2c7aa07ec78a95e2ce9c680042df9f06be0dcf2fa8f726a54881"
+    },
+    {
+      "bytes": 650,
+      "path": "STAGE_PLAN.md",
+      "sha256": "f53d38f941c420d125de8772f933d900ff0812b8185c9c905b4f2b3475ce5418"
+    },
+    {
+      "bytes": 351,
+      "path": "decision.json",
+      "sha256": "f4f76cb7e78ad56857a8e906ab65856851057471166ed6ffc83b3ce32dbf46c3"
+    },
+    {
+      "bytes": 748,
+      "path": "input_snapshots/benchmark_sigma_xxx_projection.json",
+      "sha256": "a461cf5fd243b6a7e3ce3083438f1e573773eb6e87620aafe08d2649f6435336"
+    },
+    {
+      "bytes": 1388,
+      "path": "input_snapshots/final_checkpoint_manifest.json",
+      "sha256": "f910c29d4bf6379e52184e1c1a001e285874a20fc89548443e120407398ce2cf"
+    },
+    {
+      "bytes": 1193,
+      "path": "input_snapshots/raw_input_manifest.json",
+      "sha256": "93983df271aef164f2e26aad1aebe1d0da150d21c0c5d68319f05c43879ea0fd"
+    },
+    {
+      "bytes": 2632,
+      "path": "input_snapshots/stage001b_validation_summary.json",
+      "sha256": "e959b252720e0807ee9330ab55a7362776b5e9f8666f6cafb40c806a34eacb07"
+    },
+    {
+      "bytes": 1644,
+      "path": "review_packet.md",
+      "sha256": "4889933328dbedb7615093c0764e6837492780335ddf6eeb2b881b2b4ffb3771"
+    },
+    {
+      "bytes": 997,
+      "path": "review_result.AlgebraReviewer.json",
+      "sha256": "48474b1ff9209192260791f0a3f9892e1b28f11662e0bec891b7c096f10c4680"
+    },
+    {
+      "bytes": 997,
+      "path": "review_result.PhysicsReviewer.json",
+      "sha256": "0e207598caee36e30516359dcbc87936834b417d866f304ff829bbb43e72ff36"
+    },
+    {
+      "bytes": 998,
+      "path": "review_result.SoftwareReviewer.json",
+      "sha256": "de8b012c63795715fea37079c546ce55673cda336bd704e2cb66ba167417c873"
+    },
+    {
+      "bytes": 1101,
+      "path": "review_result.json",
+      "sha256": "2597eed11cc327fdc94136ff9417a116b46c6e5c67fc5302867c4d57ad268211"
+    },
+    {
+      "bytes": 366,
+      "path": "reviewer_agent_prompt.AlgebraReviewer.md",
+      "sha256": "d1d54babf8465e34873d27bc86d7223858f834b2c137a9c1649be72e4c5c2342"
+    },
+    {
+      "bytes": 366,
+      "path": "reviewer_agent_prompt.PhysicsReviewer.md",
+      "sha256": "64a9978eb6292d6d9af34874b5a9996392ade2cd703ea94c83681561720abad4"
+    },
+    {
+      "bytes": 367,
+      "path": "reviewer_agent_prompt.SoftwareReviewer.md",
+      "sha256": "a225ea79f3b0b4172454115bb59397648bb6c16518975658b888b335f44dbdc5"
+    },
+    {
+      "bytes": 1243,
+      "path": "validation/validation_summary.json",
+      "sha256": "450d5bddedf8f6963181a0ecf76ac2f6be8dafbb2abdf25cf11a684a9d6111b0"
+    }
+  ],
+  "forbidden_claims": [
+    "Full sigma_abc equals sigma_xxx final formula before the projection benchmark is run."
+  ],
+  "input_snapshots": [
+    "input_snapshots/benchmark_sigma_xxx_projection.json",
+    "input_snapshots/final_checkpoint_manifest.json",
+    "input_snapshots/raw_input_manifest.json",
+    "input_snapshots/stage001b_validation_summary.json"
+  ],
+  "known_caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Final kernel-level projection benchmark is registered but deferred."
+  ],
+  "metrics": {
+    "after": {
+      "overall_gate": "PASS"
+    },
+    "before": {},
+    "deltas": {},
+    "notes": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "stage_name": "003_xxx_projection_benchmark_hardening"
+  },
+  "output_artifacts": [],
+  "review_result": {
+    "allowed_claims": [
+      "sigma_xxx final checkpoint is registered as a protected future benchmark."
+    ],
+    "blocking_issues": [],
+    "forbidden_claims": [
+      "Full sigma_abc equals sigma_xxx final formula before the projection benchmark is run."
+    ],
+    "mathematical_status": {
+      "exact_reconstruction": true,
+      "overclaim_detected": false,
+      "regression_preserved": true,
+      "simplification_real": false
+    },
+    "next_action": "FREEZE",
+    "nonblocking_caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+    ],
+    "patch_instructions": [],
+    "review_scope": "routine_branch",
+    "reviewer_role": "IntegratorReview",
+    "source_review_files": [
+      ".loop/reviews/review_result.AlgebraReviewer.json",
+      ".loop/reviews/review_result.PhysicsReviewer.json",
+      ".loop/reviews/review_result.SoftwareReviewer.json"
+    ],
+    "stage_name": "003_xxx_projection_benchmark_hardening",
+    "suggested_next_stage": null,
+    "verdict": "PASS_WITH_CAVEAT"
+  },
+  "stage_name": "003_xxx_projection_benchmark_hardening",
+  "timestamp": "2026-06-28T18:57:06+00:00",
+  "validation_summary": {
+    "FinalKernelBenchmarkDeferred": true,
+    "ProjectionRuleDefined": true,
+    "RawLevelProjectionAvailable": true,
+    "SigmaXXXBenchmarkRegistered": true,
+    "Stage001DCCaveatPreserved": true,
+    "caveats": [
+      "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+      "Final kernel-level projection benchmark is registered but deferred."
+    ],
+    "checks": [
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "SigmaXXXBenchmarkRegistered"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "ProjectionRuleDefined"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "FinalKernelBenchmarkDeferred"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "RawLevelProjectionAvailable"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "Stage001DCCaveatPreserved"
+      }
+    ],
+    "identity_type": "ProjectionRegression",
+    "overall_gate": "PASS",
+    "stage_name": "003_xxx_projection_benchmark_hardening"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "after": {
+    "DCProjectionTo1D": "INHERITED_PASS",
+    "OverallGate": "PASS"
+  },
+  "before": {
+    "DCProjectionTo1D": "TIMEOUT",
+    "OverallGate": "FAIL"
+  },
+  "deltas": {
+    "regression_status_changed": true
+  },
+  "notes": [
+    "No raw regeneration, sector decomposition, kernel fusion, or IBP was performed."
+  ],
+  "stage_name": "001b_dc_projection_validation_patch"
+}

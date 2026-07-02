@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CodexStrictReviewResult",
+  "type": "object",
+  "required": [
+    "verdict",
+    "stage_name",
+    "reviewer_role",
+    "review_scope",
+    "mathematical_status",
+    "blocking_issues",
+    "nonblocking_caveats",
+    "allowed_claims",
+    "forbidden_claims",
+    "next_action",
+    "suggested_next_stage",
+    "patch_instructions"
+  ],
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": ["PASS", "PASS_WITH_CAVEAT", "NEEDS_PATCH", "FAILED"]
+    },
+    "stage_name": { "type": "string" },
+    "reviewer_role": {
+      "type": "string",
+      "enum": ["AlgebraReviewer", "PhysicsReviewer", "SoftwareReviewer", "IntegratorReview", "ManualGPT", "OpenAIAPI", "GeneralReviewer"]
+    },
+    "review_scope": {
+      "type": "string",
+      "enum": ["routine_branch", "major_checkpoint", "paper_claim", "scientific_route", "general"]
+    },
+    "mathematical_status": {
+      "type": "object",
+      "required": [
+        "exact_reconstruction",
+        "simplification_real",
+        "regression_preserved",
+        "overclaim_detected"
+      ],
+      "properties": {
+        "exact_reconstruction": { "type": "boolean" },
+        "simplification_real": { "type": "boolean" },
+        "regression_preserved": { "type": "boolean" },
+        "overclaim_detected": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "blocking_issues": { "type": "array", "items": { "type": "string" } },
+    "nonblocking_caveats": { "type": "array", "items": { "type": "string" } },
+    "allowed_claims": { "type": "array", "items": { "type": "string" } },
+    "forbidden_claims": { "type": "array", "items": { "type": "string" } },
+    "next_action": { "type": "string", "enum": ["FREEZE", "PATCH", "FAIL", "OPEN_NEXT_STAGE"] },
+    "suggested_next_stage": { "type": ["string", "null"] },
+    "patch_instructions": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

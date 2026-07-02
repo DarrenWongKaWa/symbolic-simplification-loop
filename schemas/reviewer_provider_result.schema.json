@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReviewerProviderResult",
+  "description": "Result of running a reviewer-role invocation through a provider pool.",
+  "type": "object",
+  "properties": {
+    "reviewer_role": {"type": "string"},
+    "selected_provider": {"type": ["string", "null"]},
+    "provider_attempts": {
+      "type": "array",
+      "items": {"$ref": "provider_attempt.schema.json"}
+    },
+    "adapter": {"type": "string"},
+    "actually_invoked": {"type": "boolean"},
+    "stub_used": {"type": "boolean"},
+    "runtime_status": {"type": "string"},
+    "schema_valid": {"type": "boolean"},
+    "verdict": {
+      "type": ["string", "null"],
+      "enum": [
+        null,
+        "PASS",
+        "PASS_WITH_CAVEAT",
+        "FAIL",
+        "NEEDS_PATCH",
+        "BLOCKED"
+      ]
+    },
+    "retryable": {"type": "boolean"},
+    "fallback_reason": {"type": ["string", "null"]},
+    "secret_redaction_applied": {"type": "boolean"},
+    "review_debt_required": {"type": "boolean"},
+    "freeze_evidence_valid": {"type": "boolean"}
+  },
+  "required": [
+    "reviewer_role",
+    "provider_attempts",
+    "actually_invoked",
+    "stub_used",
+    "runtime_status",
+    "schema_valid",
+    "retryable",
+    "secret_redaction_applied",
+    "review_debt_required"
+  ]
+}

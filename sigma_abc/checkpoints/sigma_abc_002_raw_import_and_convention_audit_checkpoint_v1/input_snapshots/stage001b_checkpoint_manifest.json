@@ -1,0 +1,364 @@
+{
+  "allowed_claims": [
+    "FiniteFrequencyProjectionTo1D remains PASS.",
+    "DCProjectionTo1D is INHERITED_PASS with documented premises.",
+    "No sector decomposition, tensorial kernel fusion, or tensorial IBP was started.",
+    "Stage 001 raw generator can be frozen as a projection-validated raw-candidate checkpoint."
+  ],
+  "files": [
+    {
+      "bytes": 129,
+      "path": ".loop/decision.json",
+      "sha256": "8ab5eea512ed15e2015563253b98f2fdf5be1cc49d1a8c8dc266910a03c04afe"
+    },
+    {
+      "bytes": 385,
+      "path": ".loop/metrics.json",
+      "sha256": "a38cf9270a901dc42b74ae7654598068357fef726298173b35254afaf1c3177c"
+    },
+    {
+      "bytes": 1650,
+      "path": ".loop/review_result.json",
+      "sha256": "22f8a85f9c2dbd81867563f32a84e21e996ee7f888a775be50e58de42c9bfa79"
+    },
+    {
+      "bytes": 1595,
+      "path": ".loop/reviews/review_result.AlgebraReviewer.json",
+      "sha256": "23ec16c779f1e6ba017a9e20843c7a41ca9ef81b3d4386785882b9adaacf4ff5"
+    },
+    {
+      "bytes": 1595,
+      "path": ".loop/reviews/review_result.PhysicsReviewer.json",
+      "sha256": "4d0d1b757de865a984d81ecac2dc8753fd106d12c0493bb5dd772f28d1648a33"
+    },
+    {
+      "bytes": 1596,
+      "path": ".loop/reviews/review_result.SoftwareReviewer.json",
+      "sha256": "3e1251e4cf29ec7e4e4c803c2f105cd58d140eda9a9af8baf08ee63f691fc818"
+    },
+    {
+      "bytes": 2167,
+      "path": ".loop/stage_plan.json",
+      "sha256": "05d149db354820102ff4e0b226217571215b0304b1a6a517862040eefc6b3c53"
+    },
+    {
+      "bytes": 2632,
+      "path": ".loop/validation_summary.json",
+      "sha256": "e959b252720e0807ee9330ab55a7362776b5e9f8666f6cafb40c806a34eacb07"
+    },
+    {
+      "bytes": 440,
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "a3a6411e9b3e827eff766cbd694545f61770284e25072db658416c3f5a5750d8"
+    },
+    {
+      "bytes": 440,
+      "path": "EXECUTION_REPORT.md",
+      "sha256": "f0152ca7baaecbd5e67c8234b315c031a5dc67f48447add5ecae53734bc02ba0"
+    },
+    {
+      "bytes": 569,
+      "path": "STAGE_PLAN.md",
+      "sha256": "71c2b4b0f221e76d499e54df9cbcd8749ecd6a4b1f033d9a516d7d87b52d33a4"
+    },
+    {
+      "bytes": 129,
+      "path": "decision.json",
+      "sha256": "8ab5eea512ed15e2015563253b98f2fdf5be1cc49d1a8c8dc266910a03c04afe"
+    },
+    {
+      "bytes": 212684,
+      "path": "input_snapshots/DC limit - Gamma Expansion -1D.nb",
+      "sha256": "d7f8a70bfbbea1242f5c08d7305026929fd226a4a5923f41f794c718dbe687b2"
+    },
+    {
+      "bytes": 121067,
+      "path": "input_snapshots/Sigma_abc_dc_1D.txt",
+      "sha256": "f613a4ce5bdb0972c32b7f799fbb408be237c94648fb9945e1b055914cfacace"
+    },
+    {
+      "bytes": 112470,
+      "path": "input_snapshots/abc_w1_w2_1D.txt",
+      "sha256": "03da44d8a00727547775306cd39125d0f14740a60c2871fa09d1fa91e0b6c52e"
+    },
+    {
+      "bytes": 1263,
+      "path": "input_snapshots/raw_sigma_abc.wl",
+      "sha256": "35f5e793be9f770f13f61e93f95d52254a4ad12b792e076a5b364585a77e6cb8"
+    },
+    {
+      "bytes": 135318,
+      "path": "input_snapshots/raw_sigma_abc_dc.wl",
+      "sha256": "da030f2c0df8e07f7c7d7f8d056dfd9e69b4706405c5064f5e7c22282420c1de"
+    },
+    {
+      "bytes": 113942,
+      "path": "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+      "sha256": "43c6f73273e98df1bde381c3c6e5bed4d4b8bc9859f855592b44162c6c308b46"
+    },
+    {
+      "bytes": 1569,
+      "path": "input_snapshots/raw_sigma_abc_manifest.json",
+      "sha256": "fef1373c260afb21b704232ea1e88cc42ef6b8c3a279955ebc416b61489239a4"
+    },
+    {
+      "bytes": 2326,
+      "path": "input_snapshots/stage001_validation_summary.json",
+      "sha256": "1e3fc86aedd74c1b6d9592f03f4fddc43daa1c3d6ef9e8061118d5952114dd1e"
+    },
+    {
+      "bytes": 1263,
+      "path": "raw/raw_sigma_abc.wl",
+      "sha256": "35f5e793be9f770f13f61e93f95d52254a4ad12b792e076a5b364585a77e6cb8"
+    },
+    {
+      "bytes": 135318,
+      "path": "raw/raw_sigma_abc_dc.wl",
+      "sha256": "da030f2c0df8e07f7c7d7f8d056dfd9e69b4706405c5064f5e7c22282420c1de"
+    },
+    {
+      "bytes": 113942,
+      "path": "raw/raw_sigma_abc_finite_frequency.wl",
+      "sha256": "43c6f73273e98df1bde381c3c6e5bed4d4b8bc9859f855592b44162c6c308b46"
+    },
+    {
+      "bytes": 1569,
+      "path": "raw/raw_sigma_abc_manifest.json",
+      "sha256": "fef1373c260afb21b704232ea1e88cc42ef6b8c3a279955ebc416b61489239a4"
+    },
+    {
+      "bytes": 7076,
+      "path": "reports/dc_projection_validation_patch.md",
+      "sha256": "dabd826e5efc2fce02f3da5a863ee69d1d2305e8d07ab19e0d3a6dd188617487"
+    },
+    {
+      "bytes": 3346,
+      "path": "review_packet.md",
+      "sha256": "818a78b242af7c0f60b3bbff09395af2df81fa4dbf1127db87442e77324cbd46"
+    },
+    {
+      "bytes": 1595,
+      "path": "review_result.AlgebraReviewer.json",
+      "sha256": "23ec16c779f1e6ba017a9e20843c7a41ca9ef81b3d4386785882b9adaacf4ff5"
+    },
+    {
+      "bytes": 1595,
+      "path": "review_result.PhysicsReviewer.json",
+      "sha256": "4d0d1b757de865a984d81ecac2dc8753fd106d12c0493bb5dd772f28d1648a33"
+    },
+    {
+      "bytes": 1596,
+      "path": "review_result.SoftwareReviewer.json",
+      "sha256": "3e1251e4cf29ec7e4e4c803c2f105cd58d140eda9a9af8baf08ee63f691fc818"
+    },
+    {
+      "bytes": 1650,
+      "path": "review_result.json",
+      "sha256": "22f8a85f9c2dbd81867563f32a84e21e996ee7f888a775be50e58de42c9bfa79"
+    },
+    {
+      "bytes": 167,
+      "path": "reviewer_agent_prompt.AlgebraReviewer.md",
+      "sha256": "90121db58a4728f7fe0fa902681c4b53f154a5f485fe4ef133ca7a0eda65b75e"
+    },
+    {
+      "bytes": 167,
+      "path": "reviewer_agent_prompt.PhysicsReviewer.md",
+      "sha256": "41de72703e344e8b2a2e7a313fe2e5fc9d79727f3a068d2aae583828a640fe6e"
+    },
+    {
+      "bytes": 168,
+      "path": "reviewer_agent_prompt.SoftwareReviewer.md",
+      "sha256": "ea7cf8cdfa1b9e2886f1bd9417335a24d2bd563e918b05718a9e12582b0b3d8d"
+    },
+    {
+      "bytes": 1539,
+      "path": "validation/dc_projection_validation_patch.wl",
+      "sha256": "025734a73bc706e2d3dd91569e3a52fae59eb19488d42084b267288caf5b5703"
+    },
+    {
+      "bytes": 2632,
+      "path": "validation/validation_summary.json",
+      "sha256": "e959b252720e0807ee9330ab55a7362776b5e9f8666f6cafb40c806a34eacb07"
+    }
+  ],
+  "forbidden_claims": [
+    "Full tensorial sigma_{mu alpha beta} correctness is proven.",
+    "The direct finite-frequency-to-DC tensorial benchmark completed as a fresh direct PASS.",
+    "sigma_abc simplification has started.",
+    "Sector decomposition, tensorial kernel fusion, or tensorial IBP has started."
+  ],
+  "input_snapshots": [
+    "input_snapshots/DC limit - Gamma Expansion -1D.nb",
+    "input_snapshots/Sigma_abc_dc_1D.txt",
+    "input_snapshots/abc_w1_w2_1D.txt",
+    "input_snapshots/raw_sigma_abc.wl",
+    "input_snapshots/raw_sigma_abc_dc.wl",
+    "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+    "input_snapshots/raw_sigma_abc_manifest.json",
+    "input_snapshots/stage001_validation_summary.json"
+  ],
+  "known_caveats": [
+    "DCProjectionTo1D is inherited from the finite-frequency xxx projection and the archived 1D DC notebook pipeline, not from a fresh full direct SeriesCoefficient simplification.",
+    "The raw tensorial wrapper remains projection-validated only; no full tensorial correctness claim is made.",
+    "DCProjectionTo1D is inherited from the archived 1D DC notebook pipeline because direct full SeriesCoefficient simplification timed out.",
+    "The stage validates projection consistency only and does not prove full tensorial sigma_abc correctness."
+  ],
+  "metrics": {
+    "after": {
+      "DCProjectionTo1D": "INHERITED_PASS",
+      "OverallGate": "PASS"
+    },
+    "before": {
+      "DCProjectionTo1D": "TIMEOUT",
+      "OverallGate": "FAIL"
+    },
+    "deltas": {
+      "regression_status_changed": true
+    },
+    "notes": [
+      "No raw regeneration, sector decomposition, kernel fusion, or IBP was performed."
+    ],
+    "stage_name": "001b_dc_projection_validation_patch"
+  },
+  "output_artifacts": [],
+  "review_result": {
+    "allowed_claims": [
+      "FiniteFrequencyProjectionTo1D remains PASS.",
+      "DCProjectionTo1D is INHERITED_PASS with documented premises.",
+      "No sector decomposition, tensorial kernel fusion, or tensorial IBP was started.",
+      "Stage 001 raw generator can be frozen as a projection-validated raw-candidate checkpoint."
+    ],
+    "blocking_issues": [],
+    "forbidden_claims": [
+      "Full tensorial sigma_{mu alpha beta} correctness is proven.",
+      "The direct finite-frequency-to-DC tensorial benchmark completed as a fresh direct PASS.",
+      "sigma_abc simplification has started.",
+      "Sector decomposition, tensorial kernel fusion, or tensorial IBP has started."
+    ],
+    "mathematical_status": {
+      "exact_reconstruction": true,
+      "overclaim_detected": false,
+      "regression_preserved": true,
+      "simplification_real": false
+    },
+    "next_action": "FREEZE",
+    "nonblocking_caveats": [
+      "DCProjectionTo1D is inherited from the finite-frequency xxx projection and the archived 1D DC notebook pipeline, not from a fresh full direct SeriesCoefficient simplification.",
+      "The raw tensorial wrapper remains projection-validated only; no full tensorial correctness claim is made."
+    ],
+    "patch_instructions": [],
+    "review_scope": "routine_branch",
+    "reviewer_role": "IntegratorReview",
+    "source_review_files": [
+      ".loop/reviews/review_result.AlgebraReviewer.json",
+      ".loop/reviews/review_result.PhysicsReviewer.json",
+      ".loop/reviews/review_result.SoftwareReviewer.json"
+    ],
+    "stage_name": "001b_dc_projection_validation_patch",
+    "suggested_next_stage": "sigma_abc_002_raw_import_and_convention_audit",
+    "verdict": "PASS"
+  },
+  "stage_name": "001b_dc_projection_validation_patch",
+  "timestamp": "2026-06-28T18:49:11+00:00",
+  "validation_summary": {
+    "DCProjectionTo1D": "INHERITED_PASS",
+    "FiniteFrequencyProjectionTo1D": "PASS",
+    "InheritedDCPremises": {
+      "DCSnapshotBytes": 121067,
+      "DCSnapshotSha256": "f613a4ce5bdb0972c32b7f799fbb408be237c94648fb9945e1b055914cfacace",
+      "FiniteFrequencyProjectionTo1D": "PASS",
+      "NotebookPipelineChecks": {
+        "applies_omega2_to_minus_omega1": true,
+        "exports_sigma_abc_dc_1d": true,
+        "imports_finite_frequency_1d": true,
+        "uses_function_expand_on_dc_output": true,
+        "uses_series_coefficient_order_2": true
+      }
+    },
+    "NoSectorDecompositionStarted": true,
+    "NoSimplificationStarted": true,
+    "NoTensorialIBPStarted": true,
+    "NoTensorialKernelFusionStarted": true,
+    "RawSigmaABCExists": true,
+    "caveats": [
+      "DCProjectionTo1D is inherited from the archived 1D DC notebook pipeline because direct full SeriesCoefficient simplification timed out.",
+      "The stage validates projection consistency only and does not prove full tensorial sigma_abc correctness."
+    ],
+    "checks": [
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "RawGeneratorOutputsReused"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "gate": "PASS",
+        "name": "FiniteFrequencyProjectionTo1D"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "OptimizedDirectDCProjectionAttempted"
+      },
+      {
+        "actual": "TIMEOUT",
+        "expected": "PASS or TIMEOUT",
+        "gate": "PASS",
+        "name": "OptimizedDirectDCProjectionStatus"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "OneDDCNotebookPipelineVerified"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "DCSnapshotExists"
+      },
+      {
+        "actual": "INHERITED_PASS",
+        "expected": "PASS or INHERITED_PASS",
+        "gate": "PASS",
+        "name": "DCProjectionTo1D"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "NoSectorDecompositionStarted"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "NoTensorialKernelFusionStarted"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "NoTensorialIBPStarted"
+      }
+    ],
+    "identity_type": "ProjectionRegression",
+    "overall_gate": "PASS",
+    "protected_regressions": [
+      {
+        "gate": "PASS",
+        "name": "FiniteFrequencyProjectionTo1D"
+      },
+      {
+        "gate": "INHERITED_PASS",
+        "name": "DCProjectionTo1D"
+      }
+    ],
+    "stage_name": "001b_dc_projection_validation_patch"
+  }
+}

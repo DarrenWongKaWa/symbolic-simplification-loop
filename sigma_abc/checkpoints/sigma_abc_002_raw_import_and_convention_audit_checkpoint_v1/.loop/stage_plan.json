@@ -1,0 +1,48 @@
+{
+  "allowed_transformations": [
+    "Raw input registration",
+    "Convention audit",
+    "Projection-rule documentation"
+  ],
+  "claim_boundary": {
+    "allowed_claims": [
+      "Raw input candidate is registered for preparation stages.",
+      "Tensor, frequency, Gamma, and xxx projection conventions are audited."
+    ],
+    "forbidden_claims": [
+      "Full tensorial sigma_abc correctness is proven.",
+      "Tensorial simplification has started."
+    ]
+  },
+  "expected_outputs": [
+    "sigma_abc/HUMAN_TASK_BRIEF.md",
+    "sigma_abc/raw_input_manifest.json",
+    "sigma_abc/tensor_index_convention.md",
+    "sigma_abc/frequency_convention.md",
+    "sigma_abc/gamma_convention.md",
+    "sigma_abc/projection_rule_xxx.md"
+  ],
+  "forbidden_transformations": [
+    "Start sector decomposition",
+    "Start kernel fusion",
+    "Start IBP",
+    "Claim full tensorial correctness"
+  ],
+  "goal": "Register the frozen raw generator checkpoint as official raw input and audit tensor/frequency/Gamma/projection conventions.",
+  "input_snapshots": [
+    "input_snapshots/stage001b_checkpoint_manifest.json",
+    "input_snapshots/stage001b_validation_summary.json",
+    "input_snapshots/raw_sigma_abc.wl",
+    "input_snapshots/raw_sigma_abc_finite_frequency.wl",
+    "input_snapshots/raw_sigma_abc_manifest.json"
+  ],
+  "next_stage_trigger": "Proceed to Stage 003 only if OverallGate is PASS.",
+  "protected_regressions": [
+    "Stage001DCCaveatPreserved"
+  ],
+  "stage_name": "002_raw_import_and_convention_audit",
+  "validation_identity": {
+    "expression": "RawExpressionExists && RawExpressionHashRecorded && TensorConventionAuditComplete && FrequencyConventionAuditComplete && ProjectionRuleXXXRecorded",
+    "type": "ProjectionRegression"
+  }
+}

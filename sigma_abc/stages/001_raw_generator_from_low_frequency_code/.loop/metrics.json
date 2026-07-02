@@ -1,0 +1,16 @@
+{
+  "after": {
+    "overall_gate": "FAIL",
+    "raw_sigma_abc_candidate_exists": true
+  },
+  "before": {
+    "raw_sigma_abc_exists": false
+  },
+  "deltas": {
+    "generated_candidate_raw_files": 3
+  },
+  "notes": [
+    "Candidate is not official raw import because DC benchmark timed out."
+  ],
+  "stage_name": "001_raw_generator_from_low_frequency_code"
+}

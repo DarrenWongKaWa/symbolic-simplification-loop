@@ -1,0 +1,103 @@
+project: sigma_abc
+description: Safe pre-fusion stage graph for the future tensorial sigma_abc project.
+current_checkpoint: sigma_abc_005_sector_ledger_xxx_collapse_regression_checkpoint_v1
+current_checkpoint_caveats:
+  - DCProjectionTo1D is INHERITED_PASS, not direct full tensorial DC-series PASS.
+known_sector_ledger:
+  center_contact_sector: 93
+  pair_two_band_sector: 912
+  loop_three_band_sector: 288
+  unclassified: 0
+  total_rows: 1293
+known_gates:
+  RawMinusSectorSum: 0
+  SectorLedgerXXXCollapse: PASS
+  RawProjectionStillPASS: true
+  DCProjectionStillInheritedPASS: true
+stages:
+  - id: sigma_abc_002_raw_import_and_convention_audit
+    goal: Register the frozen raw generator checkpoint as official raw input and audit conventions.
+    tags: [raw_import, convention_audit, no_simplification]
+    depends_on: [sigma_abc_001_raw_generator_checkpoint_v1]
+  - id: sigma_abc_003_xxx_projection_benchmark_hardening
+    goal: Register sigma_xxx final checkpoint as the protected future projection benchmark.
+    tags: [benchmark, projection_regression, no_simplification]
+    depends_on: [sigma_abc_002_raw_import_and_convention_audit]
+  - id: sigma_abc_004_tensorial_raw_sector_decomposition_ledger
+    goal: Decompose raw tensorial expression into raw sector ledgers without simplifying.
+    tags: [sector_ledger, no_kernel_fusion, no_ibp]
+    depends_on: [sigma_abc_003_xxx_projection_benchmark_hardening]
+  - id: sigma_abc_005_sector_ledger_xxx_collapse_regression
+    goal: Check tensorial sector ledger collapse to known projected 1D xxx structure.
+    tags: [projection_regression, no_simplification]
+    depends_on: [sigma_abc_004_tensorial_raw_sector_decomposition_ledger]
+  - id: sigma_abc_006_tensorial_sector_architecture_review
+    goal: Architecture-only review before tensorial kernel fusion.
+    tags: [architecture_review, no_kernel_fusion, no_ibp, safe_prefusion]
+    kind: sigma_abc_prefusion_metadata
+    depends_on: [sigma_abc_005_sector_ledger_xxx_collapse_regression]
+  - id: sigma_abc_007_pair_sector_basis_closure_pilot
+    goal: Pair-sector basis classification pilot without IBP or kernel fusion.
+    tags: [pair_basis_pilot, no_kernel_fusion, no_ibp, safe_prefusion]
+    kind: sigma_abc_prefusion_metadata
+    depends_on: [sigma_abc_006_tensorial_sector_architecture_review]
+  - id: sigma_abc_008_pair_sector_xxx_regression_and_next_basis_decision
+    goal: Check protected xxx regression boundary and decide next pair-basis profile without running it.
+    tags: [pair_regression_decision, projection_regression, no_kernel_fusion, no_ibp, safe_prefusion]
+    kind: sigma_abc_prefusion_metadata
+    recommended_next_profile: sigma_abc_pair_basis_refinement
+    depends_on: [sigma_abc_007_pair_sector_basis_closure_pilot]
+  - id: sigma_abc_009_pair_sector_basis_refinement_classification
+    goal: Pair-sector basis refinement classification after the safe pre-fusion decision; no IBP or kernel fusion.
+    tags: [pair_basis_refinement, no_kernel_fusion, no_ibp]
+    kind: sigma_abc_prefusion_metadata
+    recommended_next_profile: sigma_abc_pair_kernel_fusion_pilot
+    depends_on: [sigma_abc_008_pair_sector_xxx_regression_and_next_basis_decision]
+  - id: sigma_abc_010_pair_kernel_fusion_pilot
+    goal: Future pair-sector-only kernel fusion pilot; not authorized by safe pre-fusion profile.
+    tags: [kernel_fusion, pair_kernel_fusion, requires_human_approval]
+    kind: sigma_abc_pair_kernel_fusion_pilot
+    depends_on: [sigma_abc_009_pair_sector_basis_refinement_classification]
+  - id: sigma_abc_011_center_sector_pilot
+    goal: Center/contact-sector-only row-provenance pattern fusion pilot without IBP or total derivatives.
+    tags: [center_sector_pilot, no_ibp, requires_human_approval]
+    kind: sigma_abc_center_sector_pilot
+    depends_on: [sigma_abc_010_pair_kernel_fusion_pilot]
+  - id: sigma_abc_012a_loop_sector_inventory
+    goal: Loop/three-band sector inventory and orbit-ledger provenance only; no candidate promotion.
+    tags: [loop_sector_inventory, no_candidate_promotion, no_ibp, requires_human_approval]
+    kind: sigma_abc_prefusion_metadata
+    depends_on: [sigma_abc_011_center_sector_pilot]
+  - id: sigma_abc_012b_loop_hypothesis_generation
+    goal: Loop/three-band conjecture generation and failure archive only; verified candidates are not promoted.
+    tags: [loop_hypothesis_generation, exploration_only, no_candidate_promotion, no_ibp, requires_human_approval]
+    kind: sigma_abc_prefusion_metadata
+    depends_on: [sigma_abc_012a_loop_sector_inventory]
+  - id: sigma_abc_012c_loop_orbit_canonicalization_promotion
+    goal: Loop/three-band orbit-canonicalization candidate promotion before tensorial IBP.
+    tags: [loop_orbit_canonicalization_promotion, candidate_promotion, no_ibp, requires_human_approval]
+    kind: sigma_abc_prefusion_metadata
+    depends_on: [sigma_abc_012b_loop_hypothesis_generation]
+  - id: sigma_abc_012c_real_loop_candidate_preparation
+    goal: Prepare real sigma_abc loop-orbit candidate artifacts for a future 012C promotion retry; no candidate promotion.
+    tags: [loop_candidate_preparation, no_candidate_promotion, no_ibp, requires_human_approval]
+    kind: sigma_abc_loop_candidate_preparation
+    intent: candidate_preparation_only
+    candidate_promotion_allowed: false
+    depends_on: [sigma_abc_012b_loop_hypothesis_generation]
+    expected_outputs:
+      - output/loop_candidate_preparation.json
+      - output/loop_candidate_requirements_resolved.json
+      - reports/loop_candidate_preparation_report.md
+      - validation/loop_candidate_preparation_validation.json
+      - .loop/validation_summary.json
+  - id: sigma_abc_013_global_pre_ibp_assembly
+    goal: Assemble center, pair, and loop pre-IBP ledgers without total-derivative reduction.
+    tags: [global_assembly_pre_ibp, no_ibp, requires_human_approval]
+    kind: sigma_abc_prefusion_metadata
+    depends_on: [sigma_abc_012c_loop_orbit_canonicalization_promotion]
+  - id: sigma_abc_014_sigma_xxx_projection_regression_hardening
+    goal: Harden projected xxx benchmark regression before any tensorial IBP work.
+    tags: [projection_regression, no_ibp, requires_human_approval]
+    kind: sigma_abc_prefusion_metadata
+    depends_on: [sigma_abc_013_global_pre_ibp_assembly]

@@ -1,0 +1,25 @@
+{
+  "caveats": [
+    "Infrastructure-only smoke test; no physics simplification was run."
+  ],
+  "checks": [
+    {
+      "actual": "0",
+      "expected": "0",
+      "gate": "PASS",
+      "name": "mock_polynomial_identity",
+      "new": "(x + 1)^2",
+      "old": "x^2 + 2 x + 1"
+    }
+  ],
+  "identity_type": "OldMinusNewZero",
+  "overall_gate": "PASS",
+  "protected_regressions": [
+    {
+      "gate": "PASS",
+      "name": "sigma_xxx_benchmark_metadata_registered",
+      "source": "examples/sigma_xxx_case/benchmark_sigma_xxx_projection.json"
+    }
+  ],
+  "stage_name": "000_polynomial_identity"
+}

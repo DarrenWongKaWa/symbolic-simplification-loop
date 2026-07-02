@@ -1,0 +1,12 @@
+project: mock_validation_fail
+description: Negative test project where validation fails and freeze must be blocked.
+stages:
+  - id: mock_fail_validation
+    goal: Produce an intentional validation failure.
+    tags: [mock, no_simplification]
+    kind: polynomial_identity
+    old: x^2
+    new: x
+    expanded_new: x
+    expected_difference: nonzero
+    force_validation_gate: FAIL

@@ -1,0 +1,46 @@
+{
+  "allowed_claims": [
+    "Raw contract readiness is validated.",
+    "RawSigmaABCExists is explicitly false.",
+    "SigmaXXXBenchmarkRegistered is true.",
+    "The raw sigma_abc contract defines the required tensorial scope.",
+    "The sigma_xxx projection benchmark is registered as a future protected regression.",
+    "The raw contract, template, source options, and benchmark registration files exist.",
+    "The validation summary honestly records raw absence."
+  ],
+  "blocking_issues": [],
+  "forbidden_claims": [
+    "raw_sigma_abc.wl exists.",
+    "sigma_abc simplification has started.",
+    "The tensorial raw expression is available.",
+    "The full tensorial conductivity formula is correct.",
+    "The projected sigma_xxx simplifications have been promoted to tensorial identities.",
+    "A generated raw_sigma_abc.wl file is present.",
+    "A downstream simplification stage has been executed."
+  ],
+  "mathematical_status": {
+    "exact_reconstruction": true,
+    "overclaim_detected": false,
+    "regression_preserved": true,
+    "simplification_real": false
+  },
+  "next_action": "FREEZE",
+  "nonblocking_caveats": [
+    "No algebraic simplification was expected or performed in this contract stage.",
+    "The sigma_xxx projection benchmark is registered but not run because no raw tensorial expression exists.",
+    "The branch is a contract and benchmark-registration checkpoint only.",
+    "The next scientific branch must select a raw source before import.",
+    "Freeze is acceptable only as a contract checkpoint, not as raw import."
+  ],
+  "patch_instructions": [],
+  "review_scope": "routine_branch",
+  "reviewer_role": "IntegratorReview",
+  "source_review_files": [
+    ".loop/reviews/review_result.AlgebraReviewer.json",
+    ".loop/reviews/review_result.PhysicsReviewer.json",
+    ".loop/reviews/review_result.SoftwareReviewer.json"
+  ],
+  "stage_name": "000_raw_contract",
+  "suggested_next_stage": "sigma_abc_001_raw_generation_or_transcription",
+  "verdict": "PASS_WITH_CAVEAT"
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PreRunBrief",
+  "type": "object",
+  "required": ["stage_id", "written_by", "task_understanding", "profile_match"],
+  "properties": {
+    "stage_id": { "type": "string", "minLength": 1 },
+    "profile_id": { "type": "string" },
+    "written_by": { "type": "string", "minLength": 1 },
+    "task_understanding": {
+      "type": "object",
+      "required": [
+        "goal_restated",
+        "expected_outputs",
+        "dependencies_acknowledged",
+        "allowed_actions",
+        "forbidden_actions",
+        "claim_boundary_acknowledged",
+        "caveats_acknowledged"
+      ],
+      "properties": {
+        "goal_restated": { "type": "string" },
+        "expected_outputs": { "type": "array", "items": { "type": "string" } },
+        "dependencies_acknowledged": { "type": "array", "items": { "type": "string" } },
+        "allowed_actions": { "type": "array", "items": { "type": "string" } },
+        "forbidden_actions": { "type": "array", "items": { "type": "string" } },
+        "claim_boundary_acknowledged": { "type": "boolean" },
+        "caveats_acknowledged": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "profile_match": {
+      "type": "object",
+      "required": [
+        "in_approved_stage_ids",
+        "forbidden_actions_covered",
+        "dependencies_covered",
+        "expected_outputs_covered"
+      ],
+      "properties": {
+        "in_approved_stage_ids": { "type": "boolean" },
+        "forbidden_actions_covered": { "type": "boolean" },
+        "dependencies_covered": { "type": "boolean" },
+        "expected_outputs_covered": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

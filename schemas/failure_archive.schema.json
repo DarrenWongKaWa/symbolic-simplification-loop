@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FailureArchive",
+  "type": "object",
+  "required": ["conjecture_id", "candidate_id", "failure_mode", "stage_action"],
+  "properties": {
+    "conjecture_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "failure_mode": { "type": "string" },
+    "stage_action": { "type": "string" },
+    "residual_summary": { "type": "string" }
+  },
+  "additionalProperties": true
+}

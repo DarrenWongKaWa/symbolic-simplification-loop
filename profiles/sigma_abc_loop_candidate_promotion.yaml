@@ -1,0 +1,99 @@
+profile: sigma_abc_loop_candidate_promotion
+current_checkpoint_override: sigma_abc_012b_loop_hypothesis_generation
+autonomy:
+  allow_physics_simplification: false
+  allow_kernel_fusion: false
+  allow_ibp_reduction: false
+  max_stages_per_run: 1
+  stop_after_stage: sigma_abc_012c_loop_orbit_canonicalization_promotion
+allowed_stage_ids:
+  - sigma_abc_012c_loop_orbit_canonicalization_promotion
+allowed_stage_tags:
+  - loop_orbit_canonicalization_promotion
+  - candidate_promotion
+review:
+  mode: codex_subagent
+  scope: major_checkpoint
+review_policy:
+  mode: tiered
+  allow_l0_freeze_for_low_risk_provenance: false
+  require_l1_for_claim_boundary: true
+  require_l2_for_kernel_fusion: true
+  require_l2_for_candidate_promotion: true
+  require_l2_for_global_assembly: true
+  lanes:
+    L0_DETERMINISTIC:
+      requires_llm_agents: false
+      allowed_for:
+        - schema_validation
+        - file_hygiene
+        - no_forbidden_action
+    L1_COMPACT_META:
+      reviewers:
+        - ScientificMetaReviewer
+      requires_compact_packet: true
+      max_input_tokens: 2500
+      allowed_for:
+        - report_boundary_check
+    L2_FULL_PANEL:
+      reviewers:
+        - AlgebraReviewer
+        - PhysicsReviewer
+        - SoftwareReviewer
+        - ScientificMetaReviewer
+      required_for:
+        - new_symbolic_candidate_promotion
+        - loop_orbit_canonicalization
+        - candidate_promotion
+        - kernel_fusion
+        - global_pre_ibp_assembly
+        - ibp_or_total_derivative
+        - full_formula_claim
+runtime:
+  on_quota_limit: VALIDATED_PENDING_REVIEW
+  do_not_wait_interactively: true
+reporting:
+  build_stage_digest: true
+  require_human_readable_review: true
+  require_meta_review: true
+  named_stage_digest: true
+  require_stage_digest: true
+  require_digest_review: true
+agents:
+  require_real_invocation: true
+  forbid_stub_in_production: true
+  require_invocation_evidence: true
+  require_read_only_contract: true
+  require_mailbox_events: true
+  allow_stub_for_tests: false
+orchestration:
+  use_mailbox: true
+  require_patch_planner_for_patch: true
+  max_patch_attempts_per_stage: 2
+patching:
+  max_patch_attempts_per_stage: 2
+  allow_report_only_patch: true
+  allow_validation_patch: true
+  allow_symbolic_patch: false
+  require_patch_plan: true
+hypothesis_search:
+  enabled: true
+  exploration_only: false
+  promote_candidates: true
+  max_conjectures_per_stage: 6
+  max_candidates_per_conjecture: 2
+  max_total_candidate_attempts: 10
+  archive_failed_conjectures: true
+  allow_ibp_conjectures: false
+  allow_total_derivative_conjectures: false
+  promote_only_verified_candidates: true
+  require_candidate_ranking: true
+hard_stop_policy: sigma_abc_hard_stops
+benchmark_policy: sigma_xxx_projection
+requires_human_approval: true
+human_approval:
+  granted: true
+  approved_stage_ids:
+    - sigma_abc_012c_loop_orbit_canonicalization_promotion
+  approved_forbidden_stage_tags: []
+  scope: loop candidate promotion only; no global pre-IBP assembly, no tensorial IBP, no total-derivative reduction

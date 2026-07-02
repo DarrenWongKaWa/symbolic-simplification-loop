@@ -1,0 +1,91 @@
+# Copy this file to `agents/runtime.local.yaml` and edit it for your machine.
+#
+# Loop 021 introduces a Reviewer Provider Pool abstraction. Reviewer
+# roles in profiles (e.g. ``ScientificMetaReviewer``) may be satisfied
+# by one of several providers. The pool iterates providers in declared
+# order and falls through to the next one ONLY on retryable runtime
+# failures (QUOTA, TIMEOUT, COMMAND_NOT_FOUND, TRANSPORT_FAILURE,
+# RUNTIME_FAILURE, NO_OUTPUT). Schema-valid reviewer verdicts stop
+# the chain, regardless of PASS / PASS_WITH_CAVEAT / FAIL /
+# NEEDS_PATCH. Production stubs are forbidden when
+# ``forbid_stub: true`` (default).
+#
+# The runner intentionally does not guess the Codex command used to invoke a
+# subagent.  Production profiles requiring real invocation evidence remain
+# blocked until a local runtime command is configured.
+#
+# SECURITY: API keys must NEVER be written into this file. Set them as
+# environment variables on the machine that runs the runner, or via
+# your secret manager. The example below uses env-var names only.
+
+profiles:
+  sigma_abc_hypothesis_pre_ibp:
+    runtime:
+      adapter: command
+      command:
+        - codex
+        - exec
+        - "--agent"
+        - "{agent_name}"
+        - "--input"
+        - "{prompt_path}"
+        - "--output"
+        - "{output_path}"
+      timeout_seconds: 900
+
+  # Loop 021 example: provider-pool for the
+  # ScientificMetaReviewer role. Allowed: command adapters
+  # (Codex CLI, Claude Code CLI, generic local command) and HTTP
+  # API adapters (Anthropic, OpenAI, OpenAI-compatible). The
+  # pool tries each in declared order. Disable any of them by
+  # deleting the entry or setting ``enabled_env`` to a variable
+  # that evaluates to "0" in your shell.
+  sigma_abc_hypothesis_pre_ibp_throughput:
+    reviewer_provider_pools:
+      ScientificMetaReviewer:
+        fallback_policy: runtime_failure_only
+        require_real_provider: true
+        forbid_stub: true
+        providers:
+          - name: anthropic_api
+            adapter: anthropic_api
+            api_key_env: ANTHROPIC_API_KEY
+            model_env: ANTHROPIC_MODEL
+            enabled_env: LOOP_ENABLE_ANTHROPIC
+
+          - name: openai_api
+            adapter: openai_api
+            api_key_env: OPENAI_API_KEY
+            model_env: OPENAI_MODEL
+            enabled_env: LOOP_ENABLE_OPENAI
+
+          - name: openai_compatible_api
+            adapter: openai_compatible_api
+            api_key_env: OPENAI_COMPATIBLE_API_KEY
+            base_url_env: OPENAI_COMPATIBLE_BASE_URL
+            model_env: OPENAI_COMPATIBLE_MODEL
+            enabled_env: LOOP_ENABLE_OPENAI_COMPATIBLE
+
+          - name: claude_code_cli
+            adapter: command
+            command: ["claude"]
+            enabled_env: LOOP_ENABLE_CLAUDE_CODE
+            timeout_seconds: 900
+
+          - name: codex_cli_resolver
+            adapter: command
+            command: ["bash", "${REPO_ROOT}/scripts/codex_resolver.sh", "{agent_name}", "{prompt_path}", "{output_path}", "{stage_dir}"]
+            enabled_env: LOOP_ENABLE_CODEX
+            timeout_seconds: 900
+
+# A small local smoke-test command can be configured separately, for example:
+#
+# profiles:
+#   test_hypothesis_search_loop:
+#     runtime:
+#       adapter: command
+#       command:
+#         - python3
+#         - -c
+#         - "print('agent runtime ok')"
+#       timeout_seconds: 30

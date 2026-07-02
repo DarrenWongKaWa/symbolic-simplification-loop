@@ -1,0 +1,53 @@
+{
+  "NoIBPStarted": true,
+  "NoKernelFusionStarted": true,
+  "RawMinusSectorSum": 0,
+  "SectorCounts": {
+    "center/contact sector": 93,
+    "loop/three-band sector": 288,
+    "pair/two-band sector": 912,
+    "total_rows": 1293,
+    "unclassified": 0
+  },
+  "SectorCountsRecorded": true,
+  "SectorDecompositionExists": true,
+  "caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Sector labels are raw row-provenance groups, not physical kernel fusion."
+  ],
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "SectorDecompositionExists"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "gate": "PASS",
+      "name": "RawMinusSectorSum"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "SectorCountsRecorded"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoKernelFusionStarted"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoIBPStarted"
+    }
+  ],
+  "identity_type": "OldMinusNewZero",
+  "overall_gate": "PASS",
+  "stage_name": "004_tensorial_raw_sector_decomposition_ledger"
+}

@@ -1,0 +1,96 @@
+profile: sigma_abc_loop_candidate_preparation
+current_checkpoint_override: sigma_abc_012b_loop_hypothesis_generation
+stage_intent: candidate_preparation_only
+candidate_promotion_allowed: false
+autonomy:
+  allow_physics_simplification: false
+  allow_kernel_fusion: false
+  allow_ibp_reduction: false
+  max_stages_per_run: 1
+  stop_after_stage: sigma_abc_012c_real_loop_candidate_preparation
+allowed_stage_ids:
+  - sigma_abc_012c_real_loop_candidate_preparation
+allowed_stage_tags:
+  - loop_candidate_preparation
+  - no_candidate_promotion
+# Preparation-only profile. Positive candidate-promotion intent is still
+# forbidden by the pre-run classifier, but negative boundary acknowledgements
+# such as "no candidate promotion" are allowed so this profile can check
+# readiness artifacts without promoting a candidate.
+forbidden_actions:
+  - global assembly
+  - IBP
+  - total derivative reduction
+  - full tensorial sigma_abc correctness claim
+review:
+  mode: codex_subagent
+  scope: preparation_checkpoint
+review_policy:
+  mode: tiered
+  allow_l0_freeze_for_low_risk_provenance: false
+  require_l1_for_claim_boundary: true
+  require_l2_for_candidate_promotion: true
+  lanes:
+    L1_COMPACT_META:
+      reviewers:
+        - ScientificMetaReviewer
+      requires_compact_packet: true
+      max_input_tokens: 2500
+      allowed_for:
+        - candidate_source_preparation
+        - report_identity_check
+        - claim_boundary_check
+    L2_FULL_PANEL:
+      reviewers:
+        - AlgebraReviewer
+        - PhysicsReviewer
+        - SoftwareReviewer
+        - ScientificMetaReviewer
+      required_for:
+        - candidate_promotion
+        - loop_orbit_canonicalization
+        - global_pre_ibp_assembly
+        - ibp_or_total_derivative
+runtime:
+  on_quota_limit: VALIDATED_PENDING_REVIEW
+  do_not_wait_interactively: true
+reporting:
+  build_stage_digest: true
+  require_human_readable_review: true
+  require_meta_review: true
+  named_stage_digest: true
+  require_stage_digest: true
+  require_digest_review: true
+agents:
+  require_real_invocation: false
+  forbid_stub_in_production: false
+  require_invocation_evidence: false
+  require_read_only_contract: true
+  require_mailbox_events: true
+  allow_stub_for_tests: true
+orchestration:
+  use_mailbox: true
+  require_patch_planner_for_patch: true
+  max_patch_attempts_per_stage: 1
+patching:
+  max_patch_attempts_per_stage: 1
+  allow_report_only_patch: true
+  allow_validation_patch: false
+  allow_symbolic_patch: false
+  require_patch_plan: true
+hypothesis_search:
+  enabled: false
+  exploration_only: true
+  promote_candidates: false
+  archive_failed_conjectures: true
+  allow_ibp_conjectures: false
+  allow_total_derivative_conjectures: false
+hard_stop_policy: sigma_abc_hard_stops
+benchmark_policy: sigma_xxx_projection
+requires_human_approval: true
+human_approval:
+  granted: true
+  approved_stage_ids:
+    - sigma_abc_012c_real_loop_candidate_preparation
+  approved_forbidden_stage_tags: []
+  scope: prepare real loop candidate artifacts only; no 012C promotion, no global assembly, no tensorial IBP, no total-derivative reduction

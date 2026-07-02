@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HumanSignoff",
+  "type": "object",
+  "required": [
+    "stage_id",
+    "signed_by",
+    "signed_at",
+    "decision",
+    "basis",
+    "basis_hashes",
+    "human_scientific_judgment",
+    "permission"
+  ],
+  "properties": {
+    "stage_id": { "type": "string" },
+    "signed_by": { "type": "string" },
+    "signed_at": { "type": "string", "format": "date-time" },
+    "decision": {
+      "enum": ["APPROVE_FREEZE", "APPROVE_FREEZE_WITH_CAVEAT", "DO_NOT_FREEZE_PATCH", "REJECT_AND_STOP"]
+    },
+    "basis": {
+      "type": "object",
+      "required": ["completion_matrix", "validation_summary", "review_result", "claim_boundary"],
+      "properties": {
+        "completion_matrix": { "type": "string" },
+        "validation_summary": { "type": "string" },
+        "review_result": { "type": "string" },
+        "claim_boundary": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "basis_hashes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "human_scientific_judgment": {
+      "type": "object",
+      "required": [
+        "completion_understood",
+        "blocking_items_understood",
+        "boundary_audit_understood",
+        "caveats_understood"
+      ],
+      "properties": {
+        "completion_understood": { "type": "boolean" },
+        "blocking_items_understood": { "type": "boolean" },
+        "boundary_audit_understood": { "type": "boolean" },
+        "caveats_understood": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "accepted_caveats": { "type": "array", "items": { "type": "string" } },
+    "blocking_reason": { "type": "array", "items": { "type": "string" } },
+    "permission": {
+      "type": "object",
+      "required": [
+        "freeze_checkpoint",
+        "continue_patch_loop",
+        "promote_claim",
+        "start_ibp",
+        "start_total_derivative"
+      ],
+      "properties": {
+        "freeze_checkpoint": { "type": "boolean" },
+        "continue_patch_loop": { "type": "boolean" },
+        "promote_claim": { "type": "boolean" },
+        "start_ibp": { "type": "boolean" },
+        "start_total_derivative": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "reject_propagates_to": { "type": "array", "items": { "type": "string" } },
+    "supersedes": { "type": ["string", "null"] },
+    "signed_via": { "type": "string" }
+  },
+  "additionalProperties": true
+}

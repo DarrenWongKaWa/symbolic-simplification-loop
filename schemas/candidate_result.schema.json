@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CandidateResult",
+  "type": "object",
+  "required": [
+    "conjecture_id",
+    "candidate_id",
+    "validation_status",
+    "identity_checked",
+    "residual_zero",
+    "protected_benchmarks_passed",
+    "promotion_allowed"
+  ],
+  "properties": {
+    "conjecture_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "validation_status": { "type": "string", "enum": ["PASS", "FAIL", "TIMEOUT", "REQUIRES_IBP_APPROVAL"] },
+    "identity_checked": { "type": "string" },
+    "residual_zero": { "type": "boolean" },
+    "protected_benchmarks_passed": { "type": "boolean" },
+    "promotion_allowed": { "type": "boolean" }
+  },
+  "additionalProperties": true
+}

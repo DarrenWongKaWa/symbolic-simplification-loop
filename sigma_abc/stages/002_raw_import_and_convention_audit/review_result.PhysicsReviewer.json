@@ -1,0 +1,31 @@
+{
+  "allowed_claims": [
+    "Raw input candidate is registered for preparation stages.",
+    "Tensor, frequency, Gamma, and xxx projection conventions are audited."
+  ],
+  "blocking_issues": [],
+  "forbidden_claims": [
+    "Full tensorial sigma_abc correctness is proven.",
+    "Tensorial simplification has started."
+  ],
+  "mathematical_status": {
+    "exact_reconstruction": true,
+    "overclaim_detected": false,
+    "regression_preserved": true,
+    "simplification_real": false
+  },
+  "next_action": "FREEZE",
+  "nonblocking_caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+  ],
+  "patch_instructions": [],
+  "review_scope": "routine_branch",
+  "reviewer_role": "PhysicsReviewer",
+  "source_review_files": [
+    "review_packet.md",
+    "validation/validation_summary.json"
+  ],
+  "stage_name": "002_raw_import_and_convention_audit",
+  "suggested_next_stage": null,
+  "verdict": "PASS_WITH_CAVEAT"
+}

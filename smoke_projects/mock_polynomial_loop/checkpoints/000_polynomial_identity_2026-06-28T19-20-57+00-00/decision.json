@@ -1,0 +1,7 @@
+{
+  "action": "FREEZE",
+  "caveats": [],
+  "freeze_allowed": true,
+  "reason": "review passed",
+  "suggested_next_stage": null
+}

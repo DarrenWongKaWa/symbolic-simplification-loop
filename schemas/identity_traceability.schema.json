@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IdentityTraceability",
+  "type": "object",
+  "required": ["stage_id", "identity_traceability_gate", "items", "blocking_failures"],
+  "properties": {
+    "stage_id": { "type": "string", "minLength": 1 },
+    "identity_traceability_gate": { "type": "string", "enum": ["PASS", "FAIL"] },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["identity_label", "latex", "linked_checks", "trace_status", "blocking_if_unlinked"],
+        "properties": {
+          "identity_label": { "type": "string" },
+          "latex": { "type": "string" },
+          "linked_checks": { "type": "array", "items": { "type": "string" } },
+          "trace_status": { "type": "string", "enum": ["LINKED", "REGISTERED", "MISSING_CHECK", "INFORMATIONAL_ONLY"] },
+          "blocking_if_unlinked": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "blocking_failures": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

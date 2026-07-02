@@ -1,0 +1,48 @@
+{
+  "allowed_transformations": [
+    "Direction-label lift of 1D matrix elements",
+    "xxx projection regression",
+    "DC series benchmark attempt"
+  ],
+  "claim_boundary": {
+    "allowed_claims": [
+      "A candidate projection-preserving raw wrapper exists.",
+      "The finite-frequency xxx projection text regression passed."
+    ],
+    "forbidden_claims": [
+      "The DC series benchmark passed.",
+      "The full tensorial sigma_abc formula is correct.",
+      "sigma_abc simplification has started."
+    ]
+  },
+  "expected_outputs": [
+    "scripts/thermal_rho_kernels.wl",
+    "scripts/generate_raw_sigma_abc.wl",
+    "raw/raw_sigma_abc.wl",
+    "raw/raw_sigma_abc_finite_frequency.wl",
+    "raw/raw_sigma_abc_dc.wl",
+    "raw/raw_sigma_abc_manifest.json"
+  ],
+  "forbidden_transformations": [
+    "Tensorial kernel fusion",
+    "Tensorial IBP reduction",
+    "Claim full tensorial correctness"
+  ],
+  "goal": "Build a candidate tensorial raw_sigma_abc generator by abstracting the finite-frequency 1D low_frequency code.",
+  "input_snapshots": [
+    "input_snapshots/abc_w1_w2_1D.txt",
+    "input_snapshots/Sigma_abc_dc_1D.txt",
+    "input_snapshots/DC limit - Gamma Expansion -1D.nb",
+    "input_snapshots/band_sum_abstractor.wl"
+  ],
+  "next_stage_trigger": "Only continue to sigma_abc_002 if OverallGate is PASS.",
+  "protected_regressions": [
+    "Finite-frequency xxx projection to low_frequency/abc_w1_w2_1D.txt",
+    "DC xxx projection to low_frequency/Sigma_abc_dc_1D.txt"
+  ],
+  "stage_name": "001_raw_generator_from_low_frequency_code",
+  "validation_identity": {
+    "expression": "ProjectXXX[raw_sigma_abc_candidate] == abc_w1_w2_1D and DCSeriesProjection == Sigma_abc_dc_1D",
+    "type": "ProjectionRegression"
+  }
+}

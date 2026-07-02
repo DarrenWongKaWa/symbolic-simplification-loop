@@ -1,0 +1,9 @@
+{
+  "action": "FREEZE_WITH_CAVEAT",
+  "caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+  ],
+  "freeze_allowed": true,
+  "reason": "review passed with caveats",
+  "suggested_next_stage": null
+}

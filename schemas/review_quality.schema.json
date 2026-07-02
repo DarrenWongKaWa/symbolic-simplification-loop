@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReviewQuality",
+  "type": "object",
+  "required": [
+    "pass_as",
+    "not_pass_as",
+    "validated_claims",
+    "inherited_or_deferred_claims",
+    "caveats_preserved",
+    "overclaim_detected",
+    "freeze_allowed_by_review_quality",
+    "human_approval_required",
+    "review_lane",
+    "review_lane_justification",
+    "next_safe_stage"
+  ],
+  "properties": {
+    "pass_as": { "type": "string", "minLength": 1 },
+    "not_pass_as": { "type": "array", "items": { "type": "string" } },
+    "validated_claims": { "type": "array", "items": { "type": "string" } },
+    "inherited_or_deferred_claims": { "type": "array", "items": { "type": "string" } },
+    "caveats_preserved": { "type": "array", "items": { "type": "string" } },
+    "overclaim_detected": { "type": "boolean" },
+    "freeze_allowed_by_review_quality": { "type": "boolean" },
+    "human_approval_required": { "type": "boolean" },
+    "review_lane": {
+      "type": "string",
+      "enum": ["L0_DETERMINISTIC", "L1_COMPACT_META", "L2_FULL_PANEL"]
+    },
+    "review_lane_justification": { "type": "string" },
+    "next_safe_stage": { "type": ["string", "null"] }
+  },
+  "additionalProperties": true
+}

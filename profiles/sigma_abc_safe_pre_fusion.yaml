@@ -1,0 +1,77 @@
+profile: sigma_abc_safe_pre_fusion
+autonomy:
+  allow_physics_simplification: false
+  allow_kernel_fusion: false
+  allow_ibp_reduction: false
+  max_stages_per_run: 3
+  stop_after_stage: sigma_abc_008_pair_sector_xxx_regression_and_next_basis_decision
+allowed_stage_ids:
+  - sigma_abc_006_tensorial_sector_architecture_review
+  - sigma_abc_007_pair_sector_basis_closure_pilot
+  - sigma_abc_008_pair_sector_xxx_regression_and_next_basis_decision
+review:
+  mode: codex_subagent
+  scope: routine_branch
+review_policy:
+  mode: tiered
+  allow_l0_freeze_for_low_risk_provenance: true
+  require_l1_for_claim_boundary: false
+  require_l2_for_kernel_fusion: true
+  require_l2_for_candidate_promotion: true
+  require_l2_for_global_assembly: true
+  lanes:
+    L0_DETERMINISTIC:
+      requires_llm_agents: false
+    L1_COMPACT_META:
+      reviewers:
+        - ScientificMetaReviewer
+      requires_compact_packet: true
+      max_input_tokens: 2500
+    L2_FULL_PANEL:
+      reviewers:
+        - AlgebraReviewer
+        - PhysicsReviewer
+        - SoftwareReviewer
+        - ScientificMetaReviewer
+reporting:
+  build_stage_digest: true
+  require_human_readable_review: true
+  require_meta_review: true
+patch_limits:
+  max_patch_attempts_per_stage: 1
+  allowed_patch_types:
+    - report_metadata
+    - missing_review_regeneration
+    - validation_summary_format
+hard_stop_policy: sigma_abc_hard_stops
+benchmark_policy: sigma_xxx_projection
+agents:
+  require_real_invocation: true
+  forbid_stub_in_production: true
+  require_invocation_evidence: true
+  require_read_only_contract: true
+  require_mailbox_events: true
+  allow_stub_for_tests: false
+orchestration:
+  use_mailbox: true
+  require_patch_planner_for_patch: true
+  max_patch_attempts_per_stage: 2
+patching:
+  max_patch_attempts_per_stage: 2
+  allow_report_only_patch: true
+  allow_validation_patch: true
+  allow_symbolic_patch: true
+  require_patch_plan: true
+hypothesis_search:
+  enabled: false
+  max_conjectures_per_stage: 6
+  max_candidates_per_conjecture: 2
+  max_total_candidate_attempts: 10
+  archive_failed_conjectures: true
+  allow_ibp_conjectures: false
+  allow_total_derivative_conjectures: false
+  promote_only_verified_candidates: true
+  require_candidate_ranking: true
+human_signoff:
+  auto_for_tests: true
+  signed_by: pytest_profile

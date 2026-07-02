@@ -1,0 +1,43 @@
+{
+  "caveats": [
+    "PASS means contract readiness only, not raw availability.",
+    "raw/raw_sigma_abc.wl has not been generated.",
+    "sigma_abc simplification has not started."
+  ],
+  "checks": [
+    {
+      "actual": false,
+      "expected": false,
+      "gate": "PASS",
+      "name": "RawSigmaABCExists"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawContractExists"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawGenerationNeeded"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "SigmaXXXBenchmarkRegistered"
+    }
+  ],
+  "identity_type": "NotApplicable",
+  "overall_gate": "PASS",
+  "protected_regressions": [
+    {
+      "gate": "REGISTERED_NOT_RUN",
+      "name": "sigma_xxx_projection_benchmark",
+      "reason": "No raw sigma_abc expression exists yet."
+    }
+  ],
+  "stage_name": "000_raw_contract"
+}

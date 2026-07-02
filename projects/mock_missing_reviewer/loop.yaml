@@ -1,0 +1,12 @@
+project: mock_missing_reviewer
+description: Negative test project where a reviewer output is missing and freeze must be blocked.
+stages:
+  - id: mock_missing_reviewer
+    goal: Simulate missing SoftwareReviewer output.
+    tags: [mock, no_simplification]
+    kind: polynomial_identity
+    old: x + 1
+    new: x + 1
+    expanded_new: x + 1
+    expected_difference: "0"
+    simulate_missing_reviewer: software_reviewer

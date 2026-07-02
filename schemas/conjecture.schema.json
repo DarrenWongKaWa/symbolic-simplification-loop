@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conjecture",
+  "type": "object",
+  "required": [
+    "conjecture_id",
+    "stage_id",
+    "proposed_by",
+    "target_sector",
+    "claim_type",
+    "mathematical_guess",
+    "expected_form",
+    "allowed_operations",
+    "forbidden_operations",
+    "required_validation",
+    "protected_benchmarks",
+    "risk_notes",
+    "status"
+  ],
+  "properties": {
+    "conjecture_id": { "type": "string", "minLength": 1 },
+    "stage_id": { "type": "string", "minLength": 1 },
+    "proposed_by": { "type": "string", "enum": ["StructureHypothesisAgent"] },
+    "target_sector": { "type": "string", "enum": ["center", "center/contact sector", "pair", "loop", "global", "toy"] },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "candidate_structure",
+        "basis_ansatz",
+        "kernel_fusion_ansatz",
+        "total_derivative_guess",
+        "ibp_route_guess"
+      ]
+    },
+    "mathematical_guess": { "type": "string" },
+    "expected_form": { "type": "string" },
+    "allowed_operations": { "type": "array", "items": { "type": "string" } },
+    "forbidden_operations": { "type": "array", "items": { "type": "string" } },
+    "required_validation": { "type": "array", "items": { "type": "string" } },
+    "protected_benchmarks": { "type": "array", "items": { "type": "string" } },
+    "risk_notes": { "type": "array", "items": { "type": "string" } },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PROPOSED",
+        "BUILT",
+        "VALIDATION_PASS",
+        "VALIDATION_FAIL",
+        "TIMEOUT",
+        "REQUIRES_IBP_APPROVAL",
+        "REQUIRES_HUMAN_APPROVAL",
+        "PROMOTED",
+        "ARCHIVED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

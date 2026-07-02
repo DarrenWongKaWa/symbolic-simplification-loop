@@ -1,0 +1,46 @@
+{
+  "DCProjectionStillInheritedPASS": true,
+  "NoSimplificationStarted": true,
+  "RawProjectionStillPASS": true,
+  "SectorLedgerXXXCollapse": "PASS",
+  "SectorProvenancePreserved": true,
+  "caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "This is a raw-level xxx collapse regression, not final kernel-level sigma_xxx equality."
+  ],
+  "checks": [
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "gate": "PASS",
+      "name": "SectorLedgerXXXCollapse"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawProjectionStillPASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "DCProjectionStillInheritedPASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "SectorProvenancePreserved"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "NoSimplificationStarted"
+    }
+  ],
+  "identity_type": "ProjectionRegression",
+  "overall_gate": "PASS",
+  "stage_name": "005_sector_ledger_xxx_collapse_regression"
+}

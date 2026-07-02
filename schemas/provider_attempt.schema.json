@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProviderAttempt",
+  "description": "One attempt of one provider inside a reviewer provider pool.",
+  "type": "object",
+  "properties": {
+    "provider_name": {"type": "string"},
+    "adapter": {"type": "string"},
+    "enabled": {"type": "boolean"},
+    "availability_status": {
+      "type": "string",
+      "enum": [
+        "AVAILABLE",
+        "DISABLED_BY_ENV",
+        "MISSING_ENV",
+        "MISSING_DEPENDENCY",
+        "MISSING_BINARY",
+        "FAILURE_AT_PROBE",
+        "OTHER"
+      ]
+    },
+    "runtime_status": {
+      "type": "string",
+      "enum": [
+        "AGENT_OK",
+        "AGENT_QUOTA_LIMIT",
+        "AGENT_TIMEOUT",
+        "AGENT_NO_OUTPUT",
+        "AGENT_SCHEMA_FAIL",
+        "AGENT_COMMAND_NOT_FOUND",
+        "AGENT_TRANSPORT_FAILURE",
+        "AGENT_RUNTIME_FAILURE",
+        "AGENT_ALL_PROVIDERS_UNAVAILABLE",
+        "STUB_NOT_PRODUCTION",
+        "NOT_INVOKED",
+        "OTHER"
+      ]
+    },
+    "exit_code": {
+      "type": ["integer", "string", "null"]
+    },
+    "retryable": {"type": "boolean"},
+    "selected": {"type": "boolean"},
+    "failure_summary_redacted": {"type": "string"}
+  },
+  "required": ["provider_name", "adapter", "enabled", "retryable", "selected"]
+}

@@ -1,0 +1,16 @@
+{
+  "stage_name": "<stage_name>",
+  "overall_gate": "PASS",
+  "identity_type": "OldMinusNewZero",
+  "checks": [
+    {
+      "name": "exact_reconstruction",
+      "expected": "0",
+      "actual": "0",
+      "gate": "PASS"
+    }
+  ],
+  "protected_regressions": [],
+  "caveats": []
+}
+

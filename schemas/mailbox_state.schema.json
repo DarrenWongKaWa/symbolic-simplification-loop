@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MailboxState",
+  "type": "object",
+  "required": ["stage_id", "current_attempt", "status", "attempts"],
+  "properties": {
+    "stage_id": { "type": "string" },
+    "current_attempt": { "type": "integer", "minimum": 1 },
+    "status": { "type": "string" },
+    "attempts": { "type": "array", "items": { "type": "integer" } },
+    "AgentRuntimeStatus": { "type": "string" }
+  },
+  "additionalProperties": true
+}

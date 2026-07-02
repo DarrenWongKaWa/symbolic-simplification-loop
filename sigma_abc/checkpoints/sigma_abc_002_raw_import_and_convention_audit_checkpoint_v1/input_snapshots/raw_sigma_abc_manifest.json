@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "projection-preserving candidate only; not a full tensorial correctness proof",
+  "direction_lift": {
+    "ha[i,j]": "h1[mu][i,j]",
+    "haa[i,j]": "h2[alpha,beta][i,j]",
+    "haaa[i,j]": "h3[mu,alpha,beta][i,j]"
+  },
+  "generated_at": "2026-06-28T18:20:44+00:00",
+  "generated_files": [
+    "raw/raw_sigma_abc.wl",
+    "raw/raw_sigma_abc_finite_frequency.wl",
+    "raw/raw_sigma_abc_dc.wl"
+  ],
+  "source_files": [
+    {
+      "bytes": 112470,
+      "path": "/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/low_frequency/abc_w1_w2_1D.txt",
+      "sha256": "03da44d8a00727547775306cd39125d0f14740a60c2871fa09d1fa91e0b6c52e"
+    },
+    {
+      "bytes": 121067,
+      "path": "/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/low_frequency/Sigma_abc_dc_1D.txt",
+      "sha256": "f613a4ce5bdb0972c32b7f799fbb408be237c94648fb9945e1b055914cfacace"
+    },
+    {
+      "bytes": 212684,
+      "path": "/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/low_frequency/DC limit - Gamma Expansion -1D.nb",
+      "sha256": "d7f8a70bfbbea1242f5c08d7305026929fd226a4a5923f41f794c718dbe687b2"
+    },
+    {
+      "bytes": 15162,
+      "path": "/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/low_frequency/band_sum_abstractor.wl",
+      "sha256": "dad9e4599976af5f869643a7fdd016258f7a790d6da02f666646b7f112691ebf"
+    }
+  ],
+  "stage_name": "001_raw_generator_from_low_frequency_code",
+  "status": "CANDIDATE_UNVERIFIED"
+}

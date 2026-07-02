@@ -1,0 +1,22 @@
+{
+  "after": {
+    "raw_contract": true,
+    "raw_generation_needed": true,
+    "raw_sigma_abc_exists": false,
+    "sigma_xxx_benchmark_registered": true
+  },
+  "before": {
+    "raw_contract": false,
+    "raw_sigma_abc_exists": false
+  },
+  "deltas": {
+    "contract_files_created": 5,
+    "raw_expression_generated": 0
+  },
+  "notes": [
+    "This is a contract-readiness stage only.",
+    "No sigma_abc simplification has started."
+  ],
+  "stage_name": "000_raw_contract"
+}
+

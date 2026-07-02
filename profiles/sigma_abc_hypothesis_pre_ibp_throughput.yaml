@@ -1,0 +1,130 @@
+profile: sigma_abc_hypothesis_pre_ibp_throughput
+current_checkpoint_override: sigma_abc_010_pair_kernel_fusion_pilot
+autonomy:
+  allow_physics_simplification: false
+  allow_kernel_fusion: false
+  allow_ibp_reduction: false
+  max_stages_per_run: 3
+  stop_after_stage: sigma_abc_012b_loop_hypothesis_generation
+allowed_stage_ids:
+  - sigma_abc_011_center_sector_pilot
+  - sigma_abc_012a_loop_sector_inventory
+  - sigma_abc_012b_loop_hypothesis_generation
+allowed_stage_tags:
+  - center_sector_pilot
+  - loop_sector_inventory
+  - loop_hypothesis_generation
+review:
+  mode: codex_subagent
+  scope: major_checkpoint
+review_policy:
+  mode: tiered
+  l1_timeout_seconds: 180
+  l1_on_timeout: PROVISIONAL_FREEZE_WITH_REVIEW_DEBT
+  l1_on_quota: PROVISIONAL_FREEZE_WITH_REVIEW_DEBT
+  l1_on_no_output: PROVISIONAL_FREEZE_WITH_REVIEW_DEBT
+  l1_allow_advance_if_validation_passed: true
+  l1_requires_review_debt_entry: true
+  l2_timeout_seconds: 900
+  l2_on_timeout: VALIDATED_PENDING_REVIEW
+  l2_allow_advance_if_validation_passed: false
+  allow_l0_freeze_for_low_risk_provenance: true
+  require_l1_for_claim_boundary: true
+  require_l2_for_kernel_fusion: true
+  require_l2_for_candidate_promotion: true
+  require_l2_for_global_assembly: true
+  lanes:
+    L0_DETERMINISTIC:
+      requires_llm_agents: false
+      allowed_for:
+        - schema_validation
+        - row_provenance_hash_conservation
+        - file_hygiene
+        - no_forbidden_action
+        - named_digest_generation
+    L1_COMPACT_META:
+      reviewers:
+        - ScientificMetaReviewer
+      requires_compact_packet: true
+      max_input_tokens: 2500
+      allowed_for:
+        - low_risk_classification
+        - provenance_grouping
+        - exploration_only_conjecture_generation
+        - report_boundary_check
+    L2_FULL_PANEL:
+      reviewers:
+        - AlgebraReviewer
+        - PhysicsReviewer
+        - SoftwareReviewer
+        - ScientificMetaReviewer
+      required_for:
+        - new_symbolic_candidate_promotion
+        - kernel_fusion
+        - loop_orbit_canonicalization
+        - global_pre_ibp_assembly
+        - ibp_or_total_derivative
+        - full_formula_claim
+review_debt:
+  allow_low_risk_advance: true
+  allow_l1_quota_debt: true
+  max_open_review_debts: 2
+  block_before_l2_promotion: true
+  block_before_global_assembly: true
+  block_before_ibp: true
+  blocking_before:
+    - candidate_promotion
+    - global_pre_ibp_assembly
+    - ibp
+    - paper_claim
+    - full_tensorial_correctness_claim
+runtime:
+  on_quota_limit: PROVISIONAL_FREEZE_WITH_REVIEW_DEBT
+  do_not_wait_interactively: true
+reporting:
+  build_stage_digest: true
+  require_human_readable_review: true
+  require_meta_review: true
+  named_stage_digest: true
+  require_stage_digest: true
+  require_digest_review: true
+agents:
+  require_real_invocation: true
+  forbid_stub_in_production: true
+  require_invocation_evidence: true
+  require_read_only_contract: true
+  require_mailbox_events: true
+  allow_stub_for_tests: false
+orchestration:
+  use_mailbox: true
+  require_patch_planner_for_patch: true
+  max_patch_attempts_per_stage: 2
+patching:
+  max_patch_attempts_per_stage: 2
+  allow_report_only_patch: true
+  allow_validation_patch: true
+  allow_symbolic_patch: false
+  require_patch_plan: true
+hypothesis_search:
+  enabled: true
+  exploration_only: true
+  promote_candidates: false
+  max_conjectures_per_stage: 6
+  max_candidates_per_conjecture: 2
+  max_total_candidate_attempts: 10
+  archive_failed_conjectures: true
+  allow_ibp_conjectures: false
+  allow_total_derivative_conjectures: false
+  promote_only_verified_candidates: true
+  require_candidate_ranking: true
+hard_stop_policy: sigma_abc_hard_stops
+benchmark_policy: sigma_xxx_projection
+requires_human_approval: true
+human_approval:
+  granted: true
+  approved_stage_ids:
+    - sigma_abc_011_center_sector_pilot
+    - sigma_abc_012a_loop_sector_inventory
+    - sigma_abc_012b_loop_hypothesis_generation
+  approved_forbidden_stage_tags: []
+  scope: throughput mode for low-risk review debt and exploration-only loop conjectures; no promotion, no tensorial IBP, no total derivatives

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PreRunGateResult",
+  "type": "object",
+  "required": ["stage_id", "gate", "execution_allowed", "blocking_reasons", "warnings", "reviewer_consulted"],
+  "properties": {
+    "stage_id": { "type": "string", "minLength": 1 },
+    "profile_id": { "type": "string" },
+    "gate": { "type": "string", "enum": ["PASS", "WARN", "FAIL"] },
+    "execution_allowed": { "type": "boolean" },
+    "blocking_reasons": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "reviewer_consulted": { "type": "boolean" }
+  },
+  "additionalProperties": true
+}

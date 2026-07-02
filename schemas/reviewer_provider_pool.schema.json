@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReviewerProviderPoolConfig",
+  "description": "Pool of providers for a reviewer role in agents/runtime.local.yaml.",
+  "type": "object",
+  "properties": {
+    "fallback_policy": {
+      "type": "string",
+      "enum": ["runtime_failure_only", "disabled_default", "off"],
+      "default": "runtime_failure_only"
+    },
+    "require_real_provider": {"type": "boolean", "default": true},
+    "forbid_stub": {"type": "boolean", "default": true},
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "adapter": {
+            "type": "string",
+            "enum": [
+              "command",
+              "codex_subagent",
+              "anthropic_api",
+              "openai_api",
+              "openai_compatible_api",
+              "claude_code_cli",
+              "stub",
+              "manual"
+            ]
+          },
+          "command": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "api_key_env": {"type": "string"},
+          "base_url_env": {"type": "string"},
+          "model_env": {"type": "string"},
+          "enabled_env": {"type": "string"},
+          "api_key": {"type": "string"},
+          "base_url": {"type": "string"},
+          "model": {"type": "string"},
+          "enabled": {"type": ["boolean", "string"]},
+          "fallback": {"type": "boolean"},
+          "notes": {"type": "string"}
+        },
+        "required": ["name", "adapter"]
+      }
+    }
+  },
+  "required": ["providers"]
+}

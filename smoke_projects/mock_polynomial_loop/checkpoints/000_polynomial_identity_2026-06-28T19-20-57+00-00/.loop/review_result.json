@@ -1,0 +1,35 @@
+{
+  "allowed_claims": [
+    "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist.",
+    "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist.",
+    "Stage may freeze only if validation_summary.overall_gate is PASS and all required reviewer inputs exist."
+  ],
+  "blocking_issues": [],
+  "forbidden_claims": [
+    "Do not override validation failures with reviewer approval.",
+    "Do not claim unvalidated physics from a structured local review.",
+    "Do not override validation failures with reviewer approval.",
+    "Do not claim unvalidated physics from a structured local review.",
+    "Do not override validation failures with reviewer approval.",
+    "Do not claim unvalidated physics from a structured local review."
+  ],
+  "mathematical_status": {
+    "exact_reconstruction": true,
+    "overclaim_detected": false,
+    "regression_preserved": true,
+    "simplification_real": true
+  },
+  "next_action": "FREEZE",
+  "nonblocking_caveats": [],
+  "patch_instructions": [],
+  "review_scope": "routine_branch",
+  "reviewer_role": "IntegratorReview",
+  "source_review_files": [
+    ".loop/reviewer_results/algebra_reviewer.json",
+    ".loop/reviewer_results/physics_reviewer.json",
+    ".loop/reviewer_results/software_reviewer.json"
+  ],
+  "stage_name": "000_polynomial_identity",
+  "suggested_next_stage": null,
+  "verdict": "PASS"
+}

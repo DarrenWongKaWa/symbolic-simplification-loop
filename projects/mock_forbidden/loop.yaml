@@ -1,0 +1,11 @@
+project: mock_forbidden
+description: Negative test project where hard-stop policy blocks a forbidden stage.
+stages:
+  - id: mock_forbidden_fusion
+    goal: Simulate a forbidden kernel-fusion stage.
+    tags: [mock, kernel_fusion]
+    kind: polynomial_identity
+    old: x
+    new: x
+    expanded_new: x
+    expected_difference: "0"

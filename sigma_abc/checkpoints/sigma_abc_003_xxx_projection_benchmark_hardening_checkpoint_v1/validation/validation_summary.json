@@ -1,0 +1,46 @@
+{
+  "FinalKernelBenchmarkDeferred": true,
+  "ProjectionRuleDefined": true,
+  "RawLevelProjectionAvailable": true,
+  "SigmaXXXBenchmarkRegistered": true,
+  "Stage001DCCaveatPreserved": true,
+  "caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS.",
+    "Final kernel-level projection benchmark is registered but deferred."
+  ],
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "SigmaXXXBenchmarkRegistered"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "ProjectionRuleDefined"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "FinalKernelBenchmarkDeferred"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "RawLevelProjectionAvailable"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "gate": "PASS",
+      "name": "Stage001DCCaveatPreserved"
+    }
+  ],
+  "identity_type": "ProjectionRegression",
+  "overall_gate": "PASS",
+  "stage_name": "003_xxx_projection_benchmark_hardening"
+}

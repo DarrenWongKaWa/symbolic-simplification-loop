@@ -1,0 +1,14 @@
+{
+  "stage_name": "<stage_name>",
+  "timestamp": "<iso8601>",
+  "input_snapshots": [],
+  "output_artifacts": [],
+  "validation_summary": {},
+  "review_result": {},
+  "allowed_claims": [],
+  "forbidden_claims": [],
+  "metrics": {},
+  "known_caveats": [],
+  "files": []
+}
+

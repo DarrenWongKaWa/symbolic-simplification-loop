@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PatchPlan",
+  "type": "object",
+  "required": [
+    "patch_reason",
+    "files_allowed_to_edit",
+    "files_forbidden_to_edit",
+    "validation_to_rerun",
+    "claim_boundary_to_preserve",
+    "expected_success_condition"
+  ],
+  "properties": {
+    "patch_reason": { "type": "string" },
+    "files_allowed_to_edit": { "type": "array", "items": { "type": "string" } },
+    "files_forbidden_to_edit": { "type": "array", "items": { "type": "string" } },
+    "validation_to_rerun": { "type": "array", "items": { "type": "string" } },
+    "claim_boundary_to_preserve": { "type": "array", "items": { "type": "string" } },
+    "expected_success_condition": { "type": "string" }
+  },
+  "additionalProperties": true
+}

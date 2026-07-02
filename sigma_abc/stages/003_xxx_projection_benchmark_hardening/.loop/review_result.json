@@ -1,0 +1,30 @@
+{
+  "allowed_claims": [
+    "sigma_xxx final checkpoint is registered as a protected future benchmark."
+  ],
+  "blocking_issues": [],
+  "forbidden_claims": [
+    "Full sigma_abc equals sigma_xxx final formula before the projection benchmark is run."
+  ],
+  "mathematical_status": {
+    "exact_reconstruction": true,
+    "overclaim_detected": false,
+    "regression_preserved": true,
+    "simplification_real": false
+  },
+  "next_action": "FREEZE",
+  "nonblocking_caveats": [
+    "Stage 001b caveat preserved: DCProjectionTo1D is INHERITED_PASS from finite-frequency xxx projection plus the archived 1D DC notebook pipeline, not a direct full tensorial DC-series PASS."
+  ],
+  "patch_instructions": [],
+  "review_scope": "routine_branch",
+  "reviewer_role": "IntegratorReview",
+  "source_review_files": [
+    ".loop/reviews/review_result.AlgebraReviewer.json",
+    ".loop/reviews/review_result.PhysicsReviewer.json",
+    ".loop/reviews/review_result.SoftwareReviewer.json"
+  ],
+  "stage_name": "003_xxx_projection_benchmark_hardening",
+  "suggested_next_stage": null,
+  "verdict": "PASS_WITH_CAVEAT"
+}

@@ -1,0 +1,259 @@
+{
+  "allowed_claims": [
+    "Raw contract readiness is validated.",
+    "RawSigmaABCExists is explicitly false.",
+    "SigmaXXXBenchmarkRegistered is true.",
+    "The raw sigma_abc contract defines the required tensorial scope.",
+    "The sigma_xxx projection benchmark is registered as a future protected regression.",
+    "The raw contract, template, source options, and benchmark registration files exist.",
+    "The validation summary honestly records raw absence."
+  ],
+  "files": [
+    {
+      "bytes": 624,
+      "path": ".loop/decision.json",
+      "sha256": "72d7c60faaeadb4421b234d72eeb5a3caba2d522fa69fd9a6fd8d6b54a471b19"
+    },
+    {
+      "bytes": 476,
+      "path": ".loop/metrics.json",
+      "sha256": "1c92fed77ad21d6da615d0f6b36e9aa47e232a013aca943e9e888ba1fbe5cac4"
+    },
+    {
+      "bytes": 2015,
+      "path": ".loop/review_result.json",
+      "sha256": "fe2df57a011830c7ddf57dd450ab4899bd52aa41bec3e4db88d4578a75a63127"
+    },
+    {
+      "bytes": 1052,
+      "path": ".loop/reviews/review_result.AlgebraReviewer.json",
+      "sha256": "448e5c392f0592c1a82da6f76cac72d29872f4962c94358c2c3ebf434b46111c"
+    },
+    {
+      "bytes": 1208,
+      "path": ".loop/reviews/review_result.PhysicsReviewer.json",
+      "sha256": "77bdce5db71e5b7338c2a6689674a55feeb16e74cb02235919326326d4eef669"
+    },
+    {
+      "bytes": 1029,
+      "path": ".loop/reviews/review_result.SoftwareReviewer.json",
+      "sha256": "35d2bcc5648a649e16971dc9a9295a67438eb371cd50f542e6322624213548a9"
+    },
+    {
+      "bytes": 1499,
+      "path": ".loop/stage_plan.json",
+      "sha256": "a3d539699cd2d88eb02f8c40d2d8e14119fd088c6cf4126af08a4ef2638b724e"
+    },
+    {
+      "bytes": 71,
+      "path": ".loop/state.json",
+      "sha256": "8c5d6b32b3b18f70b02a9f984b11f0fb60e956aadd40d9913bbbb9cdb253a268"
+    },
+    {
+      "bytes": 1390,
+      "path": ".loop/validation_summary.json",
+      "sha256": "c0dc80d3c9a145122d4941e231a8dc591daef6491cff64a7d977350c8ba51201"
+    },
+    {
+      "bytes": 572,
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "ccea6bd71c58484a4a0a80e560810c1c46f55905a258cd6961d247d70a5b10c6"
+    },
+    {
+      "bytes": 1215,
+      "path": "EXECUTION_REPORT.md",
+      "sha256": "dc534957a46291fab735ffe068842bc29424cea162e657df7f2dbb1339b45fcc"
+    },
+    {
+      "bytes": 1563,
+      "path": "STAGE_PLAN.md",
+      "sha256": "255eec32d4a59f98967b457e88aa62169c5d6d28332217d931b040afc50b0875"
+    },
+    {
+      "bytes": 6653,
+      "path": "review_packet.md",
+      "sha256": "0223c8b419e3e79297566a98a3b56941b3f953cbd8171229ae2b155b497d5716"
+    },
+    {
+      "bytes": 1053,
+      "path": "review_result.AlgebraReviewer.json",
+      "sha256": "a47c86413f15154c58f436196bd376add10a038fcebc12d545fbc1c570eb3203"
+    },
+    {
+      "bytes": 1209,
+      "path": "review_result.PhysicsReviewer.json",
+      "sha256": "80d74ab42cf4243cc378e31c255d571e7cf5fd0326ef336c3f93fad9bbc80b70"
+    },
+    {
+      "bytes": 1029,
+      "path": "review_result.SoftwareReviewer.json",
+      "sha256": "35d2bcc5648a649e16971dc9a9295a67438eb371cd50f542e6322624213548a9"
+    },
+    {
+      "bytes": 2582,
+      "path": "reviewer_agent_prompt.AlgebraReviewer.md",
+      "sha256": "5bcf8a1ae3660cc473716c0184320664785ba3355aa9dffb7782084d74fbbfb1"
+    },
+    {
+      "bytes": 2623,
+      "path": "reviewer_agent_prompt.PhysicsReviewer.md",
+      "sha256": "dfe8c329968aafda07574d305953f7116af3c25baa19ad32adf9bc014aff34bd"
+    },
+    {
+      "bytes": 2604,
+      "path": "reviewer_agent_prompt.SoftwareReviewer.md",
+      "sha256": "1ecc7834ecefed9c0887ff9cee79de280431aa8e45e6c4024dd7c48b687de0c9"
+    },
+    {
+      "bytes": 966,
+      "path": "validation/validation_summary.json",
+      "sha256": "dccb53f3330ac0b6aa8b1fefd3c905a66839e17094549a8d41d5173aeeb00dad"
+    }
+  ],
+  "forbidden_claims": [
+    "raw_sigma_abc.wl exists.",
+    "sigma_abc simplification has started.",
+    "The tensorial raw expression is available.",
+    "The full tensorial conductivity formula is correct.",
+    "The projected sigma_xxx simplifications have been promoted to tensorial identities.",
+    "A generated raw_sigma_abc.wl file is present.",
+    "A downstream simplification stage has been executed."
+  ],
+  "input_snapshots": [],
+  "known_caveats": [
+    "No algebraic simplification was expected or performed in this contract stage.",
+    "The sigma_xxx projection benchmark is registered but not run because no raw tensorial expression exists.",
+    "The branch is a contract and benchmark-registration checkpoint only.",
+    "The next scientific branch must select a raw source before import.",
+    "Freeze is acceptable only as a contract checkpoint, not as raw import.",
+    "PASS means contract readiness only, not raw availability.",
+    "raw/raw_sigma_abc.wl has not been generated.",
+    "sigma_abc simplification has not started."
+  ],
+  "metrics": {
+    "after": {
+      "raw_contract": true,
+      "raw_generation_needed": true,
+      "raw_sigma_abc_exists": false,
+      "sigma_xxx_benchmark_registered": true
+    },
+    "before": {
+      "raw_contract": false,
+      "raw_sigma_abc_exists": false
+    },
+    "deltas": {
+      "contract_files_created": 5,
+      "raw_expression_generated": 0
+    },
+    "notes": [
+      "This is a contract-readiness stage only.",
+      "No sigma_abc simplification has started."
+    ],
+    "stage_name": "000_raw_contract"
+  },
+  "output_artifacts": [],
+  "review_result": {
+    "allowed_claims": [
+      "Raw contract readiness is validated.",
+      "RawSigmaABCExists is explicitly false.",
+      "SigmaXXXBenchmarkRegistered is true.",
+      "The raw sigma_abc contract defines the required tensorial scope.",
+      "The sigma_xxx projection benchmark is registered as a future protected regression.",
+      "The raw contract, template, source options, and benchmark registration files exist.",
+      "The validation summary honestly records raw absence."
+    ],
+    "blocking_issues": [],
+    "forbidden_claims": [
+      "raw_sigma_abc.wl exists.",
+      "sigma_abc simplification has started.",
+      "The tensorial raw expression is available.",
+      "The full tensorial conductivity formula is correct.",
+      "The projected sigma_xxx simplifications have been promoted to tensorial identities.",
+      "A generated raw_sigma_abc.wl file is present.",
+      "A downstream simplification stage has been executed."
+    ],
+    "mathematical_status": {
+      "exact_reconstruction": true,
+      "overclaim_detected": false,
+      "regression_preserved": true,
+      "simplification_real": false
+    },
+    "next_action": "FREEZE",
+    "nonblocking_caveats": [
+      "No algebraic simplification was expected or performed in this contract stage.",
+      "The sigma_xxx projection benchmark is registered but not run because no raw tensorial expression exists.",
+      "The branch is a contract and benchmark-registration checkpoint only.",
+      "The next scientific branch must select a raw source before import.",
+      "Freeze is acceptable only as a contract checkpoint, not as raw import."
+    ],
+    "patch_instructions": [],
+    "review_scope": "routine_branch",
+    "reviewer_role": "IntegratorReview",
+    "source_review_files": [
+      ".loop/reviews/review_result.AlgebraReviewer.json",
+      ".loop/reviews/review_result.PhysicsReviewer.json",
+      ".loop/reviews/review_result.SoftwareReviewer.json"
+    ],
+    "stage_name": "000_raw_contract",
+    "suggested_next_stage": "sigma_abc_001_raw_generation_or_transcription",
+    "verdict": "PASS_WITH_CAVEAT"
+  },
+  "stage_name": "000_raw_contract",
+  "timestamp": "2026-06-28T18:06:10+00:00",
+  "validation_summary": {
+    "caveats": [
+      "PASS means contract readiness only, not raw availability.",
+      "raw/raw_sigma_abc.wl has not been generated.",
+      "sigma_abc simplification has not started."
+    ],
+    "checks": [
+      {
+        "actual": false,
+        "expected": false,
+        "gate": "PASS",
+        "name": "RawSigmaABCExists"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "RawContractExists"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "RawGenerationNeeded"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "gate": "PASS",
+        "name": "SigmaXXXBenchmarkRegistered"
+      },
+      {
+        "actual": "Missing[\"NotGeneratedYet\"]",
+        "expected": "Missing[\"NotGeneratedYet\"]",
+        "gate": "PASS",
+        "name": "TemplateExpressionPlaceholder"
+      }
+    ],
+    "contract_readiness": {
+      "RawContractExists": true,
+      "RawGenerationNeeded": true,
+      "RawSigmaABCExists": false,
+      "SigmaXXXBenchmarkRegistered": true
+    },
+    "identity_type": "NotApplicable",
+    "next_recommended_stage": "sigma_abc_001_raw_generation_or_transcription",
+    "overall_gate": "PASS",
+    "protected_regressions": [
+      {
+        "gate": "REGISTERED_NOT_RUN",
+        "name": "sigma_xxx_projection_benchmark",
+        "reason": "No raw sigma_abc expression exists yet."
+      }
+    ],
+    "stage_name": "000_raw_contract"
+  }
+}
