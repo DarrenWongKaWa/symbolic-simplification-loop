@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ScientistReviewDossier",
+  "type": "object",
+  "required": [
+    "stage_id",
+    "stage_title",
+    "stage_type",
+    "human_summary",
+    "inputs",
+    "outputs",
+    "scripts",
+    "verification",
+    "claim_boundary",
+    "caveats",
+    "machine_evidence",
+    "human_decision"
+  ],
+  "properties": {
+    "stage_id": { "type": "string", "minLength": 1 },
+    "stage_title": { "type": "string", "minLength": 1 },
+    "stage_type": { "type": "string", "minLength": 1 },
+    "human_summary": { "type": "string", "minLength": 1 },
+    "inputs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/path_role" }
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/path_role" }
+    },
+    "scripts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/path_role" }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "type",
+        "identity_latex",
+        "identity_plaintext",
+        "expected_result",
+        "actual_result",
+        "gate",
+        "evidence_paths"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "exact_zero",
+            "exact_reconstruction",
+            "projection_regression",
+            "modulo_total_derivative",
+            "inherited_pass",
+            "inventory_only",
+            "preparation_gate",
+            "review_runtime",
+            "safety_gate"
+          ]
+        },
+        "identity_latex": { "type": "string" },
+        "identity_plaintext": { "type": "string" },
+        "expected_result": {},
+        "actual_result": {},
+        "gate": { "type": "string" },
+        "evidence_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "claim_boundary": {
+      "type": "object",
+      "required": ["allowed", "forbidden", "caveats"],
+      "properties": {
+        "allowed": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "forbidden": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "caveats": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "caveats": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "machine_evidence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/path_role" }
+    },
+    "human_decision": {
+      "type": "object",
+      "required": [
+        "recommended_action",
+        "requires_human_signoff",
+        "signoff_file_created"
+      ],
+      "properties": {
+        "recommended_action": { "type": "string" },
+        "requires_human_signoff": { "type": "boolean" },
+        "signoff_file_created": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "path_role": {
+      "type": "object",
+      "required": ["path", "role"],
+      "properties": {
+        "path": { "type": "string" },
+        "role": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
