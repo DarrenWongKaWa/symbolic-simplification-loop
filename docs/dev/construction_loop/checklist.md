@@ -4,6 +4,12 @@ A small pre-flight and pre-landing checklist. Keep it short; the goal
 is to catch the obvious mistakes (staging the wrong files, editing a
 forbidden path, auto-committing) before they happen.
 
+> Each role runs in either **manual session mode** or
+> **agent-bus mode**. Pick the mode before reading or writing
+> anything; the role cards document both. The HumanIntegrator's
+> ready marker (`LANDING_READY`) is advisory only — the commit
+> gate remains human-only.
+
 ## Pre-flight (planner)
 
 * [ ] `Task ID` matches the filename `tasks/TASK_XXX.md`.
@@ -52,3 +58,20 @@ git status --short | grep -E 'sigma_abc/|checkpoints/|human_signoff|docs/devlog/
 ```
 
 If that prints anything, stop and route the work back to the planner.
+
+## Agent-bus mode (when applicable)
+
+* [ ] Operating mode (`manual` / `agent-bus`) is recorded in the
+      task spec.
+* [ ] Inbox paths exist and were read; outbox paths are
+      write-clean.
+* [ ] The right ready marker is emitted on the success path
+      (`TASK_READY`, `EXECUTOR_READY`, `REVIEW_READY`,
+      `LANDING_READY`).
+* [ ] The matching failed artifact is emitted on the failure
+      path (`planner_failed.md`, `executor_failed.md`,
+      `reviewer_failed.md`, `landing_blocked.md`).
+* [ ] `LANDING_READY` is **not** treated as a commit green light
+      by the dispatcher or any other agent.
+* [ ] No dispatcher, agent-bus, or schema code was modified by
+      the executor, reviewer, or integrator.

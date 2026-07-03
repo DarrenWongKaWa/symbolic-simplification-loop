@@ -46,6 +46,14 @@ See the individual role cards for inputs, outputs, and forbidden actions:
 * [`reviewer.role.md`](./reviewer.role.md)
 * [`human_integrator.role.md`](./human_integrator.role.md)
 
+Each role card documents two operating modes: **manual session
+mode** (a single human or single Claude/Codex session drives the
+role) and **agent-bus mode** (the role runs as a sub-agent of the
+construction-loop agent bus, with explicit inbox / outbox / ready
+marker / failed artifact paths). The HumanIntegrator's
+`LANDING_READY` marker is advisory only — the commit gate remains
+human-only.
+
 ## Simple flow
 
 ```text

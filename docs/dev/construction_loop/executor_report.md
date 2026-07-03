@@ -1,27 +1,53 @@
-# executor_report.md — TASK_028
+# executor_report.md — TASK_029
 
 ## Task
 
-TASK_028 — Add dev-only construction loop docs inspired by
-`cobusgreyling/loop-engineering`.
+TASK_029 — Harden construction-loop role files with explicit
+input/output contracts.
 
 ## changed_files
 
-Added (untracked):
+Updated (still in the same `docs/dev/construction_loop/` folder):
 
-* `docs/dev/construction_loop/README.md`
-* `docs/dev/construction_loop/planner.role.md`
-* `docs/dev/construction_loop/executor.role.md`
-* `docs/dev/construction_loop/reviewer.role.md`
-* `docs/dev/construction_loop/human_integrator.role.md`
-* `docs/dev/construction_loop/task_lifecycle.md`
-* `docs/dev/construction_loop/external_tools.md`
-* `docs/dev/construction_loop/checklist.md` (optional, included)
-* `docs/dev/construction_loop/executor_report.md` (this file)
+* `docs/dev/construction_loop/planner.role.md` — added
+  Operating modes / Manual session mode / Agent-bus mode sections
+  with explicit Read from, Write to, Ready marker, Failed
+  artifact, Stop condition, and Handoff subsections.
+* `docs/dev/construction_loop/executor.role.md` — same shape.
+* `docs/dev/construction_loop/reviewer.role.md` — same shape.
+* `docs/dev/construction_loop/human_integrator.role.md` — same
+  shape, with an explicit note that `LANDING_READY` is advisory
+  only and that the integrator **does not** use the same
+  ready-marker handoff pattern as the other three roles.
+* `docs/dev/construction_loop/task_lifecycle.md` — added an
+  "Operating modes" section that names the two modes and the
+  integrator's advisory marker.
+* `docs/dev/construction_loop/checklist.md` — added a note at
+  the top and an "Agent-bus mode (when applicable)" block.
+* `docs/dev/construction_loop/README.md` — added a paragraph
+  documenting the two operating modes and the integrator's
+  advisory marker.
+* `docs/dev/construction_loop/executor_report.md` — this file
+  (replaces the TASK_028 report in place; supersedes it for
+  TASK_029).
 
-No files outside `docs/dev/construction_loop/` were modified. The
-existing root-level `executor_report.md` (TASK_025_BACKFILL) is
-intentionally **not** overwritten.
+No edits to:
+
+* `agent_bus/`
+* `loop_engine/`
+* `schemas/`
+* `scripts/`
+* `sigma_abc/`
+* checkpoints
+* validation outputs
+* human signoff ledgers
+* `.loop/human_signoff.yaml`
+* `external_tools.md` (left as-is; the role-card I/O contracts
+  are clearly scoped to the construction loop, so no update was
+  needed).
+
+The existing root-level `executor_report.md` (TASK_025_BACKFILL)
+was preserved untouched.
 
 ## tests_run
 
@@ -40,30 +66,40 @@ for f in docs/dev/construction_loop/README.md \
   test -f "$f" && echo "OK $f" || echo "MISSING $f"
 done
 
+# Required-section presence (TASK_029 structure)
+for f in docs/dev/construction_loop/planner.role.md \
+         docs/dev/construction_loop/executor.role.md \
+         docs/dev/construction_loop/reviewer.role.md \
+         docs/dev/construction_loop/human_integrator.role.md; do
+  echo "--- $f"
+  grep -E '^# Role|^## Operating modes|^### Read from|^### Write to|^### Ready marker|^### Failed artifact|^### Stop condition|^# Required output format|^# Forbidden actions|^# Handoff' "$f"
+done
+
 # Forbidden-path safety check
 git status --short | grep -E 'sigma_abc/|checkpoints/|human_signoff|docs/devlog/audits/' && exit 1 || echo "OK: no forbidden paths modified"
-
-# Markdown smoke checks
-grep -R "no auto-commit" docs/dev/construction_loop
-grep -R "never git add ." docs/dev/construction_loop || true
-grep -R "This is not part of the scientific runtime" docs/dev/construction_loop || true
 ```
 
 ## tests_passed
 
-* All 7 required files exist (`README.md`, 4 role cards,
-  `task_lifecycle.md`, `external_tools.md`).
-* Optional `checklist.md` is present.
-* `find` shows the 9 expected files under
-  `docs/dev/construction_loop/` (8 docs + this report).
-* Forbidden-path safety check: no `sigma_abc/`, `checkpoints/`,
-  `human_signoff`, or `docs/devlog/audits/` paths were modified.
-* "This is not part of the scientific runtime" phrase present in
-  `README.md`.
-* "Auto-commit" / "Never auto-commit" present in
-  `executor.role.md`, `task_lifecycle.md`, and `checklist.md`.
-* "Never `git add .`" present in `task_lifecycle.md`,
-  `human_integrator.role.md`, and `checklist.md`.
+* All 7 required files exist.
+* Each of the four role files contains the required section
+  headers (`Operating modes`, `Read from`, `Write to`,
+  `Ready marker`, `Failed artifact`, `Stop condition`,
+  `Required output format`, `Forbidden actions`, `Handoff`).
+* `human_integrator.role.md` explicitly states that
+  `LANDING_READY` is advisory only and that the integrator does
+  not use the same ready-marker handoff pattern as the other
+  three roles.
+* `task_lifecycle.md` and `checklist.md` reference the two
+  operating modes and the integrator's advisory marker.
+* `README.md` documents the two operating modes at the top of
+  the role-cards section.
+* `external_tools.md` was deliberately left untouched (no
+  changes were needed; the role-card I/O contracts are clearly
+  scoped to the construction loop).
+* Forbidden-path safety check passed: no `sigma_abc/`,
+  `checkpoints/`, `human_signoff`, or `docs/devlog/audits/`
+  paths were modified.
 
 ## tests_failed
 
@@ -71,14 +107,12 @@ None.
 
 ## unresolved_issues
 
-* The external `loop-engineering` reference repo was **not cloned**;
-  the docs intentionally describe it conceptually so we do not
-  depend on the clone being present. If the reviewer wants the
-  reference clone for vocabulary alignment, it can be cloned outside
-  this repo per the task spec (e.g. `/tmp/loop-engineering-reference`).
-* No markdown linter is configured for this repo, so no linter was
-  run, per the task spec ("If the repo has a markdown linter, run
-  it. Otherwise do not introduce a new dependency.").
+* No markdown linter is configured for this repo, so no linter
+  was run, per the prior task spec.
+* `external_tools.md` was not updated. The construction-loop
+  role-card I/O contracts are already clearly scoped to the
+  construction loop (and the README + role cards say so), so
+  no clarification was needed there.
 
 ## scope_deviation
 
@@ -90,11 +124,12 @@ forbidden path was touched, and the existing root-level
 
 * Hand off to `CodexReviewer` for a `PASS` / `PASS_WITH_CAVEAT` /
   `FAIL` verdict on `review.json`.
-* On `PASS` / `PASS_WITH_CAVEAT`, the `HumanIntegrator` may stage
-  the 9 files under `docs/dev/construction_loop/`, re-run the
-  validation commands above, and present the landing report to the
-  human.
-* Do **not** commit until the human explicitly says `commit now`.
+* On `PASS` / `PASS_WITH_CAVEAT`, the `HumanIntegrator` may
+  stage the modified files under `docs/dev/construction_loop/`,
+  re-run the validation commands above, and present the landing
+  report to the human.
+* Do **not** commit until the human explicitly says
+  `commit now`.
 
 ---
 

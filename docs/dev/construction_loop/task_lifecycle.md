@@ -82,6 +82,26 @@ equivalent). Silence is not consent.
 The integrator lands the commit using the recommended commit message.
 A push happens only if separately requested.
 
+## Operating modes
+
+The lifecycle runs in one of two modes. The role cards document
+both; the lifecycle is the same shape in either mode, but the
+on-disk paths and the ready-marker / failed-artifact convention
+differ.
+
+* **Manual session mode** — a single human or single Claude/Codex
+  session drives each role. No ready markers. Handoff is
+  conversational or by reading the next role's input file.
+* **Agent-bus mode** — each role is a sub-agent of the
+  construction-loop agent bus. Each role reads from its
+  `agent_bus/<role>/inbox/`, writes to `outbox/`, and emits a
+  ready marker (or failed artifact) for the dispatcher. See the
+  individual role cards for the exact paths.
+
+> **The HumanIntegrator's marker is advisory, not a handoff.**
+> `LANDING_READY` only signals "ready for human approval". The
+> commit gate remains human-only.
+
 ## Safety rules (apply at every step)
 
 * **Never `git add .`** (or `git add -A`, `git add --all`). Stage
