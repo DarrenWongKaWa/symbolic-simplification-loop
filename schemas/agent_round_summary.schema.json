@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentRoundSummary",
+  "description": "Per-round summary written by the artifact-based agent dispatcher.",
+  "type": "object",
+  "required": ["round_id", "phase", "verdict"],
+  "properties": {
+    "round_id": { "type": "string" },
+    "phase": { "type": "string" },
+    "diagnosis_input_path": { "type": ["string", "null"] },
+    "task_spec_path": { "type": ["string", "null"] },
+    "executor_report_path": { "type": ["string", "null"] },
+    "reviewer_result_path": { "type": ["string", "null"] },
+    "git_evidence_paths": {
+      "type": "object",
+      "properties": {
+        "status": { "type": ["string", "null"] },
+        "diff_stat": { "type": ["string", "null"] },
+        "diff": { "type": ["string", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "acceptance_results_path": { "type": ["string", "null"] },
+    "verdict": { "type": ["string", "null"] },
+    "next_recommended_human_action": {
+      "type": ["array", "null"],
+      "items": { "type": "string" }
+    },
+    "forbidden_automatic_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "human_boundary_required": { "type": "boolean" },
+    "boundary_summary_path": { "type": ["string", "null"] },
+    "no_checkpoint_freeze_or_signoff_mutation": { "type": "boolean" },
+    "generated_at": { "type": "string" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentBusRoundState",
+  "description": "Deterministic round state for the artifact-based agent dispatcher.",
+  "type": "object",
+  "required": [
+    "round_id",
+    "created_at",
+    "updated_at",
+    "phase",
+    "events"
+  ],
+  "properties": {
+    "round_id": { "type": "string" },
+    "created_at": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "phase": {
+      "enum": [
+        "INIT",
+        "PLANNER_PROMPT_READY",
+        "WAITING_FOR_TASK_SPEC",
+        "EXECUTOR_PROMPT_READY",
+        "WAITING_FOR_EXECUTOR_REPORT",
+        "REVIEWER_PROMPT_READY",
+        "WAITING_FOR_REVIEW_RESULT",
+        "ROUND_SUMMARY_READY",
+        "WAITING_FOR_HUMAN_APPROVAL",
+        "FAILED"
+      ]
+    },
+    "next_action_report": { "type": ["string", "null"] },
+    "planner_prompt": { "type": ["string", "null"] },
+    "task_spec": { "type": ["string", "null"] },
+    "executor_prompt": { "type": ["string", "null"] },
+    "executor_report": { "type": ["string", "null"] },
+    "reviewer_prompt": { "type": ["string", "null"] },
+    "patch_review_result": { "type": ["string", "null"] },
+    "agent_round_summary": { "type": ["string", "null"] },
+    "human_boundary_status": {
+      "type": "string",
+      "enum": ["NONE", "PENDING_HUMAN", "APPROVED", "REJECTED"]
+    },
+    "acceptance_commands": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "current_role": {
+      "type": ["string", "null"],
+      "enum": ["planner", "executor", "reviewer", "human", null]
+    },
+    "provider_name": { "type": "string" },
+    "provider_type": { "type": "string" },
+    "current_job_envelope_path": { "type": ["string", "null"] },
+    "ready_marker_path": { "type": ["string", "null"] },
+    "expected_artifact_path": { "type": ["string", "null"] },
+    "failed_artifact_path": { "type": ["string", "null"] },
+    "watch_last_observation": { "type": ["string", "null"] },
+    "watch_outcome": {
+      "type": ["string", "null"],
+      "enum": [
+        "ADVANCE",
+        "IDLE",
+        "IDLE_WAITING_FOR_READY_MARKER",
+        "FAIL",
+        "STOP_HUMAN_BOUNDARY",
+        "STOP_TERMINAL",
+        null
+      ]
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["at", "phase", "message"],
+        "properties": {
+          "at": { "type": "string" },
+          "phase": { "type": "string" },
+          "message": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

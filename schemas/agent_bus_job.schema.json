@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentBusJobEnvelope",
+  "description": "Machine-readable job envelope for a single role in the artifact-based agent dispatcher (TASK_027).",
+  "type": "object",
+  "required": [
+    "round_id",
+    "role",
+    "phase",
+    "working_directory",
+    "input_files",
+    "output_files",
+    "ready_marker",
+    "failed_artifact",
+    "forbidden_paths",
+    "provider_name",
+    "provider_type",
+    "allowed_next_states"
+  ],
+  "properties": {
+    "round_id": { "type": "string" },
+    "role": {
+      "type": "string",
+      "enum": ["planner", "executor", "reviewer"]
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "INIT",
+        "PLANNER_PROMPT_READY",
+        "WAITING_FOR_TASK_SPEC",
+        "EXECUTOR_PROMPT_READY",
+        "WAITING_FOR_EXECUTOR_REPORT",
+        "REVIEWER_PROMPT_READY",
+        "WAITING_FOR_REVIEW_RESULT",
+        "ROUND_SUMMARY_READY",
+        "WAITING_FOR_HUMAN_APPROVAL",
+        "FAILED"
+      ]
+    },
+    "working_directory": { "type": "string" },
+    "input_files": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "output_files": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "ready_marker": { "type": "string" },
+    "failed_artifact": { "type": "string" },
+    "forbidden_paths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "expected_schema": {
+      "type": ["string", "null"]
+    },
+    "provider_name": { "type": "string" },
+    "provider_type": {
+      "type": "string",
+      "enum": ["manual", "mock"]
+    },
+    "allowed_next_states": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "job_envelope_path": { "type": "string" },
+    "generated_at": { "type": "string" }
+  },
+  "additionalProperties": true
+}
