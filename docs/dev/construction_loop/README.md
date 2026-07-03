@@ -1,0 +1,77 @@
+# Construction Loop (dev-only)
+
+This folder documents the **dev-only construction loop** used to maintain and
+improve this repository.
+
+It is inspired by
+[`cobusgreyling/loop-engineering`](https://github.com/cobusgreyling/loop-engineering)
+and borrows ideas such as skills, sub-agents, maker/checker split, state, budget,
+run logs, and human gates. The `loop-engineering` repository is **not vendored,
+copied, or submoduled** into this project; it is a conceptual reference only.
+
+> **This is not part of the scientific runtime.** The construction loop is a
+> meta-development workflow. It does **not** replace the verifier, the
+> reviewer, human signoff, or checkpoint boundaries that govern the scientific
+> symbolic-simplification loop.
+
+## What this folder is for
+
+* Coordinating the four development sessions that improve this repo.
+* Defining bounded tasks (`tasks/TASK_XXX.md`) that are small enough to
+  review and easy to revert.
+* Keeping dev-only workflow documentation separate from the scientific
+  runtime contracts.
+
+## What this folder is **not** for
+
+* Scientific artifact generation, validation, or review.
+* Modifying checkpoints, frozen artifacts, or human signoff ledgers.
+* Replacing the agent bus, dispatcher, or schema-validated state used by
+  the scientific loop.
+* Replacing the verifier, the reviewer, or any human gate.
+
+## The four development roles
+
+| Role                  | Responsibility                                              |
+| --------------------- | ----------------------------------------------------------- |
+| `CodexPlanner`        | Turn a repo-improvement goal into a bounded `TASK_XXX.md`.  |
+| `ClaudeCodeExecutor`  | Implement exactly one bounded task.                         |
+| `CodexReviewer`       | Review the patch against task, scope, tests, and safety.     |
+| `HumanIntegrator`     | Stage, test, and land reviewed patches under human control.|
+
+See the individual role cards for inputs, outputs, and forbidden actions:
+
+* [`planner.role.md`](./planner.role.md)
+* [`executor.role.md`](./executor.role.md)
+* [`reviewer.role.md`](./reviewer.role.md)
+* [`human_integrator.role.md`](./human_integrator.role.md)
+
+## Simple flow
+
+```text
+Problem / gap
+  -> CodexPlanner writes TASK_XXX.md
+  -> ClaudeCodeExecutor implements
+  -> CodexReviewer reviews
+  -> HumanIntegrator stages/tests/lands
+  -> human explicitly approves commit
+```
+
+The full lifecycle, including repair loops, is documented in
+[`task_lifecycle.md`](./task_lifecycle.md).
+
+## Related docs
+
+* [`task_lifecycle.md`](./task_lifecycle.md) — full task lifecycle and safety rules.
+* [`external_tools.md`](./external_tools.md) — how this repo relates to
+  `loop-engineering` and Langflow.
+* [`checklist.md`](./checklist.md) — quick pre-flight / pre-landing checks
+  (optional, lightweight).
+
+## Where the canonical scientific contracts live
+
+The scientific/runtime contracts remain the source of truth for running
+symbolic simplification. They live elsewhere in the repo (e.g. the agent
+bus, dispatcher, schemas, validation summaries, completion matrices,
+checkpoints, and signoff ledgers). Construction-loop tasks must not
+edit those contracts unless the task explicitly allows it.
