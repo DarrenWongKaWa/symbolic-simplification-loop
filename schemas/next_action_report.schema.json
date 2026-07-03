@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NextActionReport",
+  "description": "Deterministic, read-only diagnostic classification of a loop or autonomous run. Does NOT modify scientific artifacts, signoff ledgers, or frozen checkpoints.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "classification",
+    "all_classifications",
+    "subject",
+    "evidence",
+    "gate_status",
+    "next_action",
+    "forbidden_actions",
+    "diagnostic_warnings"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "classification": {
+      "type": "object",
+      "required": ["code", "description"],
+      "properties": {
+        "code": {
+          "enum": [
+            "COMMAND_FAILED",
+            "MISSING_REQUIRED_FILE",
+            "SCHEMA_VALIDATION_FAILED",
+            "VALIDATION_GATE_FAILED",
+            "REVIEW_GATE_FAILED",
+            "COMPLETION_MATRIX_UNHEALTHY",
+            "HUMAN_SIGNOFF_REQUIRED",
+            "FREEZE_PRECONDITION_FAILED",
+            "BOUNDARY_APPROVAL_REQUIRED",
+            "UNKNOWN_FAILURE"
+          ]
+        },
+        "description": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "all_classifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "description"],
+        "properties": {
+          "code": {
+            "enum": [
+              "COMMAND_FAILED",
+              "MISSING_REQUIRED_FILE",
+              "SCHEMA_VALIDATION_FAILED",
+              "VALIDATION_GATE_FAILED",
+              "REVIEW_GATE_FAILED",
+              "COMPLETION_MATRIX_UNHEALTHY",
+              "HUMAN_SIGNOFF_REQUIRED",
+              "FREEZE_PRECONDITION_FAILED",
+              "BOUNDARY_APPROVAL_REQUIRED",
+              "UNKNOWN_FAILURE"
+            ]
+          },
+          "description": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "subject": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["stage", "run", "command", "unknown"]
+        },
+        "stage_id": { "type": "string" },
+        "project": { "type": "string" },
+        "run_root": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "path"],
+        "properties": {
+          "label": { "type": "string" },
+          "path": { "type": "string" },
+          "exists": { "type": "boolean" },
+          "summary": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "gate_status": {
+      "type": "object",
+      "properties": {
+        "pre_run_gate": {
+          "type": "string",
+          "enum": ["PASS", "WARN", "FAIL", "MISSING", "UNKNOWN"]
+        },
+        "validation_gate": {
+          "type": "string",
+          "enum": ["PASS", "FAIL", "BLOCKED", "UNKNOWN", "MISSING"]
+        },
+        "review_verdict": {
+          "type": "string",
+          "enum": ["PASS", "PASS_WITH_CAVEAT", "NEEDS_PATCH", "FAILED", "MISSING", "UNKNOWN"]
+        },
+        "completion": {
+          "type": "string",
+          "enum": ["COMPLETE", "INCOMPLETE", "BLOCKED", "FAILED", "MISSING", "UNKNOWN"]
+        },
+        "freeze_eligible": { "type": ["boolean", "null"] },
+        "command_return_code": { "type": ["integer", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "next_action": {
+      "type": "object",
+      "required": ["recommended"],
+      "properties": {
+        "recommended": { "type": "string" },
+        "rationale": { "type": "string" },
+        "human_required": { "type": "boolean" },
+        "boundary_approval_required": { "type": "boolean" },
+        "patch_or_reject_recommended": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "diagnostic_warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tool_metadata": {
+      "type": "object",
+      "properties": {
+        "diagnostic_readonly": { "type": "boolean" },
+        "modified_artifacts": { "type": "array", "items": { "type": "string" } },
+        "generated_at": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
