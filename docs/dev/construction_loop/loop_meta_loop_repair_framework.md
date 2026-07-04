@@ -238,6 +238,278 @@ commit now
 
 ⸻
 
+## Global role-card and human-output standards
+
+These standards apply to future construction-loop tasks. They do not implement any repair by themselves.
+
+### Role-card standard
+
+Every construction-loop role card should be a Markdown file at:
+
+```text
+docs/dev/construction_loop/<role>.role.md
+```
+
+Required fields:
+
+```text
+role_name
+layer
+purpose
+manual_read_paths
+manual_write_paths
+agent_bus_read_paths
+agent_bus_write_paths
+ready_marker
+failed_artifact
+stop_condition
+forbidden_actions
+handoff_target
+human_gate
+output_format
+```
+
+Concise role-card template:
+
+```md
+# Role: <role_name>
+
+## layer
+
+## purpose
+
+## operating_modes
+
+### manual mode
+
+### agent-bus mode
+
+## read_paths
+
+### manual_read_paths
+
+### agent_bus_read_paths
+
+## write_paths
+
+### manual_write_paths
+
+### agent_bus_write_paths
+
+## ready_marker
+
+## failed_artifact
+
+## stop_condition
+
+## forbidden_actions
+
+- no git add .
+- no commit
+- no push
+- no auto-freeze
+- no auto-signoff
+- no scientific/runtime/checkpoint/signoff edits unless explicitly allowed
+
+## handoff_target
+
+## human_gate
+
+## output_format
+```
+
+### Standard task output directory
+
+Canonical task output directory:
+
+```text
+reports/TASK_XXX_<NAME>/
+  PLAN.md
+  executor_report.md
+  review_result.json
+  landing_report.md
+  audit_evidence.md
+  final_summary.md
+  build.log
+```
+
+Human-review extension:
+
+```text
+reports/TASK_XXX_<NAME>/
+  human_review/
+    human_review.tex
+    human_review.pdf
+    build.log
+    figures/
+    tables/
+```
+
+Markdown and JSON outputs are for machine-assisted review and audit traceability.
+PDF outputs are for human scientific or architecture review.
+For important scientific or architecture tasks, Markdown/JSON alone is not sufficient.
+
+### Engineering audit PDF standard
+
+Applicable to:
+
+```text
+loop / meta-loop audit
+role-card audit
+file-location audit
+automation safety audit
+probe scaffold audit
+merge policy audit
+```
+
+Recommended files:
+
+```text
+reports/TASK_XXX_<NAME>/human_review/engineering_audit.tex
+reports/TASK_XXX_<NAME>/human_review/engineering_audit.pdf
+reports/TASK_XXX_<NAME>/human_review/build.log
+```
+
+Required sections:
+
+```text
+1. Executive Summary
+2. Direct Answers
+3. Scope and Non-goals
+4. Evidence Sources
+5. Architecture / Workflow Diagram
+6. Role-card Completeness Matrix
+7. File-location Contract Audit
+8. Human-readable Output Audit
+9. Safety Boundary / Forbidden Paths
+10. Automation Readiness Assessment
+11. Risks and Caveats
+12. Recommended Next Tasks
+13. Human Decision Checklist
+```
+
+Must answer:
+
+```text
+What is complete?
+What is partial?
+What is probe-only?
+What is forbidden?
+What can be copied?
+What must not be merged?
+What requires explicit human approval?
+What is the next safe task?
+```
+
+Allowed status words:
+
+```text
+COMPLETE
+PARTIAL
+MISSING
+PROBE_ONLY
+DO_NOT_USE_YET
+PASS
+PASS_WITH_CAVEAT
+FAIL
+```
+
+### Theoretical derivation supplement PDF standard
+
+Applicable to:
+
+```text
+symbolic simplification
+sigma_xxx / sigma_abc derivation
+normal-form reduction
+coefficient extraction
+validation ledger
+checkpoint-ready mathematical report
+```
+
+Recommended files:
+
+```text
+reports/TASK_XXX_<NAME>/supplement/
+  theoretical_derivation_supplement.tex
+  theoretical_derivation_supplement.pdf
+  build.log
+  symbol_dictionary.tex
+  validation_ledger_table.tex
+  kernel_appendix.tex
+  stage_to_derivation_map.md
+  input_snapshot_manifest.wl
+```
+
+Required sections:
+
+```text
+1. Scientific Claim Boundary
+2. Starting Formula / Input Snapshot
+3. Notation and Symbol Dictionary
+4. Stage-to-Derivation Map
+5. Algebraic Transformation Ledger
+6. Normal Form / Reduced Form
+7. Residual Terms and Failed Reductions
+8. Validation Ledger
+9. Benchmark / Regression Results
+10. Allowed Claims
+11. Not Claimed
+12. Reproducibility Notes
+13. Appendix: Full Kernels / Coefficient Tables
+```
+
+It must require explicit statements of:
+
+```text
+Old expression
+New expression
+identity checked: Old - New = 0
+or: Old - New - dF = 0
+validation command
+validation artifact
+max error, if numerical
+exact symbolic result, if symbolic
+checkpoint status
+review status
+claim boundary
+```
+
+Conservative claim-boundary examples:
+
+```text
+DCProjectionTo1D -> INHERITED_PASS, not direct full tensorial DC-series PASS.
+No full tensorial sigma_abc correctness is claimed unless directly validated.
+No total-derivative / IBP reduction is promoted unless the active profile allows it.
+```
+
+### Role output_format extension
+
+Role cards' `output_format` should include PDF outputs when required:
+
+```text
+Planner:
+  reports/TASK_XXX_<NAME>/PLAN.md
+
+Executor:
+  reports/TASK_XXX_<NAME>/executor_report.md
+  reports/TASK_XXX_<NAME>/human_review/*.tex, if the task requires human-readable PDF
+  reports/TASK_XXX_<NAME>/human_review/*.pdf, if compiled
+  reports/TASK_XXX_<NAME>/supplement/*.tex, if the task is a scientific derivation task
+  reports/TASK_XXX_<NAME>/supplement/*.pdf, if compiled
+
+Reviewer:
+  reports/TASK_XXX_<NAME>/review_result.json
+  optional: reports/TASK_XXX_<NAME>/review_notes.md
+
+HumanIntegrator:
+  reports/TASK_XXX_<NAME>/landing_report.md
+```
+
+For tasks requiring human scientific or architecture review, Markdown/JSON reports are not sufficient. The task should also produce a LaTeX-rendered PDF in one of two formats: engineering audit PDF or theoretical derivation supplement PDF.
+
+⸻
+
 ## Phase 1 — Main-branch safety and documentation conventions
 
 Goal:
@@ -252,11 +524,12 @@ No runtime implementation in this phase.
 
 ### Goal
 
-Bring the safety policy and report-location convention into the main branch.
+Bring the safety policy, report-location convention, and basic human-output convention into the main branch.
 
 ### Why
 
 The probe branch has docs/safety.md, but the main branch needs its own safety policy before future construction-loop work.
+Future tasks also need a common reporting baseline that links to the role-card and human-output standards when those standards exist.
 
 ### Expected edits
 
@@ -294,6 +567,15 @@ reports/TASK_XXX/
   final_summary.md
   build.log
 ```
+
+It should also introduce the basic human-output convention:
+
+```text
+reports/TASK_XXX_<NAME>/human_review/
+reports/TASK_XXX_<NAME>/supplement/
+```
+
+and point future tasks to the role-card, engineering audit PDF, and theoretical derivation supplement PDF standards when they exist.
 
 ### Non-goals
 
@@ -386,6 +668,15 @@ root executor_report.md = legacy / discouraged
 docs/dev/construction_loop/executor_report.md = bootstrap history only
 docs/dev/construction_loop/loop_engineering_probe_report.md = probe evidence only
 future reports = reports/TASK_XXX/
+```
+
+The policy must explicitly include:
+
+```text
+reports/TASK_XXX_<NAME>/human_review/
+engineering audit PDF format
+theoretical supplement PDF format
+legacy report-path deprecation
 ```
 
 ⸻
@@ -545,7 +836,10 @@ failed artifact
 stop condition
 forbidden actions
 handoff
+output_format
 ```
+
+The `output_format` backfill must include optional LaTeX/PDF outputs for tasks that require human-readable engineering audit PDFs or theoretical derivation supplement PDFs.
 
 ### Non-goals
 
@@ -694,6 +988,16 @@ audit_evidence.md, if applicable
 final_summary.md, if applicable
 build.log, if applicable
 ```
+
+The checker should eventually validate declared human-readable outputs:
+
+```text
+human_review/
+engineering_audit.tex/pdf
+supplement/theoretical_derivation_supplement.tex/pdf
+```
+
+when a task declares those outputs.
 
 ⸻
 
