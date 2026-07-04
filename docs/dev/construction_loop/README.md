@@ -76,6 +76,25 @@ The full lifecycle, including repair loops, is documented in
 * [`checklist.md`](./checklist.md) — quick pre-flight / pre-landing checks
   (optional, lightweight).
 
+## Conventions
+
+Construction-loop work in this repo follows the main-branch safety policy and
+the canonical reporting layout. Both are required reading before starting any
+task:
+
+* [`../../../safety.md`](../../safety.md) — main safety policy: role-card-first
+  session startup, initial repo inspection, task lifecycle, forbidden paths
+  and forbidden actions, and the human commit gate (`commit now`).
+* [`reporting_convention.md`](./reporting_convention.md) — canonical
+  `reports/TASK_XXX_<NAME>/` layout, expected report artifacts, and the
+  task-dependent `human_review/` and `supplement/` subdirectories.
+
+The deeper role-card, engineering audit PDF, and theoretical derivation
+supplement standards live in the master repair framework:
+
+* [`loop_meta_loop_repair_framework.md`](./loop_meta_loop_repair_framework.md)
+  — source of truth for the repair sequence after the TASK_030 audit.
+
 ## Where the canonical scientific contracts live
 
 The scientific/runtime contracts remain the source of truth for running
