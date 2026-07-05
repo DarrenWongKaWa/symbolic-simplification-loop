@@ -1,0 +1,92 @@
+{
+  "task_id": "TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY",
+  "verdict": "PASS",
+  "safe_to_continue": true,
+  "blocking_issues": [],
+  "caveats": [],
+  "files_reviewed": [
+    "docs/dev/construction_loop/reviewer.role.md",
+    "docs/dev/construction_loop/loop_meta_loop_repair_framework.md",
+    "docs/safety.md",
+    "docs/dev/construction_loop/reporting_convention.md",
+    "docs/dev/construction_loop/README.md",
+    "reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY/PLAN.md",
+    "reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY/executor_report.md",
+    "git diff -- docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md"
+  ],
+  "evidence_summary": [
+    "Normal git status shows only docs/dev/construction_loop/README.md and docs/dev/construction_loop/reporting_convention.md modified.",
+    "TASK_033 report artifacts exist only under reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY/ and are ignored by git as expected.",
+    "reporting_convention.md defines the canonical future report directory reports/TASK_XXX_<NAME>/ and role artifact paths for PLAN.md, executor_report.md, review_result.json, and landing_report.md.",
+    "Optional supporting artifacts, human_review/, and supplement/ remain under the canonical task report directory and are described as task-dependent or generated only when useful.",
+    "Legacy path labels are explicit: root executor_report.md = legacy / discouraged; docs/dev/construction_loop/executor_report.md = bootstrap history only; docs/dev/construction_loop/loop_engineering_probe_report.md = probe evidence only.",
+    "The policy states legacy files are historical evidence and must not be renamed, deleted, rewritten, or restaged as canonical artifacts by Executor, Reviewer, or HumanIntegrator.",
+    "README.md received a minimal pointer extension to reporting_convention.md rather than a full policy duplicate.",
+    "Safety conventions remain intact in docs/safety.md and were not weakened by TASK_033.",
+    "No forbidden, scaffold, legacy report, runner, GitHub automation, .gitmodules, or vendored loop-engineering paths were dirtied by TASK_033."
+  ],
+  "validation": {
+    "commands_run": [
+      "sed -n '1,240p' docs/dev/construction_loop/reviewer.role.md",
+      "pwd",
+      "git branch --show-current",
+      "git status --short",
+      "git status --short --untracked-files=all",
+      "git log --oneline -5",
+      "sed -n '1,760p' docs/dev/construction_loop/loop_meta_loop_repair_framework.md",
+      "sed -n '1,260p' docs/safety.md",
+      "find reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY -maxdepth 3 -type f -print",
+      "sed -n '1,360p' docs/dev/construction_loop/reporting_convention.md",
+      "sed -n '1,220p' docs/dev/construction_loop/README.md",
+      "sed -n '1,260p' reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY/PLAN.md",
+      "sed -n '1,280p' reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY/executor_report.md",
+      "sed -n '280,380p' reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY/executor_report.md",
+      "git diff --stat",
+      "git diff --check",
+      "git diff -- docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md",
+      "git diff --cached --name-only",
+      "grep -n \"reports/TASK_XXX_<NAME>\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md",
+      "grep -n \"root.*executor_report.md\\|executor_report.md\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md",
+      "grep -n \"legacy / discouraged\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md && grep -n \"bootstrap history only\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md && grep -n \"probe evidence only\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md",
+      "grep -n \"human_review\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md && grep -n \"engineering audit PDF\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md && grep -n \"theoretical\" docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md",
+      "git status --short --ignored --untracked-files=all reports/TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY",
+      "git status --short --untracked-files=all executor_report.md docs/dev/construction_loop/executor_report.md docs/dev/construction_loop/loop_engineering_probe_report.md reports/TASK_030_loop_meta_loop_audit reports/TASK_030_FRAMEWORK_PLACEMENT",
+      "rg -n 'Read the relevant role card first|pwd|git branch --show-current|git status --short|git log --oneline -5|Planner -> Executor -> Reviewer -> HumanIntegrator -> human explicit `commit now`|git add \\\\.|commit now|auto-freeze|auto-signoff|push|merge|reset|rebase|cherry-pick' docs/safety.md docs/dev/construction_loop/reporting_convention.md docs/dev/construction_loop/README.md",
+      "git status --short | grep -E 'sigma_abc/|checkpoints/|human_signoff|docs/devlog/audits/|agent_bus/|loop_engine/|schemas/|scripts/' && echo \"FORBIDDEN PATH TOUCHED\" || echo \"scope looks safe\"",
+      "git status --short | grep -E 'LOOP.md|STATE.md|loop-budget.md|loop-run-log.md|\\.claude/|patterns/|\\.github/|loop-constraints.md' && echo \"SCAFFOLD OR AUTOMATION PATH TOUCHED\" || echo \"no scaffold merge\"",
+      "test ! -f .gitmodules && echo no-gitmodules",
+      "find . -maxdepth 3 -type d -name 'loop-engineering*'",
+      "git diff --name-status",
+      "git status --short --untracked-files=all scripts tests .github 2>/dev/null || true",
+      "git ls-files scripts tests | rg 'runner|ci-sweeper|github|workflow' || true",
+      "git ls-files .github .gitmodules LOOP.md STATE.md loop-budget.md loop-run-log.md loop-constraints.md 2>/dev/null || true",
+      "git status --short --untracked-files=all LOOP.md STATE.md loop-budget.md loop-run-log.md .claude .github patterns loop-constraints.md agent_bus loop_engine schemas scripts sigma_abc checkpoints .loop/human_signoff.yaml docs/devlog/audits 2>/dev/null || true"
+    ],
+    "results": {
+      "pwd": "/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/modify/modify4_sigma_xxx_simplification/symbolic-loop-audit-report",
+      "branch": "task-030-loop-meta-loop-audit",
+      "head": "9d62546 TASK_032 backfill task history records",
+      "status_short_untracked": [
+        " M docs/dev/construction_loop/README.md",
+        " M docs/dev/construction_loop/reporting_convention.md"
+      ],
+      "git_diff_stat": "2 files changed, 31 insertions(+), 6 deletions(-)",
+      "git_diff_check": "passed with no output",
+      "git_diff_cached_name_only": "empty",
+      "legacy_report_status": "no output for legacy report paths; none moved, renamed, deleted, rewritten, or restaged",
+      "forbidden_path_check": "scope looks safe",
+      "scaffold_path_check": "no scaffold merge",
+      "gitmodules": "absent",
+      "vendored_loop_engineering": "none found at maxdepth 3",
+      "runner_or_github_automation": "pre-existing tracked runner files exist under scripts/ and tests/, but git status showed no TASK_033 changes there and no .github path is tracked or dirty"
+    }
+  },
+  "recommended_next_action": "HumanIntegrator may stage docs/dev/construction_loop/reporting_convention.md, docs/dev/construction_loop/README.md, and the ignored TASK_033 report artifact by exact path only. Do not use git add . and do not commit unless the human explicitly says commit now.",
+  "test_results": {
+    "commands_run": [
+      "see validation.commands_run"
+    ],
+    "passed": true,
+    "details": "TASK_033 scope, canonical report-location policy, legacy-path preservation policy, README pointer, safety conventions, forbidden paths, ignored report artifacts, and no-staging/no-commit checks all passed."
+  }
+}

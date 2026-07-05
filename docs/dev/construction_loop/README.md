@@ -86,8 +86,13 @@ task:
   session startup, initial repo inspection, task lifecycle, forbidden paths
   and forbidden actions, and the human commit gate (`commit now`).
 * [`reporting_convention.md`](./reporting_convention.md) — canonical
-  `reports/TASK_XXX_<NAME>/` layout, expected report artifacts, and the
-  task-dependent `human_review/` and `supplement/` subdirectories.
+  `reports/TASK_XXX_<NAME>/` layout, expected report artifacts, the
+  task-dependent `human_review/` and `supplement/` subdirectories, and
+  the report-location normalization policy that deprecates the legacy
+  report paths (`root executor_report.md` = legacy / discouraged,
+  `docs/dev/construction_loop/executor_report.md` = bootstrap history only,
+  `docs/dev/construction_loop/loop_engineering_probe_report.md` = probe
+  evidence only).
 
 The deeper role-card, engineering audit PDF, and theoretical derivation
 supplement standards live in the master repair framework:

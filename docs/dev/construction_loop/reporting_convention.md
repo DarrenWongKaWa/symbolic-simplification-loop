@@ -233,17 +233,37 @@ standards. Later tasks may split each standard into its own dedicated doc.
 
 ## Legacy report paths
 
-For traceability, the legacy locations are deprecated for new content:
+For traceability, the legacy locations are deprecated for new content and
+must not receive new artifacts:
 
 ```text
 root executor_report.md                                       = legacy / discouraged
 docs/dev/construction_loop/executor_report.md                 = bootstrap history only
 docs/dev/construction_loop/loop_engineering_probe_report.md  = probe evidence only
+future reports                                                = reports/TASK_XXX_<NAME>/
 ```
 
-New content must use the canonical `reports/TASK_XXX_<NAME>/` layout. Future
-work may rename or move legacy files into the canonical layout under a
-dedicated task.
+Rules:
+
+- **New content must use the canonical `reports/TASK_XXX_<NAME>/` layout.**
+  No new executor, reviewer, planner, or human-integrator artifact may be
+  written at the legacy root or under `docs/dev/construction_loop/` other
+  than the three labeled locations above.
+- The three legacy files are **frozen as historical evidence** and must not
+  be renamed, deleted, rewritten, or restaged as canonical artifacts by
+  Executor, Reviewer, or HumanIntegrator.
+- A future bounded, human-approved task may migrate any legacy artifact
+  into the canonical layout. Until that task lands, the legacy locations
+  remain in place for traceability.
+- Mixed-case historical names such as `reports/TASK_030_loop_meta_loop_audit/`
+  and shorthand names such as `reports/TASK_XXX/` (without `<NAME>`) are
+  likewise historical evidence; the canonical form for new tasks is the
+  uppercase `<NAME>` variant `reports/TASK_XXX_<NAME>/`.
+
+This deprecation is the **report-location normalization policy** mandated by
+`TASK_033_REPORT_LOCATION_NORMALIZATION_POLICY`. The three labels above
+(`legacy / discouraged`, `bootstrap history only`, `probe evidence only`)
+are the canonical policy labels and must not be paraphrased in this repo.
 
 ## Source of truth
 
