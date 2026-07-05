@@ -1,0 +1,518 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\title{\textbf{WEP Capability Report} \\
+       \large TASK\_052 --- WEP Capability Auditor and Report}
+\author{WEPCapabilityAuditor (TASK\_052)}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Executive Summary}
+
+This report is the human-readable WEP Capability Report for TASK\_052.
+WEP (Workflow Execution Protocol / Work Execution Protocol) is the
+project-local construction-loop workflow defined under
+\texttt{docs/dev/construction\_loop/} and authorized by the main safety
+policy in \texttt{docs/safety.md}. The Capability Auditor inspected the
+repository as of HEAD \texttt{98a2040 TASK\_041 add report schema
+checker} and recorded, with evidence, what the construction loop can do
+today, what it cannot do yet, and what remains unproven.
+
+The headline conclusion is conservative: the construction loop is a
+checker-assisted prompt-loop at most, with L2 partial automation level
+and no unattended runner. Loop-engineering remains probe-only and may
+not modify the main repo. Scientific and runtime files remain protected
+and are out of WEP authority.
+
+\section{Current Repo State}
+
+\subsection{Worktree identity}
+
+\begin{itemize}[leftmargin=2em]
+  \item pwd: \texttt{/Users/wangjiahua/Desktop/25-26/Dissipation \&
+        Nonlinear Transport/newsimplification/modify/modify4\_sigma\_xxx\_simplification/symbolic-loop-audit-report}
+  \item branch: \texttt{task-030-loop-meta-loop-audit}
+  \item HEAD: \texttt{98a2040 TASK\_041 add report schema checker}
+\end{itemize}
+
+\subsection{Recent log}
+
+\begin{verbatim}
+98a2040 TASK_041 add report schema checker
+35870f5 TASK_040 add forbidden path smoke checker
+c7d3b2e TASK_033 normalize report location policy
+9d62546 TASK_032 backfill task history records
+f900ff8 docs: add task 031 safety and reporting conventions
+\end{verbatim}
+
+\subsection{Dirty status at audit time}
+
+The four required startup commands (\texttt{pwd}, \texttt{branch},
+\texttt{status}, \texttt{log}) were captured. The audit itself adds
+exactly the in-scope files for TASK\_052 and touches no other paths.
+
+\subsection{Confirmed TASK\_031 through TASK\_041 state}
+
+\begin{itemize}[leftmargin=2em]
+  \item TASK\_031 main safety and reporting conventions: landed.
+  \item TASK\_032 backfill of TASK\_028 and TASK\_029 history: landed.
+  \item TASK\_033 report location normalization policy: landed.
+  \item TASK\_040 forbidden path smoke checker: landed;
+        \texttt{scripts/check\_forbidden\_paths.py} exists and self-tests.
+  \item TASK\_041 report schema checker: landed;
+        \texttt{scripts/check\_task\_report\_schema.py} exists with
+        \texttt{-{}-self-test} and exit codes 0/1/2.
+\end{itemize}
+
+\subsection{WEP-related files found}
+
+\begin{itemize}[leftmargin=2em]
+  \item \texttt{docs/safety.md}
+  \item \texttt{docs/dev/construction\_loop/README.md}
+  \item \texttt{docs/dev/construction\_loop/planner.role.md}
+  \item \texttt{docs/dev/construction\_loop/executor.role.md}
+  \item \texttt{docs/dev/construction\_loop/reviewer.role.md}
+  \item \texttt{docs/dev/construction\_loop/human\_integrator.role.md}
+  \item \texttt{docs/dev/construction\_loop/reporting\_convention.md}
+  \item \texttt{docs/dev/construction\_loop/loop\_meta\_loop\_repair\_framework.md}
+  \item \texttt{docs/dev/construction\_loop/wep\_capability\_auditor.role.md}
+        (created by TASK\_052)
+  \item \texttt{scripts/check\_forbidden\_paths.py}
+  \item \texttt{scripts/check\_task\_report\_schema.py}
+  \item canonical task reports \texttt{reports/TASK\_031\_*} through
+        \texttt{reports/TASK\_052\_*}
+\end{itemize}
+
+Files explicitly searched for and not found at audit time:
+
+\begin{itemize}[leftmargin=2em]
+  \item \texttt{docs/dev/construction\_loop/role\_card\_schema.md}
+  \item \texttt{docs/dev/construction\_loop/file\_location\_contract.md}
+  \item \texttt{docs/dev/construction\_loop/loop\_engineering\_merge\_policy.md}
+  \item \texttt{docs/dev/construction\_loop/naming\_boundary.md}
+  \item \texttt{tasks/TASK\_INDEX.md}
+  \item \texttt{scripts/check\_role\_cards.py}
+  \item \texttt{scripts/check\_task\_index.py}
+  \item \texttt{scripts/run\_loop\_engineering\_audit.py}
+  \item \texttt{.github/}
+  \item \texttt{agent\_bus/}, \texttt{loop\_engine/}, \texttt{schemas/}
+\end{itemize}
+
+\section{Capability Matrix}
+
+The matrix uses the allowed status labels:
+\texttt{IMPLEMENTED}, \texttt{PARTIAL}, \texttt{POLICY\_ONLY},
+\texttt{CHECKER\_EXISTS}, \texttt{PROBE\_ONLY}, \texttt{NOT\_STARTED},
+\texttt{NOT\_PROVEN}, \texttt{DO\_NOT\_USE\_YET}.
+
+\renewcommand{\arraystretch}{1.15}
+\small
+\begin{longtable}{p{3.2cm} p{2.1cm} p{3.4cm} p{3.4cm} p{3.4cm} p{2.4cm}}
+\toprule
+\textbf{Capability} & \textbf{Status} & \textbf{Evidence} &
+\textbf{What it can do now} & \textbf{What it cannot do yet} & \textbf{Risk} \\
+\midrule
+\endhead
+Role-card protocol &
+  IMPLEMENTED &
+  \texttt{*.role.md} files under
+  \texttt{docs/dev/construction\_loop/} &
+  Defines Planner, Executor, Reviewer, HumanIntegrator &
+  No formal schema yet; field coverage relies on convention. &
+  Low \\ \hline
+Planner $\rightarrow$ Executor $\rightarrow$ Reviewer $\rightarrow$
+  HumanIntegrator $\rightarrow$ human commit workflow &
+  POLICY\_ONLY &
+  \texttt{loop\_meta\_loop\_repair\_framework.md}, \texttt{docs/safety.md} &
+  Documented lifecycle string enforced by humans. &
+  No runner enforces the lifecycle or surfaces the next role. &
+  Medium \\ \hline
+Human commit gate (\texttt{commit now}) &
+  POLICY\_ONLY &
+  \texttt{docs/safety.md}, role cards &
+  Humans must say the exact phrase before any commit. &
+  No machine verification that the gate was honored on every commit. &
+  High \\ \hline
+Safety policy &
+  IMPLEMENTED &
+  \texttt{docs/safety.md} &
+  Denies forbidden paths, forbids staging, sets human gates. &
+  Cannot enforce by itself; relies on session discipline. &
+  Medium \\ \hline
+Reporting convention &
+  IMPLEMENTED &
+  \texttt{docs/dev/construction\_loop/reporting\_convention.md} &
+  Names the canonical \texttt{reports/TASK\_XXX\_<NAME>/} layout. &
+  Cannot auto-rename legacy artifacts. &
+  Low \\ \hline
+\texttt{human\_review/} PDF convention &
+  POLICY\_ONLY &
+  \texttt{reporting\_convention.md}, repair framework &
+  Specifies \texttt{engineering\_audit.tex/pdf} and
+  \texttt{supplement/*.tex/pdf}. &
+  No automation; humans compile LaTeX on demand. &
+  Low \\ \hline
+Engineering audit PDF standard &
+  PARTIAL &
+  \texttt{loop\_meta\_loop\_repair\_framework.md} &
+  Section list and allowed status words are defined. &
+  No dedicated example, no lint, no consistency checker. &
+  Low \\ \hline
+Theoretical derivation supplement PDF standard &
+  POLICY\_ONLY &
+  \texttt{loop\_meta\_loop\_repair\_framework.md} &
+  Section list defined for scientific tasks. &
+  No actual scientific supplement exists yet in
+  \texttt{reports/}. &
+  Low \\ \hline
+Task history / task index &
+  NOT\_STARTED &
+  no \texttt{tasks/TASK\_INDEX.md} found &
+  None. &
+  \texttt{tasks/TASK\_INDEX.md} does not exist;
+  history is reconstructed per-task. &
+  Medium \\ \hline
+Report location normalization &
+  IMPLEMENTED &
+  \texttt{reporting\_convention.md}, TASK\_033 &
+  Canonical form documented; legacy labels are frozen. &
+  No automated migration tool for legacy artifacts. &
+  Low \\ \hline
+Loop-engineering merge policy &
+  NOT\_STARTED &
+  no \texttt{loop\_engineering\_merge\_policy.md} found &
+  None. &
+  TASK\_034 not yet executed; decision deferred. &
+  Medium \\ \hline
+Loop naming boundary &
+  NOT\_STARTED &
+  no \texttt{naming\_boundary.md} found &
+  None. &
+  TASK\_035 not yet executed. &
+  Low \\ \hline
+Role-card schema &
+  NOT\_STARTED &
+  no \texttt{role\_card\_schema.md} found &
+  None. &
+  TASK\_036 not yet executed; field coverage relies on convention. &
+  Medium \\ \hline
+Role-card backfill &
+  NOT\_STARTED &
+  no backfill commit found &
+  None. &
+  TASK\_037 not yet executed. &
+  Low \\ \hline
+File-location contract &
+  NOT\_STARTED &
+  no \texttt{file\_location\_contract.md} found &
+  None. &
+  TASK\_038 not yet executed. &
+  Medium \\ \hline
+Task registry / index &
+  NOT\_STARTED &
+  no \texttt{tasks/TASK\_INDEX.md} found &
+  None. &
+  TASK\_039 not yet executed. &
+  Medium \\ \hline
+Forbidden-path checker &
+  CHECKER\_EXISTS &
+  \texttt{scripts/check\_forbidden\_paths.py} &
+  Reads \texttt{git status -{}-short}, classifies against
+  denylist, exits 0/1/2. &
+  Cannot detect non-dirty forbidden artifacts; humans still
+  must run it. &
+  Low \\ \hline
+Report schema checker &
+  CHECKER\_EXISTS &
+  \texttt{scripts/check\_task\_report\_schema.py} &
+  Validates required and optional files; recognizes
+  \texttt{human\_review/} but does not require its PDFs. &
+  PDF/LaTeX content is not validated; humans still must
+  compile. &
+  Medium \\ \hline
+Role-card checker &
+  NOT\_PROVEN &
+  no \texttt{scripts/check\_role\_cards.py} found &
+  None. &
+  TASK\_042 not yet executed. &
+  Low \\ \hline
+Task-index checker &
+  NOT\_PROVEN &
+  no \texttt{scripts/check\_task\_index.py} found &
+  None. &
+  TASK\_043 not yet executed. &
+  Low \\ \hline
+Agent-bus dry run &
+  NOT\_STARTED &
+  no agent-bus code reachable from construction loop &
+  None. &
+  TASK\_044 not yet executed; no agent\_bus/ in main. &
+  High \\ \hline
+Loop-engineering audit wrapper &
+  NOT\_STARTED &
+  no \texttt{scripts/run\_loop\_engineering\_audit.py} found &
+  None. &
+  TASK\_045 not yet executed. &
+  Medium \\ \hline
+Construction-loop runner &
+  NOT\_PROVEN &
+  no runner exists in repo &
+  None. &
+  TASK\_046 not yet executed; no local runner,
+  no unattended loop. &
+  High \\ \hline
+GitHub Actions safety smoke &
+  NOT\_STARTED &
+  no \texttt{.github/} found &
+  None. &
+  TASK\_047 not yet executed; \texttt{.github/} is
+  forbidden until a human approves it. &
+  Medium \\ \hline
+Langflow / cockpit readiness &
+  NOT\_STARTED &
+  no Langflow config found &
+  None. &
+  TASK\_051 not yet executed; Langflow integration is
+  policy-forbidden until a human approves it. &
+  Medium \\ \bottomrule
+\end{longtable}
+\normalsize
+
+\section{What WEP Can Do Now}
+
+\subsection{Human-followed protocol}
+
+WEP can be carried out by a human or single-session agent that
+faithfully follows the role cards. Specifically:
+
+\begin{itemize}[leftmargin=2em]
+  \item Run the four startup commands and record them.
+  \item Read \texttt{docs/safety.md} and
+        \texttt{docs/dev/construction\_loop/reporting\_convention.md}
+        and apply them.
+  \item Write the bounded artifacts in the canonical
+        \texttt{reports/TASK\_XXX\_<NAME>/} directory.
+  \item Run the two bounded checkers
+        (\texttt{check\_forbidden\_paths.py} and
+        \texttt{check\_task\_report\_schema.py}) on the worktree.
+  \item Hand off to the next role via the executor report or
+        conversational handoff.
+\end{itemize}
+
+\subsection{Machine-checkable protocol}
+
+The following are machine-checkable today, on demand, by a human:
+
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{Forbidden dirty paths} via
+        \texttt{python3 scripts/check\_forbidden\_paths.py}.
+  \item \textbf{Report directory shape} via
+        \texttt{python3 scripts/check\_task\_report\_schema.py
+        reports/TASK\_XXX\_<NAME>/}.
+\end{itemize}
+
+\subsection{Automation not yet implemented}
+
+WEP cannot, today, automatically:
+
+\begin{itemize}[leftmargin=2em]
+  \item pick the next bounded task;
+  \item invoke Planner, Executor, Reviewer, or HumanIntegrator;
+  \item merge or vendor loop-engineering;
+  \item commit, push, merge, reset, rebase, cherry-pick, freeze,
+        or sign off;
+  \item touch \texttt{sigma\_abc/}, \texttt{checkpoints/}, signoff
+        ledgers, or scientific/runtime files.
+\end{itemize}
+
+\section{What WEP Cannot Do Yet}
+
+\begin{itemize}[leftmargin=2em]
+  \item Cannot automatically select and safely execute the next task.
+  \item Cannot automatically call Planner / Executor / Reviewer /
+        HumanIntegrator.
+  \item Cannot prove semantic or scientific correctness of any patch.
+  \item Cannot replace the verifier, the checkpoint, or human signoff.
+  \item Cannot let loop-engineering directly modify the main repo.
+  \item Cannot unattended commit, push, or merge.
+  \item Cannot safely touch \texttt{sigma\_abc/}, \texttt{checkpoints/},
+        signoff files, or runtime files by WEP alone.
+  \item Cannot guarantee Codex or Claude Code is in the correct worktree
+        unless each session performs the four startup commands and
+        records them.
+  \item Cannot enforce the role-card schema, because the schema file
+        does not yet exist.
+  \item Cannot enforce the file-location contract, because the contract
+        file does not yet exist.
+  \item Cannot maintain the task index, because
+        \texttt{tasks/TASK\_INDEX.md} does not yet exist.
+\end{itemize}
+
+\section{Automation Level Assessment}
+
+The levels used by this report are:
+
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{L0} --- human-only docs protocol.
+  \item \textbf{L1} --- human-gated prompt-loop.
+  \item \textbf{L2} --- checker-assisted prompt-loop.
+  \item \textbf{L3} --- local semi-auto runner, no auto-commit.
+  \item \textbf{L4} --- CI-assisted runner.
+  \item \textbf{L5} --- unattended automation.
+\end{itemize}
+
+\textbf{Conservative assessment: L2 partial.}
+
+Two checkers exist and can be run on demand. There is no local runner,
+no agent-bus integration, no GitHub Action, and no unattended loop. The
+role cards and reporting convention are docs-only and require humans to
+follow them. The audit does not rate L3 or above because no repo-local
+runner exists and none is authorized.
+
+\section{Loop-Engineering Status}
+
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{Can loop-engineering be used now?} \\
+        No, probe-only.
+  \item \textbf{Can it run in a probe worktree?} \\
+        Yes, probe-only. No probe worktree exists in the main repo.
+  \item \textbf{Can it modify main?} \\
+        No. The denylist in \texttt{docs/safety.md} and the master
+        repair framework forbid vendoring and submodule inclusion.
+  \item \textbf{Can it replace WEP?} \\
+        No.
+  \item \textbf{Can it replace verifier / signoff / checkpoint?} \\
+        No.
+  \item \textbf{Can it be used as audit / cost helper?} \\
+        Yes, but only inside an approved wrapper, e.g.
+        \texttt{scripts/run\_loop\_engineering\_audit.py}, which does
+        not yet exist (TASK\_045).
+  \item \textbf{What wrapper / checker is still needed?} \\
+        A repo-local audit wrapper that confines loop-engineering to a
+        probe worktree, refuses forbidden-path dirt, and captures its
+        output to a canonical \texttt{reports/TASK\_XXX\_<NAME>/} path.
+\end{itemize}
+
+\section{Safety Boundaries for Scientific / Runtime Files}
+
+\textbf{WEP alone does not authorize scientific or runtime edits.}
+
+Scientific and runtime edits remain under the verifier, the reviewer,
+the checkpoint, and human signoff. WEP may document, audit, and propose
+human-readable supplements, but it may not edit:
+
+\begin{itemize}[leftmargin=2em]
+  \item \texttt{sigma\_abc/}
+  \item \texttt{checkpoints/}
+  \item scientific output files
+  \item validation summaries and completion matrices
+  \item \texttt{.loop/human\_signoff.yaml} and other signoff ledgers
+  \item \texttt{agent\_bus/}, \texttt{loop\_engine/}, \texttt{schemas/}
+\end{itemize}
+
+Future scientific / runtime work must come through a bounded,
+human-approved task that explicitly names verifier, reviewer,
+checkpoint, and signoff constraints.
+
+\section{Recommended Next Upgrades}
+
+Only bounded next steps are recommended. The audit does not propose any
+automated next-step selection.
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Run \texttt{scripts/check\_forbidden\_paths.py} and
+        \texttt{scripts/check\_task\_report\_schema.py} as a routine
+        pre-landing check} for every task.
+  \item \textbf{Resume TASK\_042 role-card completeness checker}
+        (\texttt{scripts/check\_role\_cards.py}) so the existing role
+        cards can be linted automatically.
+  \item \textbf{Then TASK\_043 task-index checker}
+        (\texttt{scripts/check\_task\_index.py}) once
+        \texttt{tasks/TASK\_INDEX.md} exists.
+  \item \textbf{Then TASK\_036 / TASK\_037 / TASK\_038 / TASK\_039}
+        role-card schema, role-card backfill, file-location contract,
+        and task registry.
+  \item \textbf{Document the report-schema checker caveat}
+        (\texttt{check\_task\_report\_schema.py} requires only the four
+        core artifacts, not the \texttt{human\_review/} PDFs). A future
+        bounded task may extend the checker to require PDFs when the
+        task declares them; that is not in scope for TASK\_052.
+  \item \textbf{Only after checkers mature, consider TASK\_044 /
+        TASK\_045 / TASK\_046} automation dry-run, audit wrapper, and
+        local runner prototype. None of those exist today.
+\end{enumerate}
+
+\section{Caveats / NOT\_PROVEN Items}
+
+\begin{itemize}[leftmargin=2em]
+  \item No WEP Capability Auditor role card existed before TASK\_052.
+        The one created here is the canonical role card; do not
+        duplicate under another name without a bounded task.
+  \item No \texttt{docs/dev/construction\_loop/role\_card\_schema.md}
+        exists at audit time. Field coverage of role cards relies on
+        convention, not a machine-checkable schema.
+  \item No \texttt{docs/dev/construction\_loop/file\_location\_contract.md}
+        exists at audit time. Path discipline relies on the role cards,
+        the safety policy, and the reporting convention.
+  \item The report-schema checker currently requires four core
+        artifacts (\texttt{PLAN.md}, \texttt{executor\_report.md},
+        \texttt{review\_result.json}, \texttt{landing\_report.md})
+        while \texttt{reporting\_convention.md} and the repair
+        framework list seven minimum files. This mismatch is recorded
+        here as a caveat. The audit does not repair it.
+  \item The PDF / LaTeX content quality is not validated by any
+        checker. The auditor compiles the LaTeX on the host and
+        records the build outcome, but does not lint the content.
+  \item Semantic or scientific correctness is not provided by WEP.
+        WEP does not replace the verifier, the reviewer, the
+        checkpoint, or human signoff.
+  \item Loop-engineering remains probe-only. This audit does not rate
+        any loop-engineering capability as \texttt{IMPLEMENTED}.
+  \item \texttt{WEP} is a project-local phrase. The auditor expands it
+        in this report as Workflow Execution Protocol / Work Execution
+        Protocol, but does not claim that WEP is an external standard.
+\end{itemize}
+
+\section{Human Decision Checklist}
+
+The human reviewer is asked to confirm:
+
+\begin{itemize}[leftmargin=2em]
+  \item The capability matrix is accepted as evidence-based and
+        conservative.
+  \item The automation level \texttt{L2 partial} is accepted.
+  \item Loop-engineering probe-only status is accepted.
+  \item Scientific / runtime file protection is accepted.
+  \item The recommended next-upgrade ordering is acknowledged but not
+        auto-scheduled.
+\end{itemize}
+
+\section{Conclusion}
+
+The construction loop has a documented protocol, a canonical reporting
+convention, two bounded checkers, and a small number of in-flight
+documents (safety policy, reporting convention, repair framework). It
+does not have a runner, an agent bus, a GitHub Action, a Langflow
+integration, a role-card schema, a file-location contract, or a task
+index. The conservative conclusion is that WEP is an L2 partial
+checker-assisted prompt-loop, that loop-engineering is probe-only, and
+that scientific and runtime files remain protected.
+
+\end{document}

@@ -1,0 +1,883 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 7 Jan. 2023. Version 4.79.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "engineering_audit.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./engineering_audit.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./engineering_audit.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+Overfull \hbox (453.47726pt too wide) in paragraph at lines 49--51
+[]\OT1/cmr/m/n/10.95 pwd: \OT1/cmtt/m/n/10.95 /Users/wangjiahua/Desktop/25-26/D
+issipation & Nonlinear Transport/newsimplification/modify/modify4[]sigma[]xxx[]
+simplification/symbolic-loop-audit-report
+[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Overfull \hbox (4.03435pt too wide) in paragraph at lines 95--97
+[]\OT1/cmtt/m/n/10.95 docs/dev/construction[]loop/wep[]capability[]auditor.role
+.md \OT1/cmr/m/n/10.95 (cre-ated by TASK[]052)
+
+Overfull \hbox (9.12457pt too wide) in paragraph at lines 120--124
+\OT1/cmr/m/n/10.95 The ma-trix uses the al-lowed sta-tus la-bels: \OT1/cmtt/m/n
+/10.95 IMPLEMENTED\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 PARTIAL\OT1/cmr/m/n/
+10.95 , \OT1/cmtt/m/n/10.95 POLICY[]ONLY\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.9
+5 CHECKER[]EXISTS\OT1/cmr/m/n/10.95 ,
+
+Overfull \hbox (128.33575pt too wide) in alignment at lines 127--132
+ [] [] [] [] [] []
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 134--134
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Overfull \hbox (43.53958pt too wide) in paragraph at lines 135--136
+\OT1/cmtt/m/n/10 docs/dev/construction[]loop/|
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 Re-viewer $\OMS/cmsy/m/n/10 !$
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+\OT1/cmr/m/n/10 Hu-man-In-te-gra-tor
+
+Underfull \hbox (badness 4518) in paragraph at lines 140--141
+\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 hu-man com-mit
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 142--142
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Overfull \hbox (78.65704pt too wide) in paragraph at lines 143--143
+[]|\OT1/cmtt/m/n/10 loop[]meta[]loop[]repair[]framework.md\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1484) in paragraph at lines 144--144
+[]|\OT1/cmr/m/n/10 Documented life-cy-cle
+
+Underfull \hbox (badness 7116) in paragraph at lines 145--145
+[]|\OT1/cmr/m/n/10 No run-ner en-forces
+
+Underfull \hbox (badness 1648) in paragraph at lines 145--145
+\OT1/cmr/m/n/10 the life-cy-cle or sur-
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 148--148
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Underfull \hbox (badness 4543) in paragraph at lines 150--150
+\OT1/cmr/m/n/10 ex-act phrase be-fore
+
+Underfull \hbox (badness 1033) in paragraph at lines 151--151
+[]|\OT1/cmr/m/n/10 No ma-chine ver-i-fi-ca-
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 154--154
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\OT1/cmr/m/n/10 Denies for-bid-den
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\OT1/cmr/m/n/10 Reporting con-ven-
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Overfull \hbox (162.81853pt too wide) in paragraph at lines 161--161
+[]|\OT1/cmtt/m/n/10 docs/dev/construction[]loop/reporting[]convention.md|
+
+Overfull \hbox (26.31972pt too wide) in paragraph at lines 162--162
+\OT1/cmtt/m/n/10 reports/TASK[]XXX[]<NAME>/
+
+Underfull \hbox (badness 6510) in paragraph at lines 163--163
+[]|\OT1/cmr/m/n/10 Cannot auto-rename
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 166--166
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Overfull \hbox (25.31755pt too wide) in paragraph at lines 167--167
+[]|\OT1/cmtt/m/n/10 reporting[]convention.md\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+[]|\OT1/cmr/m/n/10 Specifies
+
+Overfull \hbox (33.03967pt too wide) in paragraph at lines 168--169
+\OT1/cmtt/m/n/10 engineering[]audit.tex/pdf
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+\OT1/cmr/m/n/10 and
+
+Overfull \hbox (11.03769pt too wide) in paragraph at lines 168--169
+\OT1/cmtt/m/n/10 supplement/*.tex/pdf\OT1/cmr/m/n/10 .|
+
+Underfull \hbox (badness 1655) in paragraph at lines 170--170
+[]|\OT1/cmr/m/n/10 No au-toma-tion; hu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\OT1/cmr/m/n/10 Engineering au-dit
+
+Overfull \hbox (75.87926pt too wide) in paragraph at lines 174--174
+[]|\OT1/cmtt/m/n/10 loop[]meta[]loop[]repair[]framework.md|
+
+Underfull \hbox (badness 2418) in paragraph at lines 175--175
+[]|\OT1/cmr/m/n/10 Section list and al-
+
+Underfull \hbox (badness 2318) in paragraph at lines 176--176
+[]|\OT1/cmr/m/n/10 No ded-i-cated ex-am-
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
+[]|\OT1/cmr/m/n/10 Theoretical deriva-
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
+\OT1/cmr/m/n/10 tion sup-ple-ment
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 179--179
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Overfull \hbox (75.87926pt too wide) in paragraph at lines 180--180
+[]|\OT1/cmtt/m/n/10 loop[]meta[]loop[]repair[]framework.md|
+
+Underfull \hbox (badness 6412) in paragraph at lines 182--183
+[]|\OT1/cmr/m/n/10 No ac-tual sci-en-tific
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 186--186
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (1.53995pt too wide) in paragraph at lines 187--187
+\OT1/cmtt/m/n/10 tasks/TASK[]INDEX.md
+
+Overfull \hbox (1.53995pt too wide) in paragraph at lines 189--190
+[]|\OT1/cmtt/m/n/10 tasks/TASK[]INDEX.md
+
+Underfull \hbox (badness 1484) in paragraph at lines 189--190
+\OT1/cmr/m/n/10 does not ex-ist; his-
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 193--193
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Overfull \hbox (25.31755pt too wide) in paragraph at lines 194--194
+[]|\OT1/cmtt/m/n/10 reporting[]convention.md\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
+[]|\OT1/cmr/m/n/10 Loop-engineering
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 199--199
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (66.84935pt too wide) in paragraph at lines 200--200
+\OT1/cmtt/m/n/10 loop[]engineering[]merge[]policy.md
+
+Underfull \hbox (badness 1902) in paragraph at lines 202--202
+\OT1/cmr/m/n/10 e-cuted; de-ci-sion de-
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 205--205
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+[]|\OT1/cmr/m/n/10 no
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+\OT1/cmtt/m/n/10 naming[]boundary.md
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 211--211
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 217--217
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+[]|\OT1/cmr/m/n/10 no back-fill com-mit
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--222
+[]|\OT1/cmr/m/n/10 File-location con-
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 223--223
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--224
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (31.56967pt too wide) in paragraph at lines 224--224
+\OT1/cmtt/m/n/10 file[]location[]contract.md
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 229--229
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (1.53995pt too wide) in paragraph at lines 230--230
+\OT1/cmtt/m/n/10 tasks/TASK[]INDEX.md
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
+[]|\OT1/cmr/m/n/10 Forbidden-path
+
+Overfull \hbox (30.79367pt too wide) in paragraph at lines 235--235
+[]|\OT1/cmr/m/n/10 CHECKER[]EXISTS|
+
+Overfull \hbox (68.31935pt too wide) in paragraph at lines 236--236
+[]|\OT1/cmtt/m/n/10 scripts/check[]forbidden[]paths.py|
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+[]|\OT1/cmr/m/n/10 Reads \OT1/cmtt/m/n/10 git status
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+\OT1/cmtt/m/n/10 --short\OT1/cmr/m/n/10 , clas-si-fies
+
+Underfull \hbox (badness 4353) in paragraph at lines 239--240
+[]|\OT1/cmr/m/n/10 Cannot de-tect non-
+
+Underfull \hbox (badness 1715) in paragraph at lines 239--240
+\OT1/cmr/m/n/10 dirty for-bid-den ar-ti-
+
+Underfull \hbox (badness 6927) in paragraph at lines 239--240
+\OT1/cmr/m/n/10 facts; hu-mans still
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+[]|\OT1/cmr/m/n/10 Report schema
+
+Overfull \hbox (30.79367pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/10 CHECKER[]EXISTS|
+
+Overfull \hbox (82.59921pt too wide) in paragraph at lines 244--244
+[]|\OT1/cmtt/m/n/10 scripts/check[]task[]report[]schema.py|
+
+Underfull \hbox (badness 3503) in paragraph at lines 245--246
+\OT1/cmr/m/n/10 nizes \OT1/cmtt/m/n/10 human[]review/
+
+Underfull \hbox (badness 3849) in paragraph at lines 247--248
+[]|\OT1/cmr/m/n/10 PDF/LaTeX con-tent
+
+Overfull \hbox (9.54362pt too wide) in paragraph at lines 251--251
+[]|\OT1/cmr/m/n/10 NOT[]PROVEN|
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (42.06958pt too wide) in paragraph at lines 252--252
+\OT1/cmtt/m/n/10 scripts/check[]role[]cards.py
+
+Overfull \hbox (9.54362pt too wide) in paragraph at lines 257--257
+[]|\OT1/cmr/m/n/10 NOT[]PROVEN|
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (42.06958pt too wide) in paragraph at lines 258--258
+\OT1/cmtt/m/n/10 scripts/check[]task[]index.py
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 263--263
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+[]|\OT1/cmr/m/n/10 no agent-bus code
+
+Underfull \hbox (badness 3189) in paragraph at lines 264--264
+\OT1/cmr/m/n/10 reach-able from con-
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 269--269
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (93.09912pt too wide) in paragraph at lines 270--270
+\OT1/cmtt/m/n/10 scripts/run[]loop[]engineering[]audit.py
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/cmr/m/n/10 Construction-loop
+
+Overfull \hbox (9.54362pt too wide) in paragraph at lines 275--275
+[]|\OT1/cmr/m/n/10 NOT[]PROVEN|
+
+Underfull \hbox (badness 2495) in paragraph at lines 276--276
+[]|\OT1/cmr/m/n/10 no run-ner ex-ists in
+
+Underfull \hbox (badness 4531) in paragraph at lines 278--279
+\OT1/cmr/m/n/10 ner, no unat-tended
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+[]|\OT1/cmr/m/n/10 GitHub Ac-tions
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 282--282
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 1478) in paragraph at lines 285--286
+\OT1/cmr/m/n/10 e-cuted; \OT1/cmtt/m/n/10 .github/ \OT1/cmr/m/n/10 is
+
+Underfull \hbox (badness 1769) in paragraph at lines 288--288
+[]|\OT1/cmr/m/n/10 Langflow / cock-pit
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 289--289
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+[]|\OT1/cmr/m/n/10 no Langflow con-fig
+
+Underfull \hbox (badness 8113) in paragraph at lines 292--293
+\OT1/cmr/m/n/10 te-gra-tion is policy-
+
+Overfull \hbox (128.33575pt too wide) in alignment at lines 132--295
+ [] [] [] [] [] []
+[2] [3]
+Overfull \hbox (3.13107pt too wide) in paragraph at lines 307--310
+[]\OT1/cmr/m/n/10.95 Read \OT1/cmtt/m/n/10.95 docs/safety.md \OT1/cmr/m/n/10.95
+ and \OT1/cmtt/m/n/10.95 docs/dev/construction[]loop/reporting[]convention.md \
+OT1/cmr/m/n/10.95 and
+[4]
+Overfull \hbox (29.81473pt too wide) in paragraph at lines 312--315
+[]\OT1/cmr/m/n/10.95 Run the two bounded check-ers (\OT1/cmtt/m/n/10.95 check[]
+forbidden[]paths.py \OT1/cmr/m/n/10.95 and \OT1/cmtt/m/n/10.95 check[]task[]rep
+ort[]schema.py\OT1/cmr/m/n/10.95 )
+
+Overfull \hbox (99.81061pt too wide) in paragraph at lines 326--329
+[]\OT1/cmr/bx/n/10.95 Report di-rec-tory shape \OT1/cmr/m/n/10.95 via \OT1/cmtt
+/m/n/10.95 python3 scripts/check[]task[]report[]schema.py reports/TASK[]XXX[]<N
+AME>/\OT1/cmr/m/n/10.95 .
+[5] [6]
+Overfull \hbox (5.41858pt too wide) in paragraph at lines 443--446
+[]\OT1/cmr/bx/n/10.95 Resume TASK[]042 role-card com-plete-ness checker \OT1/cm
+r/m/n/10.95 (\OT1/cmtt/m/n/10.95 scripts/check[]role[]cards.py\OT1/cmr/m/n/10.9
+5 )
+
+Overfull \hbox (57.33855pt too wide) in paragraph at lines 446--449
+[]\OT1/cmr/bx/n/10.95 Then TASK[]043 task-index checker \OT1/cmr/m/n/10.95 (\OT
+1/cmtt/m/n/10.95 scripts/check[]task[]index.py\OT1/cmr/m/n/10.95 ) once \OT1/cm
+tt/m/n/10.95 tasks/TASK[]INDEX.md
+
+Overfull \hbox (1.90756pt too wide) in paragraph at lines 471--474
+[]\OT1/cmr/m/n/10.95 No \OT1/cmtt/m/n/10.95 docs/dev/construction[]loop/file[]l
+ocation[]contract.md \OT1/cmr/m/n/10.95 ex-ists at au-dit time. Path
+
+Overfull \hbox (23.54086pt too wide) in paragraph at lines 474--480
+[]\OT1/cmr/m/n/10.95 The report-schema checker cur-rently re-quires four core a
+r-ti-facts (\OT1/cmtt/m/n/10.95 PLAN.md\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95
+ executor[]report.md\OT1/cmr/m/n/10.95 ,
+[7]
+Overfull \hbox (2.79596pt too wide) in paragraph at lines 509--517
+\OT1/cmr/m/n/10.95 The con-struc-tion loop has a doc-u-mented pro-to-col, a can
+on-i-cal re-port-ing con-ven-tion, two bounded
+[8] (./engineering_audit.aux)
+
+Package rerunfilecheck Warning: File `engineering_audit.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/local/texlive/2023/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist
+/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on engineering_audit.pdf (8 pages, 135110 bytes).
+Transcript written on engineering_audit.log.
+Latexmk: Getting log file 'engineering_audit.log'
+Latexmk: Examining 'engineering_audit.fls'
+Latexmk: Examining 'engineering_audit.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'engineering_audit.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  engineering_audit.aux
+  engineering_audit.out
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "engineering_audit.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./engineering_audit.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./engineering_audit.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (./engineering_audit.out) (./engineering_audit.out)
+Overfull \hbox (453.47726pt too wide) in paragraph at lines 49--51
+[]\OT1/cmr/m/n/10.95 pwd: \OT1/cmtt/m/n/10.95 /Users/wangjiahua/Desktop/25-26/D
+issipation & Nonlinear Transport/newsimplification/modify/modify4[]sigma[]xxx[]
+simplification/symbolic-loop-audit-report
+[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Overfull \hbox (4.03435pt too wide) in paragraph at lines 95--97
+[]\OT1/cmtt/m/n/10.95 docs/dev/construction[]loop/wep[]capability[]auditor.role
+.md \OT1/cmr/m/n/10.95 (cre-ated by TASK[]052)
+
+Overfull \hbox (9.12457pt too wide) in paragraph at lines 120--124
+\OT1/cmr/m/n/10.95 The ma-trix uses the al-lowed sta-tus la-bels: \OT1/cmtt/m/n
+/10.95 IMPLEMENTED\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 PARTIAL\OT1/cmr/m/n/
+10.95 , \OT1/cmtt/m/n/10.95 POLICY[]ONLY\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.9
+5 CHECKER[]EXISTS\OT1/cmr/m/n/10.95 ,
+
+Overfull \hbox (128.33575pt too wide) in alignment at lines 127--132
+ [] [] [] [] [] []
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 134--134
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Overfull \hbox (43.53958pt too wide) in paragraph at lines 135--136
+\OT1/cmtt/m/n/10 docs/dev/construction[]loop/|
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 Re-viewer $\OMS/cmsy/m/n/10 !$
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+\OT1/cmr/m/n/10 Hu-man-In-te-gra-tor
+
+Underfull \hbox (badness 4518) in paragraph at lines 140--141
+\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 hu-man com-mit
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 142--142
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Overfull \hbox (78.65704pt too wide) in paragraph at lines 143--143
+[]|\OT1/cmtt/m/n/10 loop[]meta[]loop[]repair[]framework.md\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1484) in paragraph at lines 144--144
+[]|\OT1/cmr/m/n/10 Documented life-cy-cle
+
+Underfull \hbox (badness 7116) in paragraph at lines 145--145
+[]|\OT1/cmr/m/n/10 No run-ner en-forces
+
+Underfull \hbox (badness 1648) in paragraph at lines 145--145
+\OT1/cmr/m/n/10 the life-cy-cle or sur-
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 148--148
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Underfull \hbox (badness 4543) in paragraph at lines 150--150
+\OT1/cmr/m/n/10 ex-act phrase be-fore
+
+Underfull \hbox (badness 1033) in paragraph at lines 151--151
+[]|\OT1/cmr/m/n/10 No ma-chine ver-i-fi-ca-
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 154--154
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\OT1/cmr/m/n/10 Denies for-bid-den
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\OT1/cmr/m/n/10 Reporting con-ven-
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Overfull \hbox (162.81853pt too wide) in paragraph at lines 161--161
+[]|\OT1/cmtt/m/n/10 docs/dev/construction[]loop/reporting[]convention.md|
+
+Overfull \hbox (26.31972pt too wide) in paragraph at lines 162--162
+\OT1/cmtt/m/n/10 reports/TASK[]XXX[]<NAME>/
+
+Underfull \hbox (badness 6510) in paragraph at lines 163--163
+[]|\OT1/cmr/m/n/10 Cannot auto-rename
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 166--166
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Overfull \hbox (25.31755pt too wide) in paragraph at lines 167--167
+[]|\OT1/cmtt/m/n/10 reporting[]convention.md\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+[]|\OT1/cmr/m/n/10 Specifies
+
+Overfull \hbox (33.03967pt too wide) in paragraph at lines 168--169
+\OT1/cmtt/m/n/10 engineering[]audit.tex/pdf
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+\OT1/cmr/m/n/10 and
+
+Overfull \hbox (11.03769pt too wide) in paragraph at lines 168--169
+\OT1/cmtt/m/n/10 supplement/*.tex/pdf\OT1/cmr/m/n/10 .|
+
+Underfull \hbox (badness 1655) in paragraph at lines 170--170
+[]|\OT1/cmr/m/n/10 No au-toma-tion; hu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\OT1/cmr/m/n/10 Engineering au-dit
+
+Overfull \hbox (75.87926pt too wide) in paragraph at lines 174--174
+[]|\OT1/cmtt/m/n/10 loop[]meta[]loop[]repair[]framework.md|
+
+Underfull \hbox (badness 2418) in paragraph at lines 175--175
+[]|\OT1/cmr/m/n/10 Section list and al-
+
+Underfull \hbox (badness 2318) in paragraph at lines 176--176
+[]|\OT1/cmr/m/n/10 No ded-i-cated ex-am-
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
+[]|\OT1/cmr/m/n/10 Theoretical deriva-
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
+\OT1/cmr/m/n/10 tion sup-ple-ment
+
+Overfull \hbox (11.21031pt too wide) in paragraph at lines 179--179
+[]|\OT1/cmr/m/n/10 POLICY[]ONLY|
+
+Overfull \hbox (75.87926pt too wide) in paragraph at lines 180--180
+[]|\OT1/cmtt/m/n/10 loop[]meta[]loop[]repair[]framework.md|
+
+Underfull \hbox (badness 6412) in paragraph at lines 182--183
+[]|\OT1/cmr/m/n/10 No ac-tual sci-en-tific
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 186--186
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (1.53995pt too wide) in paragraph at lines 187--187
+\OT1/cmtt/m/n/10 tasks/TASK[]INDEX.md
+
+Overfull \hbox (1.53995pt too wide) in paragraph at lines 189--190
+[]|\OT1/cmtt/m/n/10 tasks/TASK[]INDEX.md
+
+Underfull \hbox (badness 1484) in paragraph at lines 189--190
+\OT1/cmr/m/n/10 does not ex-ist; his-
+
+Overfull \hbox (18.027pt too wide) in paragraph at lines 193--193
+[]|\OT1/cmr/m/n/10 IMPLEMENTED|
+
+Overfull \hbox (25.31755pt too wide) in paragraph at lines 194--194
+[]|\OT1/cmtt/m/n/10 reporting[]convention.md\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
+[]|\OT1/cmr/m/n/10 Loop-engineering
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 199--199
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (66.84935pt too wide) in paragraph at lines 200--200
+\OT1/cmtt/m/n/10 loop[]engineering[]merge[]policy.md
+
+Underfull \hbox (badness 1902) in paragraph at lines 202--202
+\OT1/cmr/m/n/10 e-cuted; de-ci-sion de-
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 205--205
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+[]|\OT1/cmr/m/n/10 no
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+\OT1/cmtt/m/n/10 naming[]boundary.md
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 211--211
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 217--217
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+[]|\OT1/cmr/m/n/10 no back-fill com-mit
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--222
+[]|\OT1/cmr/m/n/10 File-location con-
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 223--223
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--224
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (31.56967pt too wide) in paragraph at lines 224--224
+\OT1/cmtt/m/n/10 file[]location[]contract.md
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 229--229
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (1.53995pt too wide) in paragraph at lines 230--230
+\OT1/cmtt/m/n/10 tasks/TASK[]INDEX.md
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
+[]|\OT1/cmr/m/n/10 Forbidden-path
+
+Overfull \hbox (30.79367pt too wide) in paragraph at lines 235--235
+[]|\OT1/cmr/m/n/10 CHECKER[]EXISTS|
+
+Overfull \hbox (68.31935pt too wide) in paragraph at lines 236--236
+[]|\OT1/cmtt/m/n/10 scripts/check[]forbidden[]paths.py|
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+[]|\OT1/cmr/m/n/10 Reads \OT1/cmtt/m/n/10 git status
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+\OT1/cmtt/m/n/10 --short\OT1/cmr/m/n/10 , clas-si-fies
+
+Underfull \hbox (badness 4353) in paragraph at lines 239--240
+[]|\OT1/cmr/m/n/10 Cannot de-tect non-
+
+Underfull \hbox (badness 1715) in paragraph at lines 239--240
+\OT1/cmr/m/n/10 dirty for-bid-den ar-ti-
+
+Underfull \hbox (badness 6927) in paragraph at lines 239--240
+\OT1/cmr/m/n/10 facts; hu-mans still
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+[]|\OT1/cmr/m/n/10 Report schema
+
+Overfull \hbox (30.79367pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/10 CHECKER[]EXISTS|
+
+Overfull \hbox (82.59921pt too wide) in paragraph at lines 244--244
+[]|\OT1/cmtt/m/n/10 scripts/check[]task[]report[]schema.py|
+
+Underfull \hbox (badness 3503) in paragraph at lines 245--246
+\OT1/cmr/m/n/10 nizes \OT1/cmtt/m/n/10 human[]review/
+
+Underfull \hbox (badness 3849) in paragraph at lines 247--248
+[]|\OT1/cmr/m/n/10 PDF/LaTeX con-tent
+
+Overfull \hbox (9.54362pt too wide) in paragraph at lines 251--251
+[]|\OT1/cmr/m/n/10 NOT[]PROVEN|
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (42.06958pt too wide) in paragraph at lines 252--252
+\OT1/cmtt/m/n/10 scripts/check[]role[]cards.py
+
+Overfull \hbox (9.54362pt too wide) in paragraph at lines 257--257
+[]|\OT1/cmr/m/n/10 NOT[]PROVEN|
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (42.06958pt too wide) in paragraph at lines 258--258
+\OT1/cmtt/m/n/10 scripts/check[]task[]index.py
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 263--263
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+[]|\OT1/cmr/m/n/10 no agent-bus code
+
+Underfull \hbox (badness 3189) in paragraph at lines 264--264
+\OT1/cmr/m/n/10 reach-able from con-
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 269--269
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+[]|\OT1/cmr/m/n/10 no
+
+Overfull \hbox (93.09912pt too wide) in paragraph at lines 270--270
+\OT1/cmtt/m/n/10 scripts/run[]loop[]engineering[]audit.py
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/cmr/m/n/10 Construction-loop
+
+Overfull \hbox (9.54362pt too wide) in paragraph at lines 275--275
+[]|\OT1/cmr/m/n/10 NOT[]PROVEN|
+
+Underfull \hbox (badness 2495) in paragraph at lines 276--276
+[]|\OT1/cmr/m/n/10 no run-ner ex-ists in
+
+Underfull \hbox (badness 4531) in paragraph at lines 278--279
+\OT1/cmr/m/n/10 ner, no unat-tended
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+[]|\OT1/cmr/m/n/10 GitHub Ac-tions
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 282--282
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 1478) in paragraph at lines 285--286
+\OT1/cmr/m/n/10 e-cuted; \OT1/cmtt/m/n/10 .github/ \OT1/cmr/m/n/10 is
+
+Underfull \hbox (badness 1769) in paragraph at lines 288--288
+[]|\OT1/cmr/m/n/10 Langflow / cock-pit
+
+Overfull \hbox (13.98805pt too wide) in paragraph at lines 289--289
+[]|\OT1/cmr/m/n/10 NOT[]STARTED|
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+[]|\OT1/cmr/m/n/10 no Langflow con-fig
+
+Underfull \hbox (badness 8113) in paragraph at lines 292--293
+\OT1/cmr/m/n/10 te-gra-tion is policy-
+
+Overfull \hbox (128.33575pt too wide) in alignment at lines 132--295
+ [] [] [] [] [] []
+[2] [3]
+Overfull \hbox (3.13107pt too wide) in paragraph at lines 307--310
+[]\OT1/cmr/m/n/10.95 Read \OT1/cmtt/m/n/10.95 docs/safety.md \OT1/cmr/m/n/10.95
+ and \OT1/cmtt/m/n/10.95 docs/dev/construction[]loop/reporting[]convention.md \
+OT1/cmr/m/n/10.95 and
+[4]
+Overfull \hbox (29.81473pt too wide) in paragraph at lines 312--315
+[]\OT1/cmr/m/n/10.95 Run the two bounded check-ers (\OT1/cmtt/m/n/10.95 check[]
+forbidden[]paths.py \OT1/cmr/m/n/10.95 and \OT1/cmtt/m/n/10.95 check[]task[]rep
+ort[]schema.py\OT1/cmr/m/n/10.95 )
+
+Overfull \hbox (99.81061pt too wide) in paragraph at lines 326--329
+[]\OT1/cmr/bx/n/10.95 Report di-rec-tory shape \OT1/cmr/m/n/10.95 via \OT1/cmtt
+/m/n/10.95 python3 scripts/check[]task[]report[]schema.py reports/TASK[]XXX[]<N
+AME>/\OT1/cmr/m/n/10.95 .
+[5] [6]
+Overfull \hbox (5.41858pt too wide) in paragraph at lines 443--446
+[]\OT1/cmr/bx/n/10.95 Resume TASK[]042 role-card com-plete-ness checker \OT1/cm
+r/m/n/10.95 (\OT1/cmtt/m/n/10.95 scripts/check[]role[]cards.py\OT1/cmr/m/n/10.9
+5 )
+
+Overfull \hbox (57.33855pt too wide) in paragraph at lines 446--449
+[]\OT1/cmr/bx/n/10.95 Then TASK[]043 task-index checker \OT1/cmr/m/n/10.95 (\OT
+1/cmtt/m/n/10.95 scripts/check[]task[]index.py\OT1/cmr/m/n/10.95 ) once \OT1/cm
+tt/m/n/10.95 tasks/TASK[]INDEX.md
+
+Overfull \hbox (1.90756pt too wide) in paragraph at lines 471--474
+[]\OT1/cmr/m/n/10.95 No \OT1/cmtt/m/n/10.95 docs/dev/construction[]loop/file[]l
+ocation[]contract.md \OT1/cmr/m/n/10.95 ex-ists at au-dit time. Path
+
+Overfull \hbox (23.54086pt too wide) in paragraph at lines 474--480
+[]\OT1/cmr/m/n/10.95 The report-schema checker cur-rently re-quires four core a
+r-ti-facts (\OT1/cmtt/m/n/10.95 PLAN.md\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95
+ executor[]report.md\OT1/cmr/m/n/10.95 ,
+[7]
+Overfull \hbox (2.79596pt too wide) in paragraph at lines 509--517
+\OT1/cmr/m/n/10.95 The con-struc-tion loop has a doc-u-mented pro-to-col, a can
+on-i-cal re-port-ing con-ven-tion, two bounded
+[8] (./engineering_audit.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2023/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist
+/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on engineering_audit.pdf (8 pages, 136649 bytes).
+Transcript written on engineering_audit.log.
+Latexmk: Getting log file 'engineering_audit.log'
+Latexmk: Examining 'engineering_audit.fls'
+Latexmk: Examining 'engineering_audit.log'
+Latexmk: Log file says output to 'engineering_audit.pdf'
+Latexmk: All targets () are up-to-date
