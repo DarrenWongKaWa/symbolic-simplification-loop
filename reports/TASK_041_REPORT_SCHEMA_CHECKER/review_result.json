@@ -1,0 +1,62 @@
+{
+  "task_id": "TASK_041_REPORT_SCHEMA_CHECKER",
+  "verdict": "PASS_WITH_CAVEAT",
+  "safe_to_continue": true,
+  "blocking_issues": [],
+  "caveats": [
+    "Optional human_review/ and supplement/ directories are reported when they contain recognized expected files, and invalid non-directory paths are reported. Empty optional subdirectories are silently ignored rather than explicitly reported as present with no recognized files. This is non-blocking because the PLAN does not require optional subdirectories or their contents for ordinary tasks, and the checker still correctly avoids failing on missing optional artifacts."
+  ],
+  "recommended_next_action": "HumanIntegrator may proceed after reading the role card and rerunning required checks. Stage only exact TASK_041 approved paths; do not use recursive add-dot staging; do not commit until the human explicitly says commit now.",
+  "files_reviewed": [
+    "docs/dev/construction_loop/reviewer.role.md",
+    "docs/dev/construction_loop/loop_meta_loop_repair_framework.md",
+    "docs/safety.md",
+    "docs/dev/construction_loop/reporting_convention.md",
+    "docs/dev/construction_loop/README.md",
+    "reports/TASK_041_REPORT_SCHEMA_CHECKER/PLAN.md",
+    "reports/TASK_041_REPORT_SCHEMA_CHECKER/executor_report.md",
+    "scripts/check_task_report_schema.py",
+    "scripts/check_forbidden_paths.py"
+  ],
+  "evidence_summary": {
+    "worktree": "/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/modify/modify4_sigma_xxx_simplification/symbolic-loop-audit-report",
+    "branch": "task-030-loop-meta-loop-audit",
+    "head": "35870f5 TASK_040 add forbidden path smoke checker",
+    "scope_result": "Only scripts/check_task_report_schema.py is visible as an untracked implementation path. TASK_041 PLAN.md and executor_report.md are present under the ignored reports/TASK_041_REPORT_SCHEMA_CHECKER/ directory. No tracked files are modified, no files are staged, scripts/check_forbidden_paths.py is not modified, and no dirty files were found under tests/, schemas/, agent_bus/, loop_engine/, .github/, sigma_abc/, checkpoints/, docs/devlog/audits/, or scaffold paths.",
+    "script_behavior_result": "The checker is stdlib-only, deterministic, and human-auditable. It reads only the target report directory and optional temp files during --self-test. It does not import subprocess, invoke git, stage, commit, push, merge, reset, rebase, cherry-pick, auto-freeze, auto-signoff, perform network access, or implement runner behavior.",
+    "required_artifact_result": "The checker requires PLAN.md, executor_report.md, review_result.json, and landing_report.md. It recognizes audit_evidence.md, final_summary.md, build.log, human_review/, and supplement/ without requiring them.",
+    "review_result_json_validation_result": "The checker parses review_result.json as JSON and requires verdict to be PASS, PASS_WITH_CAVEAT, or FAIL. It does not attempt a full JSON schema, matching the TASK_041 PLAN.",
+    "exit_code_output_result": "Completed TASK_040 report directory returned 0 with RESULT: PASS. In-flight TASK_041 report directory returned 1 before reviewer and landing artifacts, with missing review_result.json and landing_report.md identified. Manual temp checks returned 0 for a full directory, 1 for missing required files, 1 for invalid JSON, 1 for invalid verdict, 0 for optional artifacts and recognized subdirectory files, and 2 for a missing target path. Output includes [OK]/[MISS] markers and RESULT: PASS/FAIL.",
+    "in_flight_task041_caveat_result": "The current TASK_041 directory failed before this review artifact because review_result.json and landing_report.md were pending. After this review_result.json is written, HumanIntegrator's landing_report.md should complete the four required artifacts and make the directory valid.",
+    "forbidden_scaffold_automation_result": "No local runner, GitHub automation, ci-sweeper, scaffold vendoring, submodule, scientific/runtime edit, or TASK_042/TASK_043 work was found."
+  },
+  "test_results": {
+    "passed": true,
+    "commands_run": [
+      "pwd",
+      "git branch --show-current",
+      "git status --short",
+      "git status --short --untracked-files=all",
+      "git log --oneline -5",
+      "git status --short --ignored --untracked-files=all reports/TASK_041_REPORT_SCHEMA_CHECKER scripts/check_task_report_schema.py scripts/check_forbidden_paths.py",
+      "python3 -m py_compile scripts/check_task_report_schema.py",
+      "python3 scripts/check_task_report_schema.py --help",
+      "python3 scripts/check_task_report_schema.py --self-test",
+      "python3 scripts/check_task_report_schema.py reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER/",
+      "python3 scripts/check_task_report_schema.py reports/TASK_041_REPORT_SCHEMA_CHECKER/",
+      "git status --short --untracked-files=all",
+      "git diff --stat",
+      "git diff --check",
+      "git diff --cached --name-only",
+      "git status --short --untracked-files=all -- scripts",
+      "git status --short --untracked-files=all -- tests schemas agent_bus loop_engine .github sigma_abc checkpoints docs/devlog/audits LOOP.md STATE.md loop-budget.md loop-run-log.md .claude patterns loop-constraints.md .gitmodules",
+      "git status --short | grep -E 'sigma_abc/|checkpoints/|human_signoff|docs/devlog/audits/|agent_bus/|loop_engine/|schemas/|scripts/' | grep -v 'scripts/check_task_report_schema.py' && echo 'FORBIDDEN PATH TOUCHED' || echo 'scope looks safe except approved checker path'",
+      "git status --short | grep -E 'LOOP.md|STATE.md|loop-budget.md|loop-run-log.md|\\.claude/|patterns/|\\.github/|loop-constraints.md' && echo 'SCAFFOLD OR AUTOMATION PATH TOUCHED' || echo 'no scaffold merge'",
+      "test ! -f .gitmodules && echo '.gitmodules absent'",
+      "find . -maxdepth 3 -type d -name 'loop-engineering*'",
+      "grep -nE 'subprocess|os\\.system|git |git\\(|commit|push|merge|reset|rebase|cherry-pick|auto-freeze|auto-signoff|socket|requests|urllib|http|runner|workflow|ci-sweeper' scripts/check_task_report_schema.py",
+      "manual temp-directory smoke cases: full report, missing required files, invalid JSON, invalid verdict, optional artifacts plus human_review/supplement, missing target directory"
+    ],
+    "details": "Validation commands passed. git diff --stat, git diff --check, and git diff --cached --name-only produced no output. Completed TASK_040 report directory exited 0. In-flight TASK_041 report directory exited 1 as expected before reviewer and human-integrator artifacts. Final scope checks reported scope looks safe except approved checker path, no scaffold merge, .gitmodules absent, and no loop-engineering* directories."
+  }
+}
