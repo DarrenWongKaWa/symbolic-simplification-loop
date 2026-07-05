@@ -1,0 +1,64 @@
+{
+  "task_id": "TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER",
+  "verdict": "PASS_WITH_CAVEAT",
+  "safe_to_continue": true,
+  "blocking_issues": [],
+  "caveats": [
+    "The executor report says the script uses no git commit calls, but the optional --self-test mode performs an empty commit inside a temporary git repository. This does not touch the reviewed worktree, and the reviewer prompt explicitly required running --self-test, so no repair is required before HumanIntegrator staging."
+  ],
+  "recommended_next_action": "HumanIntegrator may stage the exact TASK_040 files only after reading the role card and rerunning required pre-landing checks. Do not use recursive add-dot staging; do not commit until the human explicitly says commit now.",
+  "files_reviewed": [
+    "docs/dev/construction_loop/reviewer.role.md",
+    "docs/dev/construction_loop/loop_meta_loop_repair_framework.md",
+    "docs/safety.md",
+    "docs/dev/construction_loop/reporting_convention.md",
+    "docs/dev/construction_loop/README.md",
+    "reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER/PLAN.md",
+    "reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER/executor_report.md",
+    "scripts/check_forbidden_paths.py"
+  ],
+  "evidence_summary": {
+    "worktree": "/Users/wangjiahua/Desktop/25-26/Dissipation & Nonlinear Transport/newsimplification/modify/modify4_sigma_xxx_simplification/symbolic-loop-audit-report",
+    "branch": "task-030-loop-meta-loop-audit",
+    "head": "c7d3b2e TASK_033 normalize report location policy",
+    "scope_result": "Only scripts/check_forbidden_paths.py is visible as an untracked implementation path. TASK_040 PLAN.md and executor_report.md are present under the ignored reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER/ directory. No tracked files are modified, no files are staged, and no dirty files were found under tests/, schemas/, agent_bus/, loop_engine/, .github/, sigma_abc/, checkpoints/, docs/devlog/audits/, or scaffold paths.",
+    "script_behavior_result": "Normal execution runs git status --short, parses dirty paths, prints a human-readable report, and returns 0 with only the approved self path dirty. The script uses only Python standard-library modules. Normal mode is read-only against the repository and does not stage, commit, push, merge, reset, rebase, cherry-pick, auto-freeze, auto-signoff, modify files, require network access, or implement a runner.",
+    "denylist_result": "The concrete denylist covers LOOP.md, STATE.md, loop-budget.md, loop-run-log.md, .claude/, .github/, patterns/, loop-constraints.md, agent_bus/, loop_engine/, schemas/, sigma_abc/, checkpoints/, .loop/human_signoff.yaml, docs/devlog/audits/, scripts/, human_signoff, .gitmodules, and loop-engineering*. The script does not invent broad patterns for documentation-only categories such as validation artifacts or scientific output files.",
+    "status_parsing_result": "The parser handles untracked, modified, staged, and rename/copy status lines well enough for the planned smoke checker. A direct parser smoke test classified .github/workflows/x.yml, loop-engineering-clone/a.txt, loop_engine/new.py, and sigma_abc/file.txt as forbidden and README.md as clean.",
+    "exit_code_output_result": "Clean temp repo returned 0, benign README.md dirty temp repo returned 0, sigma_abc/ returned 1, .github/ returned 1, loop-engineering* returned 1, unrelated scripts/other.py returned 1, and a non-git directory returned 2. Outputs identify forbidden hits and matching patterns.",
+    "self_exclusion_result": "Self-exclusion is exact for scripts/check_forbidden_paths.py and did not hide scripts/other.py in the manual temp-repo smoke test.",
+    "forbidden_scaffold_automation_result": "No local runner, GitHub automation, ci-sweeper, scaffold vendoring, submodule, scientific/runtime edit, or TASK_041/TASK_042 work was found."
+  },
+  "test_results": {
+    "passed": true,
+    "commands_run": [
+      "pwd",
+      "git branch --show-current",
+      "git status --short",
+      "git status --short --untracked-files=all",
+      "git log --oneline -5",
+      "git status --short --ignored --untracked-files=all reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER",
+      "git diff --stat",
+      "git diff --check",
+      "git diff",
+      "python3 -m py_compile scripts/check_forbidden_paths.py",
+      "python3 scripts/check_forbidden_paths.py --help",
+      "python3 scripts/check_forbidden_paths.py --self-test",
+      "python3 scripts/check_forbidden_paths.py",
+      "git diff --cached --name-only",
+      "git status --short --ignored --untracked-files=all reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER scripts/check_forbidden_paths.py",
+      "find . -maxdepth 3 -type d -name 'loop-engineering*'",
+      "test ! -f .gitmodules",
+      "manual temp-repo smoke cases: clean, benign README.md, sigma_abc/, .github/, loop-engineering*, scripts/other.py",
+      "non-git --cwd smoke case for exit 2",
+      "direct parse_status_lines/classify smoke test for modified, staged, untracked, rename, and copy lines",
+      "git status --short --untracked-files=all -- tests schemas agent_bus loop_engine .github sigma_abc checkpoints docs/devlog/audits LOOP.md STATE.md loop-budget.md loop-run-log.md .claude patterns loop-constraints.md .gitmodules",
+      "git status --short --untracked-files=all -- scripts",
+      "git status --short | grep -E 'LOOP.md|STATE.md|loop-budget.md|loop-run-log.md|\\.claude/|patterns/|\\.github/|loop-constraints.md' && echo 'SCAFFOLD OR AUTOMATION PATH TOUCHED' || echo 'no scaffold merge'",
+      "git status --short | grep -E 'sigma_abc/|checkpoints/|human_signoff|docs/devlog/audits/|agent_bus/|loop_engine/|schemas/|scripts/' | grep -v 'scripts/check_forbidden_paths.py' && echo 'FORBIDDEN PATH TOUCHED' || echo 'scope looks safe except approved checker path'",
+      "git ls-files --others --exclude-standard -- reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER scripts/check_forbidden_paths.py",
+      "git ls-files --modified --deleted -- reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER scripts tests schemas agent_bus loop_engine .github sigma_abc checkpoints docs/devlog/audits LOOP.md STATE.md loop-budget.md loop-run-log.md .claude patterns loop-constraints.md .gitmodules"
+    ],
+    "details": "Validation commands passed. git diff --stat, git diff --check, and git diff produced no tracked diff output because the implementation file is untracked. git diff --cached --name-only was empty. Normal checker invocation reported forbidden hits: 0 and clean dirty: 1 for scripts/check_forbidden_paths.py. Ignored report inspection showed PLAN.md and executor_report.md under reports/TASK_040_FORBIDDEN_PATH_SMOKE_CHECKER/."
+  }
+}
